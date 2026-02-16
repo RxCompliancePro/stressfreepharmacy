@@ -1,86 +1,80 @@
-body {
-    font-family: 'Inter', sans-serif;
-    color: #f8f9fa;
-    background-color: #121212;
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rxcelsior Solutions Inc.</title>
 
-h1, h2, h3 {
-    font-weight: 600;
-    color: #ffffff;
-}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/slate/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-h1 { font-size: 3rem; }
-h2 { font-size: 2rem; margin-bottom: 1rem; }
-h3 { font-size: 1.5rem; }
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Rxcelsior Solutions Inc.</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-p, li {
-    font-size: 1rem;
-    color: #e0e0e0;
-}
+<header class="text-center py-5" style="background-color:#1c1c1c; border-radius:8px; margin:20px;">
+  <h1 class="display-4">Rxcelsior Solutions Inc.</h1>
+  <p class="lead mb-4">Independent operational oversight supporting regulatory alignment, patient safety, and efficient pharmacy practice.</p>
+  <a href="contact.html" class="btn btn-primary btn-lg">Contact Us</a>
+</header>
 
-.navbar { background-color: #1c1c1c !important; }
-.navbar-brand { font-weight: 700; }
-.nav-link { color: #e0e0e0 !important; }
-.nav-link:hover, .nav-link.active { color: #1f4e79 !important; }
+<main class="container mt-5">
+  <section>
+    <h2>Our Approach</h2>
+    <p>We provide structured, independent reviews of pharmacy operations and compounding practices. Our goal is to strengthen systems, support professional judgment, and maintain consistent standards over time.</p>
+  </section>
 
-header {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #1c1c1c;
-}
+  <section>
+    <h2>Featured Services</h2>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="service-card">
+          <h3>Pharmacy Operations & Regulatory Review</h3>
+          <p>Comprehensive review to ensure regulatory alignment, workflow consistency, and patient safety.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="service-card">
+          <h3>Ongoing Operations Oversight Program</h3>
+          <p>Quarterly reviews to maintain operational stability, reduce risks, and prevent gradual process drift.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="service-card">
+          <h3>Compounding Practice Review</h3>
+          <p>Assessment of non-sterile and sterile compounding practices to ensure safe, compliant, and sustainable processes.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="service-card">
+          <h3>Biannual Compounding Oversight</h3>
+          <p>Twice-yearly oversight of compounding services to monitor consistency, minimize risk, and maintain high-quality operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
-main {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: auto;
-}
+<footer class="container mt-5 mb-5 text-center">
+  <p>All engagements are confidential. Documentation may be securely deleted upon request once services are completed.</p>
+</footer>
 
-section {
-    margin-bottom: 80px;
-    padding: 40px 20px;
-    border-radius: 8px;
-}
-
-.service-card {
-    background-color: #1c1c1c;
-    border: 1px solid #2a2a2a;
-    border-radius: 10px;
-    padding: 30px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-.btn-primary {
-    background-color: #1f4e79;
-    border-color: #1f4e79;
-    font-weight: 500;
-}
-
-.btn-primary:hover {
-    background-color: #326aa8;
-    border-color: #326aa8;
-}
-
-footer {
-    background-color: #1c1c1c;
-    color: #aaaaaa;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-input, textarea {
-    background-color: #2a2a2a;
-    color: #f8f9fa;
-    border: 1px solid #444;
-}
-
-input:focus, textarea:focus {
-    border-color: #1f4e79;
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(31,78,121,0.25);
-}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

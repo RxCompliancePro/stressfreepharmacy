@@ -6,90 +6,161 @@
   <title>RXCELSIOR SOLUTIONS | Independent Pharmacy Oversight</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      color: #333;
+      color: #1c1c1c;
     }
+    a {
+      text-decoration: none;
+    }
+    /* Navbar */
+    .navbar {
+      background-color: #1E3A8A; /* strong navy blue */
+    }
+    .navbar-brand, .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #D4AF37 !important; /* subtle gold highlight */
+    }
+
+    /* Hero Section */
     header {
-      background-color: #f8f9fa;
-      padding: 100px 0;
+      background: linear-gradient(to right, #1E3A8A, #1B365F);
+      color: #ffffff;
+      padding: 120px 0 80px 0;
+      text-align: center;
     }
     .hero-title {
       font-weight: 700;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
     .hero-subtitle {
-      font-weight: 500;
+      font-weight: 400;
       font-size: 1.25rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .btn-primary {
-      background-color: #007bff;
+      background-color: #D4AF37;
       border: none;
       font-weight: 600;
+      color: #1E3A8A;
+      transition: all 0.3s;
+    }
+    .btn-primary:hover {
+      background-color: #b7942f;
+      color: #fff;
+    }
+
+    /* Services Section */
+    main {
+      padding: 80px 0;
+      background-color: #f4f5f7;
     }
     .service-card {
       background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
       padding: 30px 20px;
       margin-bottom: 30px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .service-card:hover {
       transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
     .card-label {
       display: inline-block;
       font-size: 0.85rem;
-      font-weight: 600;
-      color: #007bff;
+      font-weight: 700;
+      color: #1E3A8A;
       margin-bottom: 10px;
       text-transform: uppercase;
     }
-    main {
-      padding: 80px 0;
+    h5 {
+      font-weight: 600;
+      margin-bottom: 10px;
     }
+    p.small {
+      color: #555;
+    }
+
+    /* Footer */
     footer {
-      background-color: #f8f9fa;
+      background-color: #1E3A8A;
+      color: #fff;
       padding: 40px 0;
       text-align: center;
       font-size: 0.9rem;
-      color: #666;
+    }
+    footer a {
+      color: #D4AF37;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .hero-subtitle {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="text-center text-lg-start">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-9 mx-auto">
-          <span class="card-label d-block mb-3">Independent Pharmacy Oversight</span>
-          <h1 class="hero-title">RXCELSIOR SOLUTIONS</h1>
-          <p class="hero-subtitle">
-            Regulatory & Operational Excellence for Ontario Pharmacies. We help pharmacy owners ensure full compliance with OCP and NAPRA standards, optimize workflows, and maintain the highest quality of patient care.
-          </p>
-          <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3">Contact Us</a>
-        </div>
+      <a class="navbar-brand" href="#">RXCELSIOR SOLUTIONS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header>
+    <div class="container">
+      <span class="card-label d-block mb-3">Independent Pharmacy Oversight</span>
+      <h1 class="hero-title">RXCELSIOR SOLUTIONS</h1>
+      <p class="hero-subtitle">
+        Regulatory & Operational Excellence for Ontario Pharmacies. We help pharmacy owners ensure full compliance with OCP and NAPRA standards, optimize workflows, and maintain the highest quality of patient care.
+      </p>
+      <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3">Contact Us</a>
     </div>
   </header>
 
-  <!-- Services -->
-  <main class="container">
+  <!-- Services Section -->
+  <main id="services" class="container">
     <div class="row g-4 text-center">
-      
+
       <div class="col-md-4">
         <div class="service-card">
           <span class="card-label">Standards</span>
           <h5>Pharmacy Standards Maintenance Program</h5>
-          <p class="small text-muted mb-0">
+          <p class="small mb-0">
             Ongoing support to maintain consistent excellence in pharmacy operations aligned with OCP standards.
           </p>
         </div>
@@ -99,7 +170,7 @@
         <div class="service-card">
           <span class="card-label">Optimization</span>
           <h5>Pharmacy Oversight & Optimization Review</h5>
-          <p class="small text-muted mb-0">
+          <p class="small mb-0">
             Full evaluation of workflows and operations to improve efficiency and meet regulatory expectations.
           </p>
         </div>
@@ -109,7 +180,7 @@
         <div class="service-card">
           <span class="card-label">Urgent</span>
           <h5>OCP Readiness Assessment</h5>
-          <p class="small text-muted mb-0">
+          <p class="small mb-0">
             Rapid evaluation to identify risks and ensure your pharmacy is fully prepared for inspections.
           </p>
         </div>
@@ -119,7 +190,7 @@
         <div class="service-card">
           <span class="card-label">Recovery</span>
           <h5>Compliance Recovery Review</h5>
-          <p class="small text-muted mb-0">
+          <p class="small mb-0">
             Assistance to correct deficiencies identified during inspections and restore full compliance.
           </p>
         </div>
@@ -129,7 +200,7 @@
         <div class="service-card">
           <span class="card-label">Specialized</span>
           <h5>NAPRA Compounding Check</h5>
-          <p class="small text-muted mb-0">
+          <p class="small mb-0">
             Focused assessment of non-sterile compounding operations to ensure alignment with NAPRA standards.
           </p>
         </div>
@@ -139,7 +210,7 @@
         <div class="service-card">
           <span class="card-label">Expert</span>
           <h5>Expert Advice</h5>
-          <p class="small text-muted mb-0">
+          <p class="small mb-0">
             Guidance on unique pharmacy projects, SOP documentation, and operational best practices.
           </p>
         </div>

@@ -8,27 +8,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
   <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      color: #1c1c1c;
-    }
-    a {
-      text-decoration: none;
-    }
+    body { font-family: 'Roboto', sans-serif; color: #1c1c1c; }
+    a { text-decoration: none; }
+
     /* Navbar */
-    .navbar {
-      background-color: #1E3A8A; /* strong navy blue */
-    }
-    .navbar-brand, .nav-link {
-      color: #ffffff !important;
-      font-weight: 500;
-    }
-    .nav-link:hover {
-      color: #D4AF37 !important; /* subtle gold highlight */
-    }
+    .navbar { background-color: #1E3A8A; }
+    .navbar-brand, .nav-link { color: #fff !important; font-weight: 500; }
+    .nav-link:hover, .nav-link.active { color: #D4AF37 !important; }
 
     /* Hero Section */
     header {
@@ -37,87 +24,34 @@
       padding: 120px 0 80px 0;
       text-align: center;
     }
-    .hero-title {
-      font-weight: 700;
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    .hero-subtitle {
-      font-weight: 400;
-      font-size: 1.25rem;
-      margin-bottom: 30px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .hero-title { font-weight: 700; font-size: 3rem; margin-bottom: 20px; }
+    .hero-subtitle { font-weight: 400; font-size: 1.25rem; margin-bottom: 30px; max-width: 700px; margin: 0 auto; }
     .btn-primary {
-      background-color: #D4AF37;
-      border: none;
-      font-weight: 600;
-      color: #1E3A8A;
-      transition: all 0.3s;
+      background-color: #D4AF37; border: none; font-weight: 600; color: #1E3A8A; transition: all 0.3s; padding: 12px 30px; border-radius: 8px;
     }
-    .btn-primary:hover {
-      background-color: #b7942f;
-      color: #fff;
-    }
+    .btn-primary:hover { background-color: #b7942f; color: #fff; }
 
     /* Services Section */
-    main {
-      padding: 80px 0;
-      background-color: #f4f5f7;
-    }
+    main { padding: 80px 0; background-color: #f4f5f7; }
     .service-card {
-      background-color: #ffffff;
-      border-radius: 12px;
+      background-color: #ffffff; border-radius: 12px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-      padding: 30px 20px;
-      margin-bottom: 30px;
+      padding: 30px 20px; margin-bottom: 30px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-    }
-    .card-label {
-      display: inline-block;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #1E3A8A;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-    h5 {
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-    p.small {
-      color: #555;
-    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+    .card-label { display: inline-block; font-size: 0.85rem; font-weight: 700; color: #1E3A8A; margin-bottom: 10px; text-transform: uppercase; }
+    h5 { font-weight: 600; margin-bottom: 10px; }
+    p.small { color: #555; }
 
     /* Footer */
-    footer {
-      background-color: #1E3A8A;
-      color: #fff;
-      padding: 40px 0;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: #D4AF37;
-    }
-    footer a:hover {
-      color: #fff;
-    }
+    footer { background-color: #1E3A8A; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+    footer a { color: #D4AF37; }
+    footer a:hover { color: #fff; }
 
-    /* Responsive */
     @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.2rem;
-      }
-      .hero-subtitle {
-        font-size: 1rem;
-      }
+      .hero-title { font-size: 2.2rem; }
+      .hero-subtitle { font-size: 1rem; }
     }
   </style>
 </head>
@@ -160,9 +94,7 @@
         <div class="service-card">
           <span class="card-label">Standards</span>
           <h5>Pharmacy Standards Maintenance Program</h5>
-          <p class="small mb-0">
-            Ongoing support to maintain consistent excellence in pharmacy operations aligned with OCP standards.
-          </p>
+          <p class="small mb-0">Ongoing support to maintain consistent excellence in pharmacy operations aligned with OCP standards.</p>
         </div>
       </div>
 
@@ -170,9 +102,7 @@
         <div class="service-card">
           <span class="card-label">Optimization</span>
           <h5>Pharmacy Oversight & Optimization Review</h5>
-          <p class="small mb-0">
-            Full evaluation of workflows and operations to improve efficiency and meet regulatory expectations.
-          </p>
+          <p class="small mb-0">Full evaluation of workflows and operations to improve efficiency and meet regulatory expectations.</p>
         </div>
       </div>
 
@@ -180,9 +110,7 @@
         <div class="service-card">
           <span class="card-label">Urgent</span>
           <h5>OCP Readiness Assessment</h5>
-          <p class="small mb-0">
-            Rapid evaluation to identify risks and ensure your pharmacy is fully prepared for inspections.
-          </p>
+          <p class="small mb-0">Rapid evaluation to identify risks and ensure your pharmacy is fully prepared for inspections.</p>
         </div>
       </div>
 
@@ -190,9 +118,7 @@
         <div class="service-card">
           <span class="card-label">Recovery</span>
           <h5>Compliance Recovery Review</h5>
-          <p class="small mb-0">
-            Assistance to correct deficiencies identified during inspections and restore full compliance.
-          </p>
+          <p class="small mb-0">Assistance to correct deficiencies identified during inspections and restore full compliance.</p>
         </div>
       </div>
 
@@ -200,9 +126,7 @@
         <div class="service-card">
           <span class="card-label">Specialized</span>
           <h5>NAPRA Compounding Check</h5>
-          <p class="small mb-0">
-            Focused assessment of non-sterile compounding operations to ensure alignment with NAPRA standards.
-          </p>
+          <p class="small mb-0">Focused assessment of non-sterile compounding operations to ensure alignment with NAPRA standards.</p>
         </div>
       </div>
 
@@ -210,9 +134,7 @@
         <div class="service-card">
           <span class="card-label">Expert</span>
           <h5>Expert Advice</h5>
-          <p class="small mb-0">
-            Guidance on unique pharmacy projects, SOP documentation, and operational best practices.
-          </p>
+          <p class="small mb-0">Guidance on unique pharmacy projects, SOP documentation, and operational best practices.</p>
         </div>
       </div>
 
@@ -221,7 +143,7 @@
 
   <!-- Footer -->
   <footer>
-    &copy; 2026 RXCELSIOR SOLUTIONS. All Rights Reserved. | <a href="contact.html">Contact</a>
+    &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are confidential. Documentation may be securely deleted upon request once services are completed.
   </footer>
 
   <!-- Bootstrap JS -->

@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pharmacy Consulting Services | Regulatory & Operational Excellence</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -14,7 +17,7 @@
     .card-label {
       font-weight: 600;
       text-transform: uppercase;
-      color: #0d6efd;
+      color: #0d6efd; /* primary accent */
       font-size: 0.85rem;
       display: block;
       margin-bottom: 0.5rem;
@@ -23,16 +26,25 @@
       background: #ffffff;
       border: 1px solid #e0e0e0;
       border-radius: 8px;
-      padding: 20px;
+      padding: 25px;
       margin-bottom: 30px;
-      transition: box-shadow 0.2s, transform 0.2s;
+      transition: box-shadow 0.3s, transform 0.3s;
+      text-align: center;
     }
     .service-card:hover {
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+    }
+    .service-card i {
+      font-size: 2rem;
+      color: #0d6efd;
+      margin-bottom: 15px;
     }
     h1, h5 {
       font-weight: 600;
+    }
+    p.lead {
+      font-size: 1.1rem;
     }
     p.small {
       color: #6c757d;
@@ -41,12 +53,15 @@
       border-radius: 50px;
       font-weight: 600;
     }
+    header {
+      background: #ffffff;
+    }
   </style>
 </head>
 <body>
 
 <!-- Header -->
-<header class="py-5 bg-light">
+<header class="py-5">
   <div class="container text-center text-lg-start">
     <div class="row">
       <div class="col-lg-9">
@@ -70,6 +85,7 @@
     <!-- 1. Oversight & Optimization Review -->
     <div class="col-md-4">
       <div class="service-card">
+        <i class="fas fa-clipboard-list"></i>
         <span class="card-label">Full Review</span>
         <h5>Pharmacy Oversight & Optimization Review</h5>
         <p class="small mb-0">
@@ -81,6 +97,7 @@
     <!-- 2. Standards Maintenance Program -->
     <div class="col-md-4">
       <div class="service-card">
+        <i class="fas fa-shield-alt"></i>
         <span class="card-label">Protection</span>
         <h5>Pharmacy Standards Maintenance Program</h5>
         <p class="small mb-0">
@@ -92,6 +109,7 @@
     <!-- 3. Urgent OCP Readiness Assessment -->
     <div class="col-md-4">
       <div class="service-card">
+        <i class="fas fa-bolt"></i>
         <span class="card-label">Urgent</span>
         <h5>Urgent OCP Readiness Assessment</h5>
         <p class="small mb-0">
@@ -103,6 +121,7 @@
     <!-- 4. Compliance Recovery Review -->
     <div class="col-md-4">
       <div class="service-card">
+        <i class="fas fa-undo-alt"></i>
         <span class="card-label">Recovery</span>
         <h5>Compliance Recovery Review</h5>
         <p class="small mb-0">
@@ -114,6 +133,7 @@
     <!-- 5. Non-Sterile Compounding Assessment -->
     <div class="col-md-4">
       <div class="service-card">
+        <i class="fas fa-flask"></i>
         <span class="card-label">Specialized</span>
         <h5>Non-Sterile Compounding Assessment</h5>
         <p class="small mb-0">
@@ -125,6 +145,7 @@
     <!-- 6. Custom / Expert Consulting -->
     <div class="col-md-4">
       <div class="service-card">
+        <i class="fas fa-user-tie"></i>
         <span class="card-label">Custom</span>
         <h5>Expert Consulting</h5>
         <p class="small mb-0">

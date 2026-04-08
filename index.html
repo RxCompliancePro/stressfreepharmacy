@@ -9,12 +9,15 @@
     body {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       color: #333;
+      background-color: #f8f9fa;
     }
     .card-label {
       font-weight: 600;
       text-transform: uppercase;
-      color: #555;
+      color: #0d6efd;
       font-size: 0.85rem;
+      display: block;
+      margin-bottom: 0.5rem;
     }
     .service-card {
       background: #ffffff;
@@ -22,16 +25,19 @@
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 30px;
-      transition: box-shadow 0.2s;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
     .service-card:hover {
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
     }
-    h5 {
+    h1, h5 {
       font-weight: 600;
-      margin-top: 10px;
     }
-    .btn-primary, .btn-dark {
+    p.small {
+      color: #6c757d;
+    }
+    .btn-dark {
       border-radius: 50px;
       font-weight: 600;
     }
@@ -44,13 +50,13 @@
   <div class="container text-center text-lg-start">
     <div class="row">
       <div class="col-lg-9">
-        <span class="card-label">Independent Pharmacy Oversight</span>
+        <span class="card-label mb-3 d-block">Independent Pharmacy Oversight</span>
         <h1>Expert Guidance for Regulatory Alignment and Operational Excellence</h1>
         <p class="lead text-muted mb-5">
           We help Ontario pharmacy owners ensure full compliance with OCP standards, optimize workflows, and maintain the highest quality of patient care. Our proactive evaluations identify opportunities before regulatory concerns arise.
         </p>
-        <a href="contact.html" class="btn btn-dark btn-lg px-5 py-3">
-          Schedule Your Oversight & Optimization Review
+        <a href="mailto:youremail@domain.com" class="btn btn-dark btn-lg px-5 py-3">
+          Contact Us
         </a>
       </div>
     </div>
@@ -66,7 +72,7 @@
       <div class="service-card">
         <span class="card-label">Full Review</span>
         <h5>Pharmacy Oversight & Optimization Review</h5>
-        <p class="small text-muted mb-0">
+        <p class="small mb-0">
           Comprehensive evaluation of operations and workflows to identify inefficiencies and ensure alignment with OCP and NAPRA standards.
         </p>
       </div>
@@ -77,7 +83,7 @@
       <div class="service-card">
         <span class="card-label">Protection</span>
         <h5>Pharmacy Standards Maintenance Program</h5>
-        <p class="small text-muted mb-0">
+        <p class="small mb-0">
           Ongoing oversight to maintain compliance, prevent operational drift, and sustain high-quality pharmacy practices. Optional quarterly or biannual reviews track improvements and ensure continuous alignment with standards.
         </p>
       </div>
@@ -88,7 +94,7 @@
       <div class="service-card">
         <span class="card-label">Urgent</span>
         <h5>Urgent OCP Readiness Assessment</h5>
-        <p class="small text-muted mb-0">
+        <p class="small mb-0">
           Fast, full-scope evaluation to ensure your pharmacy is aligned with OCP standards. Optional Non-Sterile Compounding Assessment available to elevate compounding quality and maintain NAPRA alignment.
         </p>
       </div>
@@ -99,7 +105,7 @@
       <div class="service-card">
         <span class="card-label">Recovery</span>
         <h5>Compliance Recovery Review</h5>
-        <p class="small text-muted mb-0">
+        <p class="small mb-0">
           Targeted support to address deficiencies following an OCP inspection, implement corrective actions, and restore full compliance efficiently.
         </p>
       </div>
@@ -110,19 +116,19 @@
       <div class="service-card">
         <span class="card-label">Specialized</span>
         <h5>Non-Sterile Compounding Assessment</h5>
-        <p class="small text-muted mb-0">
+        <p class="small mb-0">
           Focused review of non-sterile compounding practices to achieve excellence and ensure alignment with NAPRA standards. Can be added to any evaluation.
         </p>
       </div>
     </div>
 
-    <!-- 6. Custom / Expert Support -->
+    <!-- 6. Custom / Expert Consulting -->
     <div class="col-md-4">
       <div class="service-card">
         <span class="card-label">Custom</span>
         <h5>Expert Consulting</h5>
-        <p class="small text-muted mb-0">
-          Specialized support for unique projects, workflow optimization, clinical protocols, or software transitions requiring expert guidance.
+        <p class="small mb-0">
+          Specialized support for unique projects, workflow optimization, clinical protocols, or other pharmacy operations requiring expert guidance.
         </p>
       </div>
     </div>

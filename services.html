@@ -7,14 +7,24 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background-color:#f9f9f9; }
+    .card-container { background-color:#fff; padding:25px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:transform 0.3s; height:100%; }
+    .card-container:hover { transform:translateY(-5px); }
+    .card-label { font-weight:700; color:#D4AF37; text-transform:uppercase; font-size:0.85rem; letter-spacing:1px; }
+    header { background-color:#1E3A8A; color:#fff; text-align:center; padding:80px 20px; }
+    header .hero-title { font-weight:700; font-size:3rem; margin-bottom:15px; }
+    header .hero-subtitle { font-size:1.2rem; max-width:700px; margin-left:auto; margin-right:auto; }
+    footer { background-color:#1E3A8A; color:#fff; text-align:center; padding:25px 0; margin-top:50px; }
+  </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#0F2A60;">
   <div class="container">
     <a class="navbar-brand" href="index.html">
-      <div>Independent Pharmacy Oversight</div>
+      <div style="font-size:0.8rem;">Independent Pharmacy Oversight</div>
       RXCELSIOR SOLUTIONS
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -32,7 +42,7 @@
 </nav>
 
 <!-- Hero / Intro -->
-<header class="py-5" style="background-color:#1E3A8A; color:#fff; text-align:center;">
+<header>
   <div class="container">
     <h1 class="hero-title">Our Services</h1>
     <p class="hero-subtitle">
@@ -47,28 +57,42 @@
     <div class="col-md-6 col-lg-4">
       <div class="card-container">
         <span class="card-label">Full Review</span>
-        <h3>Operations & Regulatory Alignment</h3>
+        <h5>Operations & Regulatory Alignment</h5>
         <p>Complete evaluation of SOPs, compounding practices, documentation, and workflows to meet OCP standards efficiently.</p>
       </div>
     </div>
     <div class="col-md-6 col-lg-4">
       <div class="card-container">
         <span class="card-label">Ongoing Oversight</span>
-        <h3>Compliance & Accountability Program</h3>
+        <h5>Compliance & Accountability Program</h5>
         <p>Quarterly or semi-annual assessments to prevent operational drift and ensure continuous regulatory readiness.</p>
       </div>
     </div>
     <div class="col-md-6 col-lg-4">
       <div class="card-container">
-        <span class="card-label">Specialized Review</span>
-        <h3>NAPRA Compounding Standards</h3>
-        <p>Targeted review of non-sterile compounding practices to ensure safety, consistency, and compliance with NAPRA standards.</p>
+        <span class="card-label">Urgent</span>
+        <h5>Emergency OCP Prep</h5>
+        <p>Fast, focused evaluation to identify risks and implement fixes before your scheduled inspection.</p>
       </div>
     </div>
     <div class="col-md-6 col-lg-4">
       <div class="card-container">
-        <span class="card-label">Consulting</span>
-        <h3>Workflow, SOPs & Training</h3>
+        <span class="card-label">Recovery</span>
+        <h5>Inspection Support</h5>
+        <p>Assistance with implementing required changes and restoring compliance after deficiencies are identified.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card-container">
+        <span class="card-label">Specialized</span>
+        <h5>NAPRA Compounding Check</h5>
+        <p>Targeted review of non-sterile compounding practices to ensure safety, consistency, and NAPRA compliance.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="card-container">
+        <span class="card-label">Custom Consulting</span>
+        <h5>Workflow, SOPs & Training</h5>
         <p>Expert guidance for SOP updates, workflow redesign, staff training, and practical solutions tailored to your pharmacy.</p>
       </div>
     </div>

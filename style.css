@@ -1,101 +1,60 @@
-/* === Brand Colors === */
+/* === Rxcelsior Corporate Branding === */
 :root {
-    --brand-primary: #1f4e79; 
-    --brand-secondary: #326aa8;
-    --text-light: #f8f9fa;
-    --card-bg: #1c1c1c;
+    --brand-primary: #1f4e79;  /* Your professional blue */
+    --brand-dark: #1e293b;     /* Navy for text */
+    --bg-light: #ffffff;       /* White for clarity */
+    --bg-ghost: #f8fafc;       /* Light gray for section contrast */
+    --border: #e2e8f0;
 }
 
-/* Body */
+/* Body - Clean & Professional */
 body {
-    background-color: #121212 !important;
-    color: var(--text-light) !important;
+    background-color: var(--bg-light) !important;
+    color: var(--brand-dark) !important;
     font-family: 'Inter', sans-serif !important;
     line-height: 1.6 !important;
+    margin: 0;
 }
 
-/* Navbar */
-.navbar, .navbar-dark {
-    background-color: #121212 !important;
+/* Navbar - Navy Blue with White Text */
+.navbar {
+    background-color: var(--brand-dark) !important;
+    padding: 1rem 0 !important;
 }
-.navbar .nav-link {
-    color: var(--text-light) !important;
+.navbar .navbar-brand, .navbar .nav-link {
+    color: #ffffff !important;
 }
-.navbar .nav-link.active {
-    color: var(--brand-primary) !important;
+
+/* Hero Section (The top part) */
+header {
+    background-color: var(--bg-ghost) !important;
+    border-bottom: 1px solid var(--border);
+    padding: 80px 0 !important;
 }
-.navbar .nav-link:hover {
-    color: var(--brand-secondary) !important;
+
+/* Service Cards - White with Blue Top Border */
+.card, .service-card {
+    background-color: #ffffff !important;
+    border: 1px solid var(--border) !important;
+    border-top: 4px solid var(--brand-primary) !important;
+    color: var(--brand-dark) !important;
+    border-radius: 8px !important;
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
 }
 
 /* Headings */
 h1, h2, h3 {
     color: var(--brand-primary) !important;
+    font-weight: 700 !important;
 }
 
-/* Sections */
-.section-light {
-    background-color: var(--brand-primary) !important;
-    color: var(--text-light) !important;
-    padding: 60px 20px !important;
-    border-radius: 8px !important;
-}
-.section-dark {
-    background-color: #121212 !important;
-    color: var(--text-light) !important;
-    padding: 60px 20px !important;
-    border-radius: 8px !important;
-}
-
-/* Service Cards */
-.service-card {
-    background-color: var(--card-bg) !important;
-    border: 2px solid var(--brand-primary) !important;
-    border-radius: 8px !important;
-    padding: 25px !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5) !important;
-}
-
-/* Buttons */
-.btn-primary {
-    background-color: var(--brand-primary) !important;
-    border-color: var(--brand-primary) !important;
-}
-.btn-primary:hover {
-    background-color: var(--brand-secondary) !important;
-    border-color: var(--brand-secondary) !important;
-}
-
-/* Links */
-a, a:link {
-    color: var(--brand-primary) !important;
-}
-a:hover {
-    color: var(--brand-secondary) !important;
-    text-decoration: none !important;
-}
-
-/* Footer */
+/* Footer - Simple & Clean */
 footer {
-    background-color: #1c1c1c !important;
-    color: var(--text-light) !important;
+    background-color: var(--brand-dark) !important;
+    color: #ffffff !important;
     padding: 40px !important;
-    text-align: center !important;
-    font-size: 14px !important;
 }
-
-/* Forms */
-form input, form textarea {
-    background-color: #1c1c1c !important;
-    border: 1px solid var(--brand-primary) !important;
-    color: var(--text-light) !important;
-}
-form input:focus, form textarea:focus {
-    border-color: var(--brand-secondary) !important;
-    box-shadow: 0 0 0 0.2rem rgba(50, 106, 168, 0.25) !important;
-}
-

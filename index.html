@@ -14,19 +14,31 @@
     }
 
     /* Navbar */
-    .navbar { background-color: #3366B0; } /* dark blue */
-    .navbar-brand span:first-child { color: #fff; font-weight: 700; }
-    .navbar-brand span:last-child { color: #D97630; font-size:0.75rem; } /* dark orange */
+    .navbar {
+      background-color: #3366B0; /* dark blue */
+      padding-top: 20px;
+      padding-bottom: 20px; /* taller navbar */
+    }
+    .navbar-brand span:first-child {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.8rem; /* larger RXCELSIOR text */
+    }
+    .navbar-brand span:last-child {
+      color: #D97630; /* dark orange */
+      font-size: 1.1rem; /* larger subtitle */
+      font-weight: 600;
+    }
     .nav-link { color: #fff !important; font-weight: 500; }
     .nav-link.active, .nav-link:hover { color: #D4AF37 !important; }
 
     /* Hero Section */
-header {
-  background-color: #B0D4F1; /* light professional blue */
-  color: #fff;
-  text-align: center;
-  padding: 120px 0 80px;
-}
+    header {
+      background-color: #B0D4F1; /* light professional blue */
+      color: #fff;
+      text-align: center;
+      padding: 120px 0 80px;
+    }
     header .hero-title { font-weight:700; font-size:2.5rem; margin-bottom:20px; }
     header .hero-subtitle { font-size:1.2rem; max-width:700px; margin:0 auto; line-height:1.6; margin-top:10px; }
 
@@ -63,6 +75,8 @@ header {
       header .hero-title { font-size:2rem; }
       header .hero-subtitle { font-size:1rem; }
       .card-container { padding:25px; }
+      .navbar-brand span:first-child { font-size:1.4rem; }
+      .navbar-brand span:last-child { font-size:0.9rem; }
     }
   </style>
 </head>
@@ -71,10 +85,10 @@ header {
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-   <a class="navbar-brand d-flex flex-column" href="index.html">
-  <span>RXCELSIOR SOLUTIONS</span>
-  <span>Independent Pharmacy Oversight</span>
-</a>
+    <a class="navbar-brand d-flex flex-column" href="index.html">
+      <span>RXCELSIOR SOLUTIONS</span>
+      <span>Independent Pharmacy Oversight</span>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>

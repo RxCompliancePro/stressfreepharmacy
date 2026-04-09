@@ -8,46 +8,76 @@
   <link href="style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Roboto', sans-serif; background-color: #f4f5f7; color: #1c1c1c; }
+    body { 
+      font-family: 'Roboto', sans-serif; 
+      background-color: #E6F0FA; 
+      color: #1c1c1c; 
+      padding-top: 56px; 
+    }
+
     a { text-decoration: none; }
 
     /* Navbar */
-    .navbar { background-color: #1E3A8A; }
-    .navbar-brand, .nav-link { color: #fff !important; font-weight: 500; }
-    .nav-link:hover, .nav-link.active { color: #D4AF37 !important; }
-    .navbar-brand div { font-size: 0.85rem; color: #D4AF37; line-height: 1; }
-
-    /* Hero */
-    header { 
-      background: linear-gradient(135deg, #1E3A8A 0%, #3B5998 100%);
-      color: #fff;
-      padding: 120px 20px 80px 20px;
-      text-align: center;
+    .navbar { 
+      background-color: #1C3B70; 
+      padding-top:20px;
+      padding-bottom:20px;
     }
-    .hero-title { font-weight: 700; font-size: 3rem; margin-bottom: 20px; }
-    .hero-subtitle { font-weight: 400; font-size: 1.25rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .navbar-brand span:first-child { color: #fff; font-weight:700; font-size:1.8rem; }
+    .navbar-brand span:last-child { color: #D4AF37; font-weight:600; font-size:1.1rem; }
+    .nav-link { color:#fff !important; font-weight:500; }
+    .nav-link.active, .nav-link:hover { color:#D4AF37 !important; }
+
+    /* Hero Section */
+    header {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      min-height: calc(100vh - 100px); 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 20px;
+      background: url('images/Professionals discussion.png') center center / cover no-repeat;
+    }
+    header::before {
+      content:'';
+      position:absolute;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.35); 
+      z-index:1;
+    }
+    header > .container { position: relative; z-index:2; }
+    .hero-title { font-weight:700; font-size:2.5rem; margin-bottom:20px; color:#fff; }
+    .hero-subtitle { font-size:1.2rem; max-width:700px; margin:0 auto; line-height:1.6; color:#fff; }
 
     /* Sections */
     section { padding: 80px 0; }
-    .section-light { background-color: #ffffff; }
-    .section-dark { background-color: #e6e8eb; }
-    section h2 { font-weight: 700; color: #1E3A8A; margin-bottom: 20px; }
-    section p { line-height: 1.7; margin-bottom: 1.2rem; font-size: 1.05rem; }
+    .section-light { background-color: #fff; }
+    .section-dark { background-color: #E6F0FA; }
+    section h2 { font-weight:700; color:#1C3B70; margin-bottom:20px; }
+    section p { line-height:1.7; margin-bottom:1.2rem; font-size:1.05rem; }
 
     /* About layout */
-    .about-row { align-items: center; gap: 30px; }
-    .about-img { width: 100%; border-radius: 10px; }
+    .about-row { align-items:center; gap:30px; }
+    .about-img { width:100%; border-radius:10px; }
 
     /* Footer */
-    footer { background-color: #1E3A8A; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; }
-    footer a { color: #D4AF37; }
-    footer a:hover { color: #fff; }
+    footer { 
+      background-color:#1C3B70; 
+      color:#fff; 
+      padding:40px 0; 
+      text-align:center; 
+      font-size:0.9rem;
+    }
+    footer a { color:#D4AF37; }
+    footer a:hover { color:#fff; }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      .hero-title { font-size: 2.2rem; }
-      .hero-subtitle { font-size: 1rem; }
-      section { padding: 50px 15px; }
+    @media (max-width:768px){
+      .hero-title { font-size:2rem; }
+      .hero-subtitle { font-size:1rem; }
+      section { padding:50px 15px; }
     }
   </style>
 </head>
@@ -58,7 +88,7 @@
   <div class="container">
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span>RXCELSIOR SOLUTIONS</span>
-      <div>Independent Pharmacy Oversight</div>
+      <span>Independent Pharmacy Oversight</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>

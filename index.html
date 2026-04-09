@@ -12,7 +12,12 @@
     .card-container { background-color:#fff; padding:30px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.08); transition:transform 0.3s; }
     .card-container:hover { transform:translateY(-5px); }
     .card-label { font-weight:700; color:#D4AF37; text-transform:uppercase; font-size:0.85rem; letter-spacing:1px; }
-    header { background-color:#1E3A8A; color:#fff; text-align:center; padding:60px 0; }
+   header {
+  background: linear-gradient(135deg, #1E3A8A, #0F2A60);
+  color:#fff;
+  text-align:center;
+  padding:120px 0 80px;
+}
     header .hero-title { font-weight:700; font-size:2.5rem; }
     header .hero-subtitle { font-size:1.2rem; margin-top:10px; max-width:700px; margin-left:auto; margin-right:auto; }
     footer { background-color:#1E3A8A; color:#fff; text-align:center; padding:25px 0; margin-top:50px; }
@@ -23,10 +28,10 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#0F2A60;">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <div style="font-size:0.8rem;">Independent Pharmacy Oversight</div>
-      RXCELSIOR SOLUTIONS
-    </a>
+   <a class="navbar-brand d-flex flex-column" href="index.html">
+  <span style="font-weight:700;">RXCELSIOR SOLUTIONS</span>
+  <span style="font-size:0.75rem; opacity:0.85;">Independent Pharmacy Oversight</span>
+</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -50,7 +55,6 @@
     </p>
   </div>
 </header>
-
 <main class="container py-5">
   <div class="row g-4">
     <div class="col-md-6 col-lg-4">

@@ -12,27 +12,26 @@
       font-family: 'Roboto', sans-serif; 
       background-color:#f9f9f9; 
       padding-top:56px; /* offset for fixed navbar */
+      color:#1c1c1c;
     }
 
     /* Navbar brand subtitle stacking */
-    .navbar-brand span {
-      display:block;
-    }
+    .navbar-brand span { display:block; }
 
     /* Hero section */
     header {
-      background: linear-gradient(135deg, #1E3A8A, #0F2A60);
+      background: linear-gradient(135deg, #2A52BE 0%, #3B78E7 100%);
       color:#fff;
       text-align:center;
-      padding:120px 0 80px;
+      padding:120px 20px 80px;
     }
     header .hero-title {
       font-weight:700;
-      font-size:2.5rem;
+      font-size:2.8rem;
       margin-bottom:20px;
     }
     header .hero-subtitle {
-      font-size:1.2rem;
+      font-size:1.25rem;
       margin-top:10px;
       max-width:700px;
       margin-left:auto;
@@ -48,11 +47,10 @@
       border-radius:6px;
       transition: all 0.3s ease;
     }
-    .btn-warning:hover {
-      background-color:#b8962e;
-    }
+    .btn-warning:hover { background-color:#b8962e; }
 
-    /* Cards */
+    /* Cards section */
+    main { background-color:#f9f9f9; padding:60px 0; text-align:center; }
     .card-container {
       background-color:#fff; 
       padding:35px; 
@@ -72,15 +70,8 @@
       font-size:0.85rem; 
       letter-spacing:1px; 
     }
-    h5 {
-      font-weight:600;
-      margin-top:10px;
-      margin-bottom:15px;
-    }
-    p {
-      color:#555;
-      line-height:1.6;
-    }
+    h5 { font-weight:600; margin-top:10px; margin-bottom:15px; }
+    p { color:#555; line-height:1.6; }
 
     /* Footer */
     footer { 
@@ -90,12 +81,19 @@
       padding:25px 0; 
       margin-top:50px; 
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      header .hero-title { font-size:2.2rem; }
+      header .hero-subtitle { font-size:1rem; }
+      .card-container { padding:20px; }
+    }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#0F2A60;">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#1E3A8A;">
   <div class="container">
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span style="font-weight:700;">RXCELSIOR SOLUTIONS</span>
@@ -127,8 +125,8 @@
 </header>
 
 <!-- Main content (service cards) -->
-<main class="container py-5">
-  <div class="row g-4">
+<main class="container">
+  <div class="row g-4 justify-content-center">
     <div class="col-md-6 col-lg-4">
       <div class="card-container">
         <span class="card-label">Full Review</span>

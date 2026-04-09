@@ -7,15 +7,58 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background-color: #f4f5f7; color: #1c1c1c; }
+    a { text-decoration: none; }
+
+    /* Navbar */
+    .navbar { background-color: #1E3A8A; }
+    .navbar-brand, .nav-link { color: #fff !important; font-weight: 500; }
+    .nav-link:hover, .nav-link.active { color: #D4AF37 !important; }
+    .navbar-brand div { font-size: 0.85rem; color: #D4AF37; line-height: 1; }
+
+    /* Hero */
+    header { 
+      background: linear-gradient(135deg, #1E3A8A 0%, #3B5998 100%);
+      color: #fff;
+      padding: 120px 20px 80px 20px;
+      text-align: center;
+    }
+    .hero-title { font-weight: 700; font-size: 3rem; margin-bottom: 20px; }
+    .hero-subtitle { font-weight: 400; font-size: 1.25rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-light { background-color: #ffffff; }
+    .section-dark { background-color: #e6e8eb; }
+    section h2 { font-weight: 700; color: #1E3A8A; margin-bottom: 20px; }
+    section p { line-height: 1.7; margin-bottom: 1.2rem; font-size: 1.05rem; }
+
+    /* About layout */
+    .about-row { align-items: center; gap: 30px; }
+    .about-img { width: 100%; border-radius: 10px; }
+
+    /* Footer */
+    footer { background-color: #1E3A8A; color: #fff; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+    footer a { color: #D4AF37; }
+    footer a:hover { color: #fff; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.2rem; }
+      .hero-subtitle { font-size: 1rem; }
+      section { padding: 50px 15px; }
+    }
+  </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand d-flex flex-column" href="index.html">
+      <span>RXCELSIOR SOLUTIONS</span>
       <div>Independent Pharmacy Oversight</div>
-      RXCELSIOR SOLUTIONS
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -31,8 +74,8 @@
   </div>
 </nav>
 
-<!-- Hero / Intro -->
-<header class="py-5" style="background-color:#1E3A8A; color:#fff; text-align:center;">
+<!-- Hero -->
+<header>
   <div class="container">
     <h1 class="hero-title">About RXCELSIOR SOLUTIONS</h1>
     <p class="hero-subtitle">
@@ -41,14 +84,39 @@
   </div>
 </header>
 
-<main class="container py-5">
-  <h2>Our Mission</h2>
-  <p>We provide Ontario pharmacy owners with actionable oversight and structured solutions to maintain safe, compliant, and efficient operations.</p>
-  
-  <h2>Our Approach</h2>
-  <p>We operate with a professional team approach, ensuring consistency, accountability, and practical guidance across all pharmacy operations. Our focus is on compliance, workflow optimization, and achieving excellence in patient care.</p>
-</main>
+<!-- Mission Section -->
+<section class="section-light">
+  <div class="container">
+    <div class="row about-row">
+      <div class="col-md-6">
+        <h2>Our Mission</h2>
+        <p>We provide Ontario pharmacy owners with actionable oversight and structured solutions to maintain safe, compliant, and efficient operations.</p>
+        <p>Our goal is to empower pharmacies with the knowledge, structure, and support needed to succeed consistently in a highly regulated environment.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="placeholder-mission.jpg" alt="Mission Image" class="about-img">
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Approach Section -->
+<section class="section-dark">
+  <div class="container">
+    <div class="row about-row">
+      <div class="col-md-6 order-md-2">
+        <h2>Our Approach</h2>
+        <p>We operate with a professional team approach, ensuring consistency, accountability, and practical guidance across all pharmacy operations.</p>
+        <p>Our focus is on compliance, workflow optimization, and achieving excellence in patient care, with actionable recommendations that are easy to implement.</p>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <img src="placeholder-approach.jpg" alt="Approach Image" class="about-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
   &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are confidential. Documentation may be securely deleted upon request.
 </footer>

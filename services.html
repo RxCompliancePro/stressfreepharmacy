@@ -39,13 +39,13 @@
       justify-content: center;
       padding: 0 20px;
     }
-    header::before {
-      content:'';
-      position:absolute;
-      top:0; left:0; right:0; bottom:0;
-      background: rgba(0,0,0,0.35); /* fade overlay */
-      z-index:1;
-    }
+header::before {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.55); /* darker overlay */
+  z-index:1;
+}
     header > .container { position: relative; z-index:2; }
     header .hero-title { font-weight:700; font-size:2.5rem; margin-bottom:20px; color:#fff; }
     header .hero-subtitle { font-size:1.2rem; max-width:700px; margin:0 auto; line-height:1.6; margin-top:10px; color:#fff; }

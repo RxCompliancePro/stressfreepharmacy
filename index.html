@@ -4,14 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RXCELSIOR SOLUTIONS</title>
-  <meta name="description" content="RXCELSIOR SOLUTIONS provides comprehensive pharmacy oversight, OCP and NAPRA compliance, and operational excellence services.">
-  <meta name="keywords" content="pharmacy compliance, OCP, NAPRA, pharmacy operations, workflow optimization">
-  <link rel="icon" href="images/favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    html { scroll-behavior: smooth; }
-
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #E6F0FA;
@@ -19,26 +14,14 @@
     }
 
     /* Navbar */
-    .navbar {
-      background-color: #1D3A6D;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
-    .navbar-brand span:first-child {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.8rem;
-    }
-    .navbar-brand span:last-child {
-      color: #D4AF37;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
+    .navbar { background-color: #1D3A6D; padding-top: 20px; padding-bottom: 20px; }
+    .navbar-brand span:first-child { color: #fff; font-weight: 700; font-size: 1.8rem; }
+    .navbar-brand span:last-child { color: #D4AF37; font-size: 1.1rem; font-weight: 600; }
     .nav-link { color: #fff !important; font-weight: 500; }
     .nav-link.active, .nav-link:hover { color: #D4AF37 !important; }
 
-    /* Hero Section */
-    header {
+    /* Hero */
+    header { 
       background: url('images/2people.png') center center / cover no-repeat;
       color: #fff;
       text-align: center;
@@ -47,7 +30,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0;
     }
     header::before {
       content: '';
@@ -56,52 +38,27 @@
       background-color: rgba(0,0,0,0.35);
       z-index:1;
     }
-    header > .container {
-      position: relative;
-      z-index:2;
-    }
+    header > .container { position: relative; z-index:2; }
     header .hero-title { font-weight:700; font-size:2.5rem; margin-bottom:20px; color:#fff; }
     header .hero-subtitle { font-size:1.2rem; max-width:700px; margin:0 auto; line-height:1.6; margin-top:10px; color:#fff; }
 
     /* CTA Button */
-    .btn-warning {
-      background-color: #D4AF37;
-      border: none;
-      font-weight: 500;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-    }
+    .btn-warning { background-color: #D4AF37; border: none; font-weight: 500; border-radius: 6px; transition: all 0.3s ease; }
     .btn-warning:hover { background-color: #b8962e; }
 
-    /* Main Cards Section */
+    /* Cards */
     main.container { padding-top:50px; padding-bottom:50px; background-color:#E6F0FA; }
-    .card-container {
-      background-color:#fff;
-      padding:35px;
-      border-radius:12px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.06);
-      transition: all 0.3s ease;
-      height:100%;
-      min-height:300px;
-    }
+    .card-container { background-color:#fff; padding:35px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.06); transition: all 0.3s ease; height:100%; min-height:300px; text-decoration:none; color: inherit; display:block; }
     .card-container:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
     .card-label { font-weight:700; color:#D4AF37; text-transform:uppercase; font-size:0.85rem; letter-spacing:1px; }
     h5 { font-weight:600; margin-top:10px; margin-bottom:15px; }
     p { color:#333; line-height:1.6; }
 
     /* Footer */
-    footer { 
-      background-color:#1D3A6D; 
-      color:#fff; 
-      text-align:center; 
-      padding:25px 0; 
-      margin-top:50px; 
-      font-size:0.9rem; 
-    }
+    footer { background-color:#1D3A6D; color:#fff; text-align:center; padding:25px 0; margin-top:50px; font-size:0.9rem; }
     footer a { color:#D4AF37; text-decoration:none; margin:0 5px; }
     footer a:hover { text-decoration:underline; }
 
-    /* Responsive */
     @media (max-width:768px) {
       header .hero-title { font-size:2rem; }
       header .hero-subtitle { font-size:1rem; }
@@ -135,7 +92,7 @@
 </nav>
 
 <!-- Hero -->
-<header role="img" aria-label="Two professionals consulting in a pharmacy setting">
+<header>
   <div class="container">
     <h1 class="hero-title">Inspection-Ready Compliance & Pharmacy Practice Excellence</h1>
     <p class="hero-subtitle">
@@ -148,43 +105,53 @@
 <!-- Main Content Cards -->
 <main class="container py-5">
   <div class="row g-4 justify-content-center text-center">
+
     <div class="col-md-6 col-lg-4">
-      <div class="card-container">
+      <a href="full-review.html" class="card-container">
         <span class="card-label">Full Review</span>
         <h5>Operations & Regulatory Review</h5>
         <p>A comprehensive evaluation of all workflows to identify inefficiencies and ensure all processes align with OCP regulations.</p>
-      </div>
+      </a>
     </div>
+
     <div class="col-md-6 col-lg-4">
-      <div class="card-container">
+      <a href="ongoing-compliance.html" class="card-container">
         <span class="card-label">Protection</span>
         <h5>Ongoing Compliance Shield</h5>
         <p>Quarterly or semi-annual reviews to prevent operational drift and maintain consistent regulatory readiness.</p>
-      </div>
+      </a>
     </div>
+
     <div class="col-md-6 col-lg-4">
-      <div class="card-container">
+      <a href="emergency-prep.html" class="card-container">
         <span class="card-label">Urgent</span>
         <h5>Emergency OCP Prep</h5>
         <p>Fast, focused evaluation to identify risks and implement fixes before your scheduled inspection.</p>
-      </div>
+      </a>
     </div>
+
     <div class="col-md-6 col-lg-4">
-      <div class="card-container">
+      <a href="inspection-support.html" class="card-container">
         <span class="card-label">Recovery</span>
         <h5>Inspection Support</h5>
         <p>Assistance with implementing required changes and restoring compliance after deficiencies are identified.</p>
-      </div>
+      </a>
     </div>
+
     <div class="col-md-6 col-lg-4">
-      <div class="card-container">
+      <a href="napra-compounding.html" class="card-container">
         <span class="card-label">Specialized</span>
         <h5>NAPRA Compounding Check</h5>
         <p>Targeted review of non-sterile compounding practices to ensure safety, consistency, and NAPRA compliance.</p>
-      </div>
+      </a>
     </div>
+
     <div class="col-md-6 col-lg-4">
-      <div class="card-container">
+      <a href="expert-advice.html" class="card-container">
         <span class="card-label">Custom</span>
         <h5>Expert Advice</h5>
-        <p>Support
+        <p>Support for SOPs, workflow redesign, staff training, and other implementation-focused pharmacy projects.</p>
+      </a>
+    </div>
+
+  </

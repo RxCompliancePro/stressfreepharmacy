@@ -3,120 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Operations & Regulatory Alignment - RXCELSIOR SOLUTIONS</title>
-
+  <title>Full Review - RXCELSIOR SOLUTIONS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    body { 
-      font-family: 'Roboto', sans-serif; 
-      background-color:#E6F0FA; 
-      padding-top:56px; 
+    body { font-family: 'Inter', sans-serif; background-color: #E6F0FA; padding-top: 56px; }
+    .navbar { background-color: #1D3A6D; padding: 20px 0; }
+    .navbar-brand span:first-child { color: #fff; font-weight: 700; font-size: 1.8rem; }
+    .navbar-brand span:last-child { color: #D4AF37; font-weight: 600; font-size: 1.1rem; }
+    .nav-link { color: #fff !important; font-weight: 500; }
+    .nav-link.active, .nav-link:hover { color: #D4AF37 !important; }
+    header {
+      background: url('images/Shield.png') center / cover no-repeat;
+      position: relative; color: #fff; text-align: center;
+      min-height: 60vh; display: flex; align-items: center;
     }
-
-    .navbar { background-color: #1D3A6D; padding:20px 0; }
-
-    .navbar-brand span:first-child { color:#fff; font-weight:700; font-size:1.6rem; }
-    .navbar-brand span:last-child { color:#D4AF37; font-weight:600; font-size:1rem; }
-
-    .nav-link { color:#fff !important; }
-    .nav-link:hover { color:#D4AF37 !important; }
-
-    .hero {
-      background: url('images/pharmacy-hero.jpg') center/cover no-repeat;
-      height: 300px;
-      position: relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:white;
-      text-align:center;
-    }
-
-    .hero::before {
-      content:"";
-      position:absolute;
-      top:0; left:0; right:0; bottom:0;
-      background:rgba(0,0,0,0.5);
-    }
-
-    .hero h1 {
-      position:relative;
-      z-index:2;
-      font-weight:700;
-    }
-
-    .content-box {
-      background:white;
-      padding:40px;
-      border-radius:12px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.05);
-    }
-
-    footer {
-      background:#1D3A6D;
-      color:white;
-      text-align:center;
-      padding:25px;
-      margin-top:50px;
-    }
+    header::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    header .container { position: relative; z-index: 2; }
+    .hero-title { font-weight: 700; font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.2rem; max-width: 800px; margin: 20px auto; line-height: 1.6; }
+    .btn-warning { background-color: #D4AF37; border: none; font-weight: 600; padding: 12px 30px; }
+    .btn-warning:hover { background-color: #b8962e; }
+    .content-section { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-top: -50px; position: relative; z-index: 3; }
+    .service-list { list-style: none; padding-left: 0; }
+    .service-list li { margin-bottom: 18px; font-size: 1.05rem; line-height: 1.6; display: flex; align-items: flex-start; }
+    .service-list li::before { content: "•"; color: #D4AF37; font-weight: bold; margin-right: 12px; font-size: 1.5rem; line-height: 1; }
+    footer { background: #1D3A6D; color: white; text-align: center; padding: 25px 0; margin-top: 50px; font-size: 0.9rem; }
+    footer a { color: #D4AF37; text-decoration: none; margin: 0 5px; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span>RXCELSIOR SOLUTIONS</span>
-      <span>Comprehensive Pharmacy Oversight</span>
+      <span>Comprehensive Pharmacy Oversight & Compliance</span>
     </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Operations & Regulatory Alignment</h1>
-</section>
+<header>
+  <div class="container">
+    <h1 class="hero-title">Operations & Regulatory Alignment</h1>
+    <p class="hero-subtitle">Our Full Review is an all-encompassing evaluation designed to ensure your pharmacy is 100% inspection-ready and operating at peak clinical excellence.</p>
+    <a href="contact.html" class="btn btn-warning mt-3">Contact Us</a>
+  </div>
+</header>
 
-<!-- CONTENT -->
-<main class="container my-5">
-  <div class="content-box">
-
-    <h2>Overview</h2>
-    <p>
-      This comprehensive service evaluates all operational and regulatory components of your pharmacy, 
-      ensuring alignment with OCP and NAPRA standards while identifying risks and inefficiencies.
-    </p>
-
-    <h3 class="mt-4">What We Assess</h3>
-    <ul>
-      <li>Standard Operating Procedures (SOPs)</li>
-      <li>Documentation and record-keeping</li>
-      <li>Workflow and staff responsibilities</li>
-      <li>Inventory management practices</li>
-      <li>Compounding compliance (if applicable)</li>
+<main class="container mb-5">
+  <div class="content-section">
+    <h3 class="mb-4">Comprehensive Service Scope</h3>
+    <ul class="service-list">
+      <li><strong>Full 15-Section Pharmacy Audit:</strong> A deep-dive assessment covering all functional domains including SOPs, narcotics management, and clinical workflows.</li>
+      <li><strong>12-Section NAPRA Compounding Review:</strong> Detailed evaluation of non-sterile compounding practices, logs, and environments to ensure safety and compliance.</li>
+      <li><strong>Metric-Based Compliance Scoring:</strong> We apply "Master Scores" to each section, providing a quantitative baseline of your regulatory standing.</li>
+      <li><strong>Visual Performance Reporting:</strong> Findings are summarized using automated charts and gauges for clear, high-level oversight.</li>
+      <li><strong>Prioritized Gap Analysis:</strong> Identification of critical risks with a ranked list of implementation priorities to resolve deficiencies quickly.</li>
+      <li><strong>SOP & Template Provision:</strong> We provide the actual written operating procedures and clinical templates needed to satisfy OCP and NAPRA requirements.</li>
+      <li><strong>Inspection Readiness:</strong> Direct alignment with official standards to remove the stress and uncertainty from upcoming College assessments.</li>
+      <li><strong>Practice Optimization:</strong> Implementation of efficient clinical logic to reduce errors and drive pharmacy practice excellence.</li>
     </ul>
-
-    <h3 class="mt-4">Outcome</h3>
-    <p>
-      You receive a structured report outlining gaps, risks, and prioritized recommendations, 
-      with optional implementation support.
-    </p>
-
-    <div class="mt-4">
-      <a href="contact.html" class="btn btn-primary btn-lg">Request This Service</a>
-    </div>
-
   </div>
 </main>
 
 <footer>
-  © 2026 RXCELSIOR SOLUTIONS
+  &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are strictly confidential.<br>
+  <small>
+    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="terms.html">Terms of Engagement</a>
+  </small>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -7,16 +7,16 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- CONSISTENT PREMIUM FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: 'Inter', sans-serif;
       background-color: #E6F0FA;
       color: #1c1c1c;
-      padding-top: 56px;
-      font-size: 16.5px;
+      padding-top: 70px;
+      font-size: 17px;
+      line-height: 1.75;
     }
 
     /* NAVBAR */
@@ -28,7 +28,7 @@
     .navbar-brand span:first-child {
       color: #fff;
       font-weight: 700;
-      font-size: 1.8rem;
+      font-size: 1.75rem;
       font-family: 'Playfair Display', serif;
     }
 
@@ -53,11 +53,11 @@
       position: relative;
       color: #fff;
       text-align: center;
-      min-height: 72vh;
+      min-height: 75vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 20px;
+      padding: 110px 20px 90px;
       background: url('images/Pharmacy audit with medication bottles.png') center / cover no-repeat;
     }
 
@@ -65,58 +65,27 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.48);
+      background: rgba(0,0,0,0.50);
     }
 
     header .container {
       position: relative;
       z-index: 2;
-      padding-top: 60px;
-      padding-bottom: 40px;
+      max-width: 900px;
     }
 
     .hero-title {
       font-weight: 700;
-      font-size: 2.6rem;
+      font-size: 2.85rem;
       font-family: 'Playfair Display', serif;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       line-height: 1.2;
     }
 
     .hero-subtitle {
-      font-size: 1.15rem;
-      max-width: 820px;
-      margin: 0 auto;
-      line-height: 1.75;
-      opacity: 0.95;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 85px 0;
-    }
-
-    section h2 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      color: #1D3A6D;
-      margin-bottom: 22px;
-      font-size: 1.9rem;
-    }
-
-    section p {
-      font-size: 1.05rem;
+      font-size: 1.3rem;
       line-height: 1.8;
-      color: #2b2b2b;
-      margin-bottom: 1.25rem;
-    }
-
-    .section-light {
-      background-color: #ffffff;
-    }
-
-    .section-dark {
-      background-color: #E6F0FA;
+      opacity: 0.95;
     }
 
     /* BUTTON */
@@ -125,11 +94,39 @@
       border: none;
       font-weight: 700;
       padding: 12px 28px;
-      letter-spacing: 0.2px;
+      margin-top: 10px;
     }
 
     .btn-warning:hover {
       background-color: #b8962e;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 95px 0;
+    }
+
+    section h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #1D3A6D;
+      margin-bottom: 22px;
+      font-size: 2rem;
+    }
+
+    section p {
+      font-size: 1.12rem;
+      line-height: 1.85;
+      color: #2a2a2a;
+      margin-bottom: 1.3rem;
+    }
+
+    .section-light {
+      background-color: #ffffff;
+    }
+
+    .section-dark {
+      background-color: #E6F0FA;
     }
 
     /* FOOTER */
@@ -143,20 +140,21 @@
     }
 
     footer a {
-      color: #D4AF37;
+      color: #D4AF37 !important;
       text-decoration: none;
-      margin: 0 5px;
+      margin: 0 6px;
+      font-weight: 500;
     }
 
     footer a:hover {
-      color: #fff;
+      color: #fff !important;
     }
 
     /* MOBILE */
     @media (max-width:768px) {
-      .hero-title { font-size: 2rem; }
-      .hero-subtitle { font-size: 1.05rem; }
-      section { padding: 60px 15px; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-subtitle { font-size: 1.1rem; }
+      section { padding: 65px 15px; }
     }
   </style>
 </head>
@@ -193,12 +191,10 @@
 
     <p class="hero-subtitle">
       An independent pharmacy compliance and operational advisory firm focused on structured oversight,
-      regulatory risk mitigation, and implementation-driven practice improvement systems.
+      regulatory risk mitigation, and implementation-driven systems designed for inspection-ready performance.
     </p>
 
-    <a href="contact.html" class="btn btn-warning mt-4">
-      Start a Conversation
-    </a>
+    <a href="contact.html" class="btn btn-warning">Start a Conversation</a>
   </div>
 </header>
 
@@ -211,13 +207,13 @@
         <h2>Our Mandate</h2>
 
         <p>
-          RXCELSIOR SOLUTIONS provides structured, independent oversight designed to strengthen pharmacy compliance
-          with OCP and NAPRA standards while improving operational consistency across practice environments.
+          RXCELSIOR SOLUTIONS provides independent, structured oversight designed to strengthen compliance
+          with OCP and NAPRA standards while improving operational consistency across pharmacy environments.
         </p>
 
         <p>
-          Our focus is on identifying regulatory and operational risk and translating expectations into
-          practical, implementable systems that support sustained inspection readiness.
+          We translate regulatory expectations into practical operational systems that reduce risk,
+          improve accountability, and support sustained inspection readiness.
         </p>
 
       </div>
@@ -234,17 +230,17 @@
         <h2>Our Approach</h2>
 
         <p>
-          Our methodology combines structured evaluation, gap analysis, and direct implementation support.
-          We do not stop at identifying deficiencies — we build the systems required to resolve them effectively.
+          Our methodology combines structured evaluation, gap analysis, and implementation support.
+          We do not stop at identifying deficiencies — we build the systems required to resolve them.
         </p>
 
         <p>
-          This includes SOP design, workflow engineering, documentation systems, staff training frameworks,
+          This includes SOP design, workflow engineering, documentation frameworks, staff training systems,
           and quality improvement structures tailored to real-world pharmacy operations.
         </p>
 
         <p>
-          The goal is not temporary compliance — but stable, repeatable operational control.
+          The objective is not temporary compliance — but stable, repeatable operational control.
         </p>
 
       </div>

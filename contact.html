@@ -8,183 +8,25 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
+<!-- GLOBAL STYLE SYSTEM -->
+<link rel="stylesheet" href="styles.css">
 
-/* ================= BASE ================= */
-html { font-size: 18px; }
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #E6F0FA;
-  color: #1c1c1c;
-  padding-top: 78px;
-  font-size: 1.08rem;
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* ================= NAVBAR (MATCH INDEX) ================= */
-.navbar {
-  background-color: #1D3A6D;
-  padding: 18px 0;
-}
-
-.navbar-brand span:first-child {
-  color: #fff;
-  font-weight: 800;
-  font-size: 1.85rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.navbar-brand span:last-child {
-  color: #D4AF37;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.nav-link {
-  color: #fff !important;
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: #D4AF37 !important;
-}
-
-/* ================= HERO (MATCH INDEX STRUCTURE) ================= */
-header {
-  background: url('images/Consultant3.PNG') center / cover no-repeat;
-  color: #fff;
-  min-height: calc(100vh - 80px);
-  position: relative;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 110px 20px 80px;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-}
-
-header .container {
-  position: relative;
-  z-index: 2;
-  max-width: 950px;
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.05rem;
-  font-weight: 700;
-  line-height: 1.15;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  margin-top: 18px;
-  line-height: 1.75;
-  opacity: 0.95;
-}
-
-/* ================= BUTTON (MATCH INDEX) ================= */
-.btn-primary-custom {
-  background-color: #D4AF37;
-  border: none;
-  color: #1c1c1c;
-  font-weight: 700;
-  padding: 12px 28px;
-  border-radius: 6px;
-}
-
-.btn-primary-custom:hover {
-  background-color: #b8962e;
-  color: #1c1c1c;
-}
-
-/* ================= FORM ================= */
-main {
-  max-width: 780px;
-  margin: 0 auto;
-}
-
-form {
-  background: #fff;
-  padding: 50px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-  margin-top: -60px;
-  position: relative;
-  z-index: 3;
-}
-
-form h2 {
-  font-family: 'Playfair Display', serif;
-  color: #1D3A6D;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2rem;
-}
-
-label {
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.form-control {
-  padding: 12px;
-  font-size: 1rem;
-}
-
-/* EMAIL LINE */
-.email-line {
-  font-size: 1.05rem;
-  margin-top: 18px;
-  text-align: center;
-  color: #2b2b2b;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background-color:#1D3A6D;
-  color:#fff;
-  text-align:center;
-  padding:30px 0;
-  font-size:0.95rem;
-  margin-top: 60px;
-}
-
-footer a {
-  color:#D4AF37;
-  text-decoration:none;
-  margin:0 6px;
-  font-weight:500;
-}
-
-footer a:hover {
-  color:#fff;
-}
-
-</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (GLOBAL CONTROLLED) -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
+
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span>RXCELSIOR SOLUTIONS</span>
       <span>Pharmacy Compliance & Operational Excellence</span>
     </a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu"></button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav">
@@ -194,55 +36,66 @@ footer a:hover {
         <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
       </ul>
     </div>
+
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO (MATCH INDEX STRUCTURE) -->
 <header>
   <div class="container">
-    <h1 class="hero-title">External Pharmacy Oversight & Compliance Support</h1>
+
+    <h1 class="hero-title">
+      External Pharmacy Oversight & Compliance Support
+    </h1>
 
     <p class="hero-subtitle">
       Structured pharmacy assessments focused on regulatory compliance, workflow integrity, and compounding standards.
       We deliver implementation-ready solutions for sustained operational control.
     </p>
+
   </div>
 </header>
 
 <!-- FORM -->
-<main>
+<main class="container py-5">
 
-  <form action="https://formspree.io/f/xykbqkzy" method="POST">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
 
-    <h2>Start a Conversation</h2>
+      <form action="https://formspree.io/f/xykbqkzy" method="POST">
 
-    <input type="hidden" name="_subject" value="New RXCELSIOR Inquiry">
+        <h2>Start a Conversation</h2>
 
-    <div class="mb-3">
-      <label>Name</label>
-      <input type="text" class="form-control" name="name" required>
+        <input type="hidden" name="_subject" value="New RXCELSIOR Inquiry">
+
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-control" name="name" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" name="email" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" name="message" rows="5" required></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-warning">
+            Send Message
+          </button>
+        </div>
+
+      </form>
+
+      <div class="email-line text-center mt-4">
+        Or email directly: <strong>contact_stressfreepharmacy@proton.me</strong>
+      </div>
+
     </div>
-
-    <div class="mb-3">
-      <label>Email</label>
-      <input type="email" class="form-control" name="email" required>
-    </div>
-
-    <div class="mb-3">
-      <label>Message</label>
-      <textarea class="form-control" name="message" rows="5" required></textarea>
-    </div>
-
-    <div class="text-center">
-      <button type="submit" class="btn btn-primary-custom">
-        Send Message
-      </button>
-    </div>
-
-  </form>
-
-  <div class="email-line">
-    Or email directly: <strong>contact_stressfreepharmacy@proton.me</strong>
   </div>
 
 </main>
@@ -257,5 +110,6 @@ footer a:hover {
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

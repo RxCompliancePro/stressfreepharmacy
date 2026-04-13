@@ -8,143 +8,25 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
+<!-- GLOBAL STYLE SYSTEM (CRITICAL) -->
+<link rel="stylesheet" href="styles.css">
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #E6F0FA;
-  color: #1c1c1c;
-  padding-top: 72px;
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
-/* NAVBAR (MATCH INDEX) */
-.navbar {
-  background-color: #1D3A6D;
-  padding: 18px 0;
-}
-
-.navbar-brand span:first-child {
-  color: #fff;
-  font-weight: 800;
-  font-size: 1.9rem;
-  font-family: 'Inter', sans-serif;
-}
-
-.navbar-brand span:last-child {
-  color: #D4AF37;
-  font-size: 1.05rem;
-  font-weight: 600;
-}
-
-.nav-link {
-  color: #fff !important;
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: #D4AF37 !important;
-}
-
-/* HERO */
-header {
-  position: relative;
-  color: #fff;
-  text-align: center;
-  min-height: 75vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 110px 20px 90px;
-  background: url('images/Pharmacy audit with medication bottles.png') center / cover no-repeat;
-}
-
-header::before {
-  content:'';
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.50);
-}
-
-header .container {
-  position:relative;
-  z-index:2;
-  max-width:900px;
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.9rem;
-  font-weight: 700;
-}
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  line-height: 1.75;
-}
-
-/* SECTIONS */
-section {
-  padding: 90px 0;
-}
-
-section h2 {
-  font-family: 'Playfair Display', serif;
-  color: #1D3A6D;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-section p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-/* BUTTON (MATCH INDEX) */
-.btn-warning {
-  background-color: #D4AF37;
-  border: none;
-  font-weight: 700;
-  padding: 12px 28px;
-}
-
-.btn-warning:hover {
-  background-color: #b8962e;
-}
-
-/* FOOTER */
-footer {
-  background-color:#1D3A6D;
-  color:#fff;
-  text-align:center;
-  padding:30px 0;
-  font-size:0.9rem;
-}
-
-footer a {
-  color:#D4AF37;
-}
-
-footer a:hover {
-  color:#fff;
-}
-
-</style>
 </head>
 
 <body>
 
+<!-- NAVBAR (NOW FULLY GLOBAL) -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
+
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span>RXCELSIOR SOLUTIONS</span>
       <span>Pharmacy Compliance & Operational Excellence</span>
     </a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu"></button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav">
@@ -154,48 +36,75 @@ footer a:hover {
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
+
   </div>
 </nav>
 
+<!-- HERO (MATCHES INDEX + SERVICES SYSTEM) -->
 <header>
   <div class="container">
-    <h1 class="hero-title">About RXCELSIOR SOLUTIONS</h1>
+
+    <h1 class="hero-title">
+      About RXCELSIOR SOLUTIONS
+    </h1>
+
     <p class="hero-subtitle">
       Independent pharmacy compliance and operational advisory focused on structured oversight,
       regulatory alignment, and implementation-driven systems.
     </p>
-    <a href="contact.html" class="btn btn-warning mt-4">Start a Conversation</a>
+
+    <a href="contact.html" class="btn btn-warning mt-4">
+      Start a Conversation
+    </a>
+
   </div>
 </header>
 
-<section class="section-light">
+<!-- MANDATE -->
+<section>
   <div class="container col-lg-9">
+
     <h2>Our Mandate</h2>
+
     <p>
       RXCELSIOR SOLUTIONS provides structured oversight aligned with OCP and NAPRA standards.
     </p>
+
     <p>
       We translate regulatory expectations into practical systems that reduce risk and improve consistency.
     </p>
+
   </div>
 </section>
 
-<section class="section-dark">
+<!-- APPROACH -->
+<section>
   <div class="container col-lg-9">
+
     <h2>Our Approach</h2>
+
     <p>
       We combine evaluation, gap analysis, and implementation support to build operational control systems.
     </p>
+
+    <p>
+      Our focus is not only identifying gaps, but ensuring sustainable correction through workflow design,
+      SOP systems, and accountability structures.
+    </p>
+
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are confidential.<br>
   <small>
-    <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Engagement</a>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms of Engagement</a>
   </small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

@@ -1,193 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - RXCELSIOR SOLUTIONS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - RXCELSIOR SOLUTIONS</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- CONSISTENT BRAND FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #E6F0FA;
-      color: #1c1c1c;
-      padding-top: 72px;
-      font-size: 17px;
-      line-height: 1.65;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #E6F0FA;
+  color: #1c1c1c;
+  padding-top: 72px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
 
-    /* NAVBAR */
-    .navbar {
-      background-color: #1D3A6D;
-      padding-top: 20px;
-      padding-bottom: 20px;
-    }
+/* NAVBAR (MATCH INDEX EXACTLY) */
+.navbar {
+  background-color: #1D3A6D;
+  padding: 18px 0;
+}
 
-    .navbar-brand span:first-child {
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.75rem;
-      font-family: 'Playfair Display', serif;
-      letter-spacing: 0.2px;
-    }
+.navbar-brand span:first-child {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.9rem;
+  font-family: 'Inter', sans-serif;
+}
 
-    .navbar-brand span:last-child {
-      color: #D4AF37;
-      font-weight: 600;
-      font-size: 1.05rem;
-    }
+.navbar-brand span:last-child {
+  color: #D4AF37;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
 
-    .nav-link {
-      color: #fff !important;
-      font-weight: 500;
-    }
+.nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
 
-    .nav-link.active,
-    .nav-link:hover {
-      color: #D4AF37 !important;
-    }
+.nav-link:hover,
+.nav-link.active {
+  color: #D4AF37 !important;
+}
 
-    /* HERO */
-    header {
-      position: relative;
-      color: #fff;
-      text-align: center;
-      min-height: calc(100vh - 90px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 120px 20px 80px; /* FIX: spacing from navbar */
-      background: url('images/Consultant3.PNG') center center / cover no-repeat;
-    }
+/* HERO */
+header {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 20px 80px;
+  background: url('images/Consultant3.PNG') center / cover no-repeat;
+}
 
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.48);
-    }
+header::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.48);
+}
 
-    header .container {
-      position: relative;
-      z-index: 2;
-    }
+header .container {
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
 
-    .hero-title {
-      font-weight: 700;
-      font-size: 2.75rem;
-      font-family: 'Playfair Display', serif;
-      line-height: 1.2;
-      margin-bottom: 18px;
-    }
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
 
-    .hero-subtitle {
-      font-size: 1.25rem;
-      max-width: 820px;
-      margin: 0 auto;
-      line-height: 1.75;
-      opacity: 0.95;
-    }
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 18px;
+}
 
-    /* FORM */
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-    }
+/* FORM */
+main {
+  max-width: 780px;
+  margin: 0 auto;
+}
 
-    form {
-      background-color: #ffffff;
-      padding: 50px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-    }
+form {
+  background: #fff;
+  padding: 50px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
 
-    form h2 {
-      font-family: 'Playfair Display', serif;
-      color: #1D3A6D;
-      text-align: center;
-      margin-bottom: 32px;
-      font-size: 1.8rem;
-    }
+form h2 {
+  font-family: 'Playfair Display', serif;
+  color: #1D3A6D;
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    label {
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
 
-    .form-control {
-      padding: 12px;
-      font-size: 1rem;
-    }
+.form-control {
+  padding: 12px;
+}
 
-    /* BUTTON */
-    .btn-warning {
-      background-color: #D4AF37;
-      border: none;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
+/* BUTTON (MATCH INDEX) */
+.btn-warning {
+  background-color: #D4AF37;
+  border: none;
+  font-weight: 700;
+  padding: 12px 28px;
+}
 
-    .btn-warning:hover {
-      background-color: #b8962e;
-    }
+.btn-warning:hover {
+  background-color: #b8962e;
+}
 
-    /* EMAIL TEXT */
-    .email-line {
-      font-size: 1.05rem;
-      opacity: 0.9;
-    }
+/* EMAIL LINE */
+.email-line {
+  font-size: 1.05rem;
+  margin-top: 18px;
+}
 
-    /* FOOTER */
-    footer {
-      background-color: #1D3A6D;
-      color: #fff;
-      padding: 32px 0;
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.9rem;
-    }
+/* FOOTER */
+footer {
+  background-color:#1D3A6D;
+  color:#fff;
+  text-align:center;
+  padding:30px 0;
+  font-size:0.9rem;
+  margin-top: 60px;
+}
 
-    footer a {
-      color: #D4AF37 !important;
-      text-decoration: none;
-      margin: 0 6px;
-      font-weight: 500;
-    }
+footer a {
+  color:#D4AF37;
+}
 
-    footer a:hover {
-      color: #ffffff !important;
-    }
+footer a:hover {
+  color:#fff;
+}
 
-    /* MOBILE */
-    @media (max-width:768px) {
-      .hero-title { font-size: 2.1rem; }
-      .hero-subtitle { font-size: 1.05rem; }
-      form { padding: 30px; }
-      .navbar-brand span:first-child { font-size: 1.4rem; }
-      .navbar-brand span:last-child { font-size: 0.9rem; }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span>RXCELSIOR SOLUTIONS</span>
-      <span>Pharmacy Compliance & Inspection Readiness (OCP & NAPRA)</span>
+      <span>Pharmacy Compliance & Operational Excellence</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu"></button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -198,62 +176,51 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <header>
   <div class="container">
-
-    <h1 class="hero-title">
-      External Pharmacy Oversight & Compliance Support
-    </h1>
-
+    <h1 class="hero-title">External Pharmacy Oversight & Compliance Support</h1>
     <p class="hero-subtitle">
       Structured pharmacy assessments focused on regulatory compliance, workflow integrity, and compounding standards.
-      We identify gaps and deliver implementation-ready solutions for sustained operational control.
+      We deliver implementation-ready solutions for sustained operational control.
     </p>
-
   </div>
 </header>
 
-<!-- FORM -->
 <main class="py-5">
 
   <form action="https://formspree.io/f/xykbqkzy" method="POST">
 
     <h2>Start a Conversation</h2>
 
-    <input type="hidden" name="_subject" value="New RXCELSIOR Inquiry">
-
     <div class="mb-3">
-      <label class="form-label">Name</label>
+      <label>Name</label>
       <input type="text" class="form-control" name="name" required>
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Email</label>
+      <label>Email</label>
       <input type="email" class="form-control" name="email" required>
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Message</label>
+      <label>Message</label>
       <textarea class="form-control" name="message" rows="5" required></textarea>
     </div>
 
     <div class="text-center">
-      <button type="submit" class="btn btn-warning px-4 py-2">
+      <button type="submit" class="btn btn-warning">
         Send Message
       </button>
     </div>
 
   </form>
 
-  <!-- fallback -->
-  <div class="text-center mt-4 email-line">
+  <div class="text-center email-line">
     Or email directly: <strong>contact_stressfreepharmacy@proton.me</strong>
   </div>
 
 </main>
 
-<!-- FOOTER -->
 <footer>
   &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are confidential.<br>
   <small>

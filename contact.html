@@ -10,16 +10,20 @@
 
 <style>
 
+/* ================= BASE ================= */
+html { font-size: 18px; }
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #E6F0FA;
   color: #1c1c1c;
-  padding-top: 72px;
-  font-size: 1.05rem;
+  padding-top: 78px;
+  font-size: 1.08rem;
   line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* NAVBAR (MATCH INDEX EXACTLY) */
+/* ================= NAVBAR (MATCH INDEX) ================= */
 .navbar {
   background-color: #1D3A6D;
   padding: 18px 0;
@@ -28,14 +32,15 @@ body {
 .navbar-brand span:first-child {
   color: #fff;
   font-weight: 800;
-  font-size: 1.9rem;
+  font-size: 1.85rem;
   font-family: 'Inter', sans-serif;
 }
 
 .navbar-brand span:last-child {
   color: #D4AF37;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 600;
+  line-height: 1.2;
 }
 
 .nav-link {
@@ -49,44 +54,61 @@ body {
   color: #D4AF37 !important;
 }
 
-/* HERO */
+/* ================= HERO (MATCH INDEX STRUCTURE) ================= */
 header {
-  position: relative;
+  background: url('images/Consultant3.PNG') center / cover no-repeat;
   color: #fff;
-  text-align: center;
   min-height: calc(100vh - 80px);
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  text-align: center;
   padding: 110px 20px 80px;
-  background: url('images/Consultant3.PNG') center / cover no-repeat;
 }
 
 header::before {
-  content:'';
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.48);
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
 }
 
 header .container {
-  position:relative;
-  z-index:2;
-  max-width:900px;
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
 }
 
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
+  font-size: 3.05rem;
   font-weight: 700;
+  line-height: 1.15;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-top: 18px;
+  line-height: 1.75;
+  opacity: 0.95;
 }
 
-/* FORM */
+/* ================= BUTTON (MATCH INDEX) ================= */
+.btn-primary-custom {
+  background-color: #D4AF37;
+  border: none;
+  color: #1c1c1c;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 6px;
+}
+
+.btn-primary-custom:hover {
+  background-color: #b8962e;
+  color: #1c1c1c;
+}
+
+/* ================= FORM ================= */
 main {
   max-width: 780px;
   margin: 0 auto;
@@ -97,6 +119,9 @@ form {
   padding: 50px;
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+  margin-top: -60px;
+  position: relative;
+  z-index: 3;
 }
 
 form h2 {
@@ -104,6 +129,7 @@ form h2 {
   color: #1D3A6D;
   text-align: center;
   margin-bottom: 30px;
+  font-size: 2rem;
 }
 
 label {
@@ -113,38 +139,32 @@ label {
 
 .form-control {
   padding: 12px;
-}
-
-/* BUTTON (MATCH INDEX) */
-.btn-warning {
-  background-color: #D4AF37;
-  border: none;
-  font-weight: 700;
-  padding: 12px 28px;
-}
-
-.btn-warning:hover {
-  background-color: #b8962e;
+  font-size: 1rem;
 }
 
 /* EMAIL LINE */
 .email-line {
   font-size: 1.05rem;
   margin-top: 18px;
+  text-align: center;
+  color: #2b2b2b;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer {
   background-color:#1D3A6D;
   color:#fff;
   text-align:center;
   padding:30px 0;
-  font-size:0.9rem;
+  font-size:0.95rem;
   margin-top: 60px;
 }
 
 footer a {
   color:#D4AF37;
+  text-decoration:none;
+  margin:0 6px;
+  font-weight:500;
 }
 
 footer a:hover {
@@ -156,6 +176,7 @@ footer a:hover {
 
 <body>
 
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex flex-column" href="index.html">
@@ -176,9 +197,11 @@ footer a:hover {
   </div>
 </nav>
 
+<!-- HERO -->
 <header>
   <div class="container">
     <h1 class="hero-title">External Pharmacy Oversight & Compliance Support</h1>
+
     <p class="hero-subtitle">
       Structured pharmacy assessments focused on regulatory compliance, workflow integrity, and compounding standards.
       We deliver implementation-ready solutions for sustained operational control.
@@ -186,11 +209,14 @@ footer a:hover {
   </div>
 </header>
 
-<main class="py-5">
+<!-- FORM -->
+<main>
 
   <form action="https://formspree.io/f/xykbqkzy" method="POST">
 
     <h2>Start a Conversation</h2>
+
+    <input type="hidden" name="_subject" value="New RXCELSIOR Inquiry">
 
     <div class="mb-3">
       <label>Name</label>
@@ -208,19 +234,20 @@ footer a:hover {
     </div>
 
     <div class="text-center">
-      <button type="submit" class="btn btn-warning">
+      <button type="submit" class="btn btn-primary-custom">
         Send Message
       </button>
     </div>
 
   </form>
 
-  <div class="text-center email-line">
+  <div class="email-line">
     Or email directly: <strong>contact_stressfreepharmacy@proton.me</strong>
   </div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
   &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are confidential.<br>
   <small>

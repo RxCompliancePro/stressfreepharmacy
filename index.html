@@ -9,208 +9,9 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <style>
+  <!-- IMPORTANT: link your GLOBAL STYLE SHEET here -->
+  <link rel="stylesheet" href="styles.css">
 
-    html {
-      font-size: 18px;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #E6F0FA;
-      color: #1c1c1c;
-      padding-top: 78px;
-      font-size: 1.08rem;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    p {
-      font-size: 1.12rem;
-      line-height: 1.75;
-    }
-
-    /* ================= NAVBAR ================= */
-    .navbar {
-      background-color: #1D3A6D;
-      padding: 18px 0;
-    }
-
-    .navbar-brand span:first-child {
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.85rem;
-      font-family: 'Inter', sans-serif;
-      letter-spacing: 0.3px;
-    }
-
-    .navbar-brand span:last-child {
-      color: #D4AF37;
-      font-size: 1rem;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-
-    .nav-link {
-      color: #fff !important;
-      font-weight: 600;
-      font-size: 1.05rem;
-      padding: 8px 14px;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-      color: #D4AF37 !important;
-    }
-
-    /* ================= HERO ================= */
-    header {
-      background: url('images/DESK.png') center / cover no-repeat;
-      color: #fff;
-      min-height: calc(100vh - 80px);
-      position: relative;
-      display: flex;
-      align-items: center;
-      text-align: center;
-
-      padding-top: 120px;
-      padding-bottom: 80px;
-    }
-
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.42);
-    }
-
-    header .container {
-      position: relative;
-      z-index: 2;
-      max-width: 950px;
-    }
-
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.05rem;
-      font-weight: 700;
-      line-height: 1.15;
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      margin-top: 18px;
-      line-height: 1.75;
-      opacity: 0.95;
-    }
-
-    /* ================= BUTTON ================= */
-    .btn-primary-custom {
-      background-color: #D4AF37;
-      border: none;
-      color: #1c1c1c;
-      font-weight: 800;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    .btn-primary-custom:hover {
-      background-color: #b8962e;
-      color: #1c1c1c;
-    }
-
-    /* ================= SECTION ================= */
-    section {
-      padding: 95px 0;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #1D3A6D;
-      margin-bottom: 15px;
-    }
-
-    .section-subtext {
-      max-width: 750px;
-      margin: 0 auto 50px;
-      font-size: 1.15rem;
-      color: #333;
-    }
-
-    /* ================= PILLARS ================= */
-    .pillar {
-      background: #fff;
-      border-radius: 14px;
-      padding: 48px 34px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-      height: 100%;
-      transition: 0.25s ease;
-    }
-
-    .pillar:hover {
-      transform: translateY(-6px);
-    }
-
-    .pillar h5 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
-      margin-bottom: 14px;
-      color: #1D3A6D;
-    }
-
-    .pillar p {
-      font-size: 1.12rem;
-      line-height: 1.75;
-      color: #222;
-    }
-
-    .pillar small {
-      display: block;
-      margin-top: 14px;
-      font-size: 1rem;
-      color: #555;
-    }
-
-    /* ================= FOOTER ================= */
-    footer {
-      background-color:#1D3A6D;
-      color:#fff;
-      text-align:center;
-      padding:30px 0;
-      font-size:0.95rem;
-    }
-
-    footer a {
-      color:#D4AF37;
-      text-decoration:none;
-      margin:0 6px;
-      font-weight: 500;
-    }
-
-    /* ================= MOBILE ================= */
-    @media (max-width:768px) {
-      html { font-size: 17px; }
-
-      .hero-title { font-size: 2.2rem; }
-      .hero-subtitle { font-size: 1.05rem; }
-
-      section { padding: 65px 15px; }
-
-      .pillar { padding: 28px 22px; }
-
-      .navbar-brand span:first-child {
-        font-size: 1.4rem;
-      }
-
-      .navbar-brand span:last-child {
-        font-size: 0.9rem;
-      }
-    }
-
-  </style>
 </head>
 
 <body>
@@ -218,12 +19,13 @@
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
+
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span>RXCELSIOR SOLUTIONS</span>
       <span>Pharmacy Compliance & Operational Excellence</span>
     </a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -235,6 +37,7 @@
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
+
   </div>
 </nav>
 
@@ -250,7 +53,7 @@
       Structured oversight for community pharmacies focused on regulatory compliance, workflow integrity, and sustainable operational performance aligned with OCP and NAPRA standards.
     </p>
 
-    <a href="contact.html" class="btn btn-primary-custom mt-4">
+    <a href="contact.html" class="btn btn-warning mt-4">
       Start a Conversation
     </a>
 
@@ -269,7 +72,7 @@
   <div class="row g-4">
 
     <div class="col-md-4">
-      <div class="pillar">
+      <div class="card-container">
         <h5>Regulatory Alignment</h5>
         <p>Ensuring full alignment with OCP and NAPRA standards across all operational domains.</p>
         <small>Issues often remain hidden until inspection review.</small>
@@ -277,25 +80,25 @@
     </div>
 
     <div class="col-md-4">
-      <div class="pillar">
+      <div class="card-container">
         <h5>Operational Control</h5>
-        <p>Identifying workflow inefficiencies and process breakdowns impacting consistency.</p>
-        <small>Small deviations compound into systemic failures.</small>
+        <p>Identifying workflow inefficiencies and process breakdowns impacting consistency and accountability.</p>
+        <small>Small deviations compound into systemic failures over time.</small>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="pillar">
+      <div class="card-container">
         <h5>Compliance Sustainability</h5>
-        <p>Building systems that maintain long-term inspection readiness and discipline.</p>
-        <small>Without structure, compliance erodes over time.</small>
+        <p>Building systems that maintain long-term inspection readiness and operational discipline.</p>
+        <small>Without structure, compliance naturally erodes over time.</small>
       </div>
     </div>
 
   </div>
 
   <div class="mt-5">
-    <a href="services.html" class="btn btn-primary-custom">
+    <a href="services.html" class="btn btn-warning">
       View Services
     </a>
   </div>

@@ -1,187 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - RXCELSIOR SOLUTIONS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - RXCELSIOR SOLUTIONS</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <!-- Unified Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
 
-  <style>
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #E6F0FA;
+  color: #1c1c1c;
+  padding-top: 72px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
 
-    /* ================= BASE ================= */
-    html {
-      font-size: 18px;
-    }
+/* NAVBAR (MATCH INDEX) */
+.navbar {
+  background-color: #1D3A6D;
+  padding: 18px 0;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #E6F0FA;
-      color: #1c1c1c;
-      padding-top: 72px;
-      font-size: 1.05rem;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
-    }
+.navbar-brand span:first-child {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.9rem;
+  font-family: 'Inter', sans-serif;
+}
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.75;
-      color: #222;
-    }
+.navbar-brand span:last-child {
+  color: #D4AF37;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
 
-    /* ================= NAVBAR ================= */
-    .navbar {
-      background-color: #1D3A6D;
-      padding: 18px 0;
-    }
+.nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
 
-    .navbar-brand span:first-child {
-      color: #fff;
-      font-weight: 800;
-      font-size: 1.9rem;
-      font-family: 'Inter', sans-serif;
-      letter-spacing: 0.4px;
-    }
+.nav-link:hover,
+.nav-link.active {
+  color: #D4AF37 !important;
+}
 
-    .navbar-brand span:last-child {
-      color: #D4AF37;
-      font-size: 1.05rem;
-      font-weight: 600;
-    }
+/* HERO */
+header {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 20px 90px;
+  background: url('images/Pharmacy audit with medication bottles.png') center / cover no-repeat;
+}
 
-    .nav-link {
-      color: #fff !important;
-      font-weight: 600;
-      font-size: 1.05rem;
-      padding: 8px 14px;
-    }
+header::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.50);
+}
 
-    .nav-link:hover,
-    .nav-link.active {
-      color: #D4AF37 !important;
-    }
+header .container {
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
 
-    /* ================= HERO ================= */
-    header {
-      position: relative;
-      color: #fff;
-      text-align: center;
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.9rem;
+  font-weight: 700;
+}
 
-      padding-top: 110px;
-      padding-bottom: 80px;
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75;
+}
 
-      background: url('images/Pharmacy audit with medication bottles.png') center / cover no-repeat;
-    }
+/* SECTIONS */
+section {
+  padding: 90px 0;
+}
 
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.50);
-    }
+section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #1D3A6D;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-    header .container {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
-    }
+section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
 
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      font-size: 2.9rem;
-      line-height: 1.15;
-    }
+/* BUTTON (MATCH INDEX) */
+.btn-warning {
+  background-color: #D4AF37;
+  border: none;
+  font-weight: 700;
+  padding: 12px 28px;
+}
 
-    .hero-subtitle {
-      font-size: 1.25rem;
-      margin-top: 18px;
-      line-height: 1.8;
-      opacity: 0.95;
-    }
+.btn-warning:hover {
+  background-color: #b8962e;
+}
 
-    /* ================= BUTTON (UNIFIED) ================= */
-    .btn-primary-custom {
-      background-color: #D4AF37;
-      border: none;
-      color: #1c1c1c;
-      font-weight: 700;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-size: 1rem;
-      margin-top: 20px;
-    }
+/* FOOTER */
+footer {
+  background-color:#1D3A6D;
+  color:#fff;
+  text-align:center;
+  padding:30px 0;
+  font-size:0.9rem;
+}
 
-    .btn-primary-custom:hover {
-      background-color: #b8962e;
-      color: #1c1c1c;
-    }
+footer a {
+  color:#D4AF37;
+}
 
-    /* ================= SECTIONS ================= */
-    section {
-      padding: 90px 0;
-    }
+footer a:hover {
+  color:#fff;
+}
 
-    section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: #1D3A6D;
-      margin-bottom: 20px;
-    }
-
-    /* ================= FOOTER ================= */
-    footer {
-      background-color: #1D3A6D;
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    footer a {
-      color: #D4AF37;
-      text-decoration: none;
-      margin: 0 6px;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
-
-    /* ================= MOBILE ================= */
-    @media (max-width:768px) {
-
-      html { font-size: 17px; }
-
-      .hero-title { font-size: 2.2rem; }
-      .hero-subtitle { font-size: 1.05rem; }
-
-      section { padding: 65px 15px; }
-
-      .navbar-brand span:first-child {
-        font-size: 1.4rem;
-      }
-
-      .navbar-brand span:last-child {
-        font-size: 0.9rem;
-      }
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand d-flex flex-column" href="index.html">
@@ -189,11 +144,9 @@
       <span>Pharmacy Compliance & Operational Excellence</span>
     </a>
 
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu"></button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
@@ -204,86 +157,45 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <header>
   <div class="container">
-
-    <h1 class="hero-title">
-      About RXCELSIOR SOLUTIONS
-    </h1>
-
+    <h1 class="hero-title">About RXCELSIOR SOLUTIONS</h1>
     <p class="hero-subtitle">
-      An independent pharmacy compliance and operational advisory firm focused on structured oversight,
-      regulatory risk mitigation, and implementation-driven systems designed for inspection-ready performance.
+      Independent pharmacy compliance and operational advisory focused on structured oversight,
+      regulatory alignment, and implementation-driven systems.
     </p>
-
-    <a href="contact.html" class="btn btn-primary-custom">
-      Start a Conversation
-    </a>
-
+    <a href="contact.html" class="btn btn-warning mt-4">Start a Conversation</a>
   </div>
 </header>
 
-<!-- MANDATE -->
 <section class="section-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
-
-        <h2>Our Mandate</h2>
-
-        <p>
-          RXCELSIOR SOLUTIONS provides independent, structured oversight designed to strengthen compliance
-          with OCP and NAPRA standards while improving operational consistency across pharmacy environments.
-        </p>
-
-        <p>
-          We translate regulatory expectations into practical operational systems that reduce risk,
-          improve accountability, and support sustained inspection readiness.
-        </p>
-
-      </div>
-    </div>
+  <div class="container col-lg-9">
+    <h2>Our Mandate</h2>
+    <p>
+      RXCELSIOR SOLUTIONS provides structured oversight aligned with OCP and NAPRA standards.
+    </p>
+    <p>
+      We translate regulatory expectations into practical systems that reduce risk and improve consistency.
+    </p>
   </div>
 </section>
 
-<!-- APPROACH -->
-<section>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-9">
-
-        <h2>Our Approach</h2>
-
-        <p>
-          Our methodology combines structured evaluation, gap analysis, and implementation support.
-          We do not stop at identifying deficiencies — we build the systems required to resolve them.
-        </p>
-
-        <p>
-          This includes SOP design, workflow engineering, documentation frameworks, staff training systems,
-          and quality improvement structures tailored to real-world pharmacy operations.
-        </p>
-
-        <p>
-          The objective is not temporary compliance — but stable, repeatable operational control.
-        </p>
-
-      </div>
-    </div>
+<section class="section-dark">
+  <div class="container col-lg-9">
+    <h2>Our Approach</h2>
+    <p>
+      We combine evaluation, gap analysis, and implementation support to build operational control systems.
+    </p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are confidential.<br>
   <small>
-    <a href="privacy.html">Privacy Policy</a> |
-    <a href="terms.html">Terms of Engagement</a>
+    <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Engagement</a>
   </small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

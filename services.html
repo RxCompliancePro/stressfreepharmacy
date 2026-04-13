@@ -5,61 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services - RXCELSIOR SOLUTIONS</title>
 
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- CONSISTENT PREMIUM FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Unified Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    /* ================= BASE ================= */
+    html {
+      font-size: 18px;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       background-color: #E6F0FA;
-      padding-top: 56px;
-      font-size: 16.5px;
       color: #1c1c1c;
+      padding-top: 72px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* NAVBAR */
+    p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+
+    /* ================= NAVBAR ================= */
     .navbar {
       background-color: #1D3A6D;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding: 18px 0;
     }
 
     .navbar-brand span:first-child {
       color: #fff;
-      font-weight: 700;
-      font-size: 1.8rem;
-      font-family: 'Playfair Display', serif;
+      font-weight: 800;
+      font-size: 1.9rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.4px;
     }
 
     .navbar-brand span:last-child {
       color: #D4AF37;
-      font-weight: 600;
       font-size: 1.05rem;
+      font-weight: 600;
     }
 
     .nav-link {
       color: #fff !important;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 8px 14px;
     }
 
-    .nav-link.active,
-    .nav-link:hover {
+    .nav-link:hover,
+    .nav-link.active {
       color: #D4AF37 !important;
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
     header {
-      position: relative;
+      background: url('images/Shield.png') center / cover no-repeat;
       color: #fff;
-      text-align: center;
-      min-height: calc(100vh - 100px);
+      min-height: calc(100vh - 80px);
+      position: relative;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 20px;
-      background: url('images/Shield.png') center center / cover no-repeat;
+      align-items: center;
+      text-align: center;
+
+      padding-top: 110px;
+      padding-bottom: 70px;
     }
 
     header::before {
@@ -72,44 +89,66 @@
     header .container {
       position: relative;
       z-index: 2;
+      max-width: 950px;
     }
 
     .hero-title {
-      font-size: 2.7rem;
-      font-weight: 700;
       font-family: 'Playfair Display', serif;
-      line-height: 1.2;
-      color: #fff;
+      font-size: 3.0rem;
+      font-weight: 700;
+      line-height: 1.15;
     }
 
     .hero-subtitle {
-      font-size: 1.2rem;
-      max-width: 780px;
-      margin: 18px auto 0;
-      line-height: 1.7;
-      color: #fff;
+      font-size: 1.25rem;
+      margin-top: 18px;
+      line-height: 1.75;
       opacity: 0.95;
     }
 
-    /* BUTTON */
-    .btn-warning {
+    /* ================= BUTTON ================= */
+    .btn-primary-custom {
       background-color: #D4AF37;
       border: none;
-      font-weight: 600;
-      margin-top: 22px;
+      color: #1c1c1c;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 1rem;
     }
 
-    .btn-warning:hover {
+    .btn-primary-custom:hover {
       background-color: #b8962e;
+      color: #1c1c1c;
     }
 
-    /* SECTION CARDS */
+    /* ================= SECTION ================= */
+    section {
+      padding: 90px 0;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #1D3A6D;
+      margin-bottom: 15px;
+    }
+
+    .section-subtext {
+      max-width: 750px;
+      margin: 0 auto 50px;
+      font-size: 1.15rem;
+      color: #333;
+    }
+
+    /* ================= CARDS ================= */
     .card-container {
       background-color: #fff;
-      padding: 38px;
-      border-radius: 12px;
+      border-radius: 14px;
+      padding: 42px 32px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-      transition: all 0.25s ease;
+      transition: 0.25s ease;
       height: 100%;
       display: block;
       text-decoration: none;
@@ -122,51 +161,65 @@
     }
 
     .card-label {
-      font-weight: 700;
       color: #D4AF37;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
     }
 
     h5 {
       font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
       font-weight: 600;
-      margin-top: 10px;
       margin-bottom: 14px;
-      font-size: 1.25rem;
+      color: #1D3A6D;
     }
 
-    p {
-      font-size: 1.05rem;
+    .card-container p {
+      font-size: 1.1rem;
       line-height: 1.7;
-      color: #2a2a2a;
+      color: #222;
     }
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
     footer {
       background-color: #1D3A6D;
       color: #fff;
       text-align: center;
-      padding: 25px 0;
-      margin-top: 60px;
+      padding: 30px 0;
       font-size: 0.9rem;
     }
 
     footer a {
       color: #D4AF37;
       text-decoration: none;
-      margin: 0 5px;
+      margin: 0 6px;
     }
 
-    /* MOBILE */
+    /* ================= MOBILE ================= */
     @media (max-width:768px) {
-      .hero-title { font-size: 2.1rem; }
+
+      html { font-size: 17px; }
+
+      .hero-title { font-size: 2.2rem; }
       .hero-subtitle { font-size: 1.05rem; }
-      .card-container { padding: 26px; }
-      .navbar-brand span:first-child { font-size: 1.4rem; }
-      .navbar-brand span:last-child { font-size: 0.9rem; }
+
+      section { padding: 65px 15px; }
+
+      .card-container { padding: 28px 22px; }
+
+      .navbar-brand span:first-child {
+        font-size: 1.4rem;
+      }
+
+      .navbar-brand span:last-child {
+        font-size: 0.9rem;
+      }
     }
+
   </style>
 </head>
 
@@ -177,10 +230,10 @@
   <div class="container">
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span>RXCELSIOR SOLUTIONS</span>
-      <span>Comprehensive Pharmacy Oversight & Compliance</span>
+      <span>Pharmacy Compliance & Operational Excellence</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -201,10 +254,11 @@
     <h1 class="hero-title">Structured Oversight for Pharmacy Operations</h1>
 
     <p class="hero-subtitle">
-      Targeted evaluation and advisory support designed to identify regulatory risks, operational inefficiencies, and compliance gaps. Each engagement focuses on practical implementation aligned with OCP and NAPRA expectations.
+      Targeted evaluation and advisory support designed to identify regulatory risks, operational inefficiencies, and compliance gaps.
+      Each engagement focuses on practical implementation aligned with OCP and NAPRA expectations.
     </p>
 
-    <a href="contact.html" class="btn btn-warning px-4 py-2">
+    <a href="contact.html" class="btn btn-primary-custom mt-4">
       Start a Conversation
     </a>
   </div>
@@ -218,9 +272,7 @@
       <a href="service-full-review.html" class="card-container">
         <span class="card-label">Full Review</span>
         <h5>Operational & Regulatory Assessment</h5>
-        <p>
-          End-to-end review of workflows, SOPs, documentation, and compounding practices to identify regulatory exposure and operational gaps before inspection.
-        </p>
+        <p>End-to-end review of workflows, SOPs, documentation, and compounding practices to identify compliance risks before inspection.</p>
       </a>
     </div>
 
@@ -228,9 +280,7 @@
       <a href="service-ongoing-oversight.html" class="card-container">
         <span class="card-label">Ongoing Oversight</span>
         <h5>Compliance Monitoring Program</h5>
-        <p>
-          Structured recurring reviews designed to prevent process drift, reinforce accountability, and maintain continuous regulatory alignment.
-        </p>
+        <p>Recurring structured reviews to prevent process drift and maintain continuous regulatory alignment.</p>
       </a>
     </div>
 
@@ -238,9 +288,7 @@
       <a href="service-urgent-prep.html" class="card-container">
         <span class="card-label">Urgent</span>
         <h5>Inspection Readiness Preparation</h5>
-        <p>
-          Rapid assessment to identify high-risk gaps and implement corrective actions ahead of scheduled inspections.
-        </p>
+        <p>Rapid assessments to identify high-risk gaps and implement corrective actions before inspections.</p>
       </a>
     </div>
 
@@ -248,9 +296,7 @@
       <a href="service-recovery.html" class="card-container">
         <span class="card-label">Recovery</span>
         <h5>Post-Inspection Support</h5>
-        <p>
-          Structured guidance to address deficiencies, implement corrective actions, and restore full compliance after inspection findings.
-        </p>
+        <p>Structured remediation of deficiencies and restoration of full compliance after inspections.</p>
       </a>
     </div>
 
@@ -258,9 +304,7 @@
       <a href="service-specialized.html" class="card-container">
         <span class="card-label">Specialized</span>
         <h5>NAPRA Compounding Review</h5>
-        <p>
-          Detailed evaluation of non-sterile compounding processes to ensure safety, consistency, and full alignment with NAPRA standards.
-        </p>
+        <p>Detailed evaluation of non-sterile compounding processes for safety, consistency, and compliance.</p>
       </a>
     </div>
 
@@ -268,9 +312,7 @@
       <a href="service-custom.html" class="card-container">
         <span class="card-label">Custom Consulting</span>
         <h5>Workflow & SOP Optimization</h5>
-        <p>
-          Tailored consulting for SOP development, workflow design, and staff training focused on practical, sustainable implementation.
-        </p>
+        <p>Tailored SOP and workflow design focused on sustainable operational implementation.</p>
       </a>
     </div>
 
@@ -281,11 +323,12 @@
 <footer>
   &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are strictly confidential.<br>
   <small>
-    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms of Engagement</a>
   </small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

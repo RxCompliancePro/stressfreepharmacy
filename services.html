@@ -7,46 +7,50 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- UPDATED FONTS -->
+  <!-- CONSISTENT PREMIUM FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-color:#E6F0FA;
-      padding-top:56px;
+      background-color: #E6F0FA;
+      padding-top: 56px;
+      font-size: 16.5px;
+      color: #1c1c1c;
     }
 
+    /* NAVBAR */
     .navbar {
       background-color: #1D3A6D;
-      padding-top:20px;
-      padding-bottom:20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
     .navbar-brand span:first-child {
-      color:#fff;
-      font-weight:700;
-      font-size:1.8rem;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.8rem;
       font-family: 'Playfair Display', serif;
     }
 
     .navbar-brand span:last-child {
-      color:#D4AF37;
-      font-weight:600;
-      font-size:1.1rem;
+      color: #D4AF37;
+      font-weight: 600;
+      font-size: 1.05rem;
     }
 
     .nav-link {
       color: #fff !important;
-      font-weight:500;
+      font-weight: 500;
     }
 
-    .nav-link.active, .nav-link:hover {
+    .nav-link.active,
+    .nav-link:hover {
       color: #D4AF37 !important;
     }
 
+    /* HERO */
     header {
-      background: url('images/Shield.png') center center / cover no-repeat;
       position: relative;
       color: #fff;
       text-align: center;
@@ -55,108 +59,114 @@
       flex-direction: column;
       justify-content: center;
       padding: 0 20px;
+      background: url('images/Shield.png') center center / cover no-repeat;
     }
 
     header::before {
-      content:'';
-      position:absolute;
-      inset:0;
-      background: rgba(0,0,0,0.5);
-      z-index:1;
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
     }
 
-    header > .container {
+    header .container {
       position: relative;
-      z-index:2;
+      z-index: 2;
     }
 
     .hero-title {
-      font-weight:700;
-      font-size:2.6rem;
-      color:#fff;
+      font-size: 2.7rem;
+      font-weight: 700;
       font-family: 'Playfair Display', serif;
-      line-height:1.2;
+      line-height: 1.2;
+      color: #fff;
     }
 
     .hero-subtitle {
-      font-size:1.15rem;
-      max-width:750px;
-      margin:0 auto;
-      line-height:1.7;
+      font-size: 1.2rem;
+      max-width: 780px;
+      margin: 18px auto 0;
+      line-height: 1.7;
+      color: #fff;
+      opacity: 0.95;
     }
 
+    /* BUTTON */
     .btn-warning {
-      background-color:#D4AF37;
-      border:none;
+      background-color: #D4AF37;
+      border: none;
+      font-weight: 600;
+      margin-top: 22px;
     }
 
     .btn-warning:hover {
-      background-color:#b8962e;
+      background-color: #b8962e;
     }
 
+    /* SECTION CARDS */
     .card-container {
-      background-color:#fff;
-      padding:35px;
-      border-radius:12px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.06);
-      transition:all 0.3s ease;
-      height:100%;
-      text-decoration:none;
-      color:inherit;
-      display:block;
+      background-color: #fff;
+      padding: 38px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: all 0.25s ease;
+      height: 100%;
+      display: block;
+      text-decoration: none;
+      color: inherit;
     }
 
     .card-container:hover {
-      transform:translateY(-8px);
-      box-shadow:0 15px 35px rgba(0,0,0,0.1);
+      transform: translateY(-6px);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
     }
 
     .card-label {
-      font-weight:700;
-      color:#D4AF37;
-      text-transform:uppercase;
-      font-size:0.85rem;
-      letter-spacing:1px;
+      font-weight: 700;
+      color: #D4AF37;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
     }
 
     h5 {
       font-family: 'Playfair Display', serif;
-      font-weight:600;
-      margin-top:10px;
-      margin-bottom:15px;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 14px;
+      font-size: 1.25rem;
     }
 
     p {
-      color:#333;
-      line-height:1.6;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #2a2a2a;
     }
 
+    /* FOOTER */
     footer {
-      background-color:#1D3A6D;
-      color:#fff;
-      text-align:center;
-      padding:25px 0;
-      margin-top:50px;
-      font-size:0.9rem;
+      background-color: #1D3A6D;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 60px;
+      font-size: 0.9rem;
     }
 
     footer a {
-      color:#D4AF37;
-      text-decoration:none;
-      margin:0 5px;
+      color: #D4AF37;
+      text-decoration: none;
+      margin: 0 5px;
     }
 
+    /* MOBILE */
     @media (max-width:768px) {
-      .hero-title { font-size:2rem; }
-      .hero-subtitle { font-size:1rem; }
-      .card-container { padding:25px; }
-      .navbar-brand span:first-child { font-size:1.4rem; }
-      .navbar-brand span:last-child { font-size:0.9rem; }
+      .hero-title { font-size: 2.1rem; }
+      .hero-subtitle { font-size: 1.05rem; }
+      .card-container { padding: 26px; }
+      .navbar-brand span:first-child { font-size: 1.4rem; }
+      .navbar-brand span:last-child { font-size: 0.9rem; }
     }
-    header h1,
-header p {
-  color: #ffffff;
-}
   </style>
 </head>
 
@@ -189,11 +199,14 @@ header p {
 <header>
   <div class="container">
     <h1 class="hero-title">Structured Oversight for Pharmacy Operations</h1>
-    <p class="hero-subtitle mt-3">
+
+    <p class="hero-subtitle">
       Targeted evaluation and advisory support designed to identify regulatory risks, operational inefficiencies, and compliance gaps. Each engagement focuses on practical implementation aligned with OCP and NAPRA expectations.
     </p>
 
-    <a href="contact.html" class="btn btn-warning mt-4 px-4 py-2">Start a Conversation</a>
+    <a href="contact.html" class="btn btn-warning px-4 py-2">
+      Start a Conversation
+    </a>
   </div>
 </header>
 
@@ -226,7 +239,7 @@ header p {
         <span class="card-label">Urgent</span>
         <h5>Inspection Readiness Preparation</h5>
         <p>
-          Rapid, focused assessment to identify high-risk deficiencies and implement corrective actions ahead of scheduled inspections.
+          Rapid assessment to identify high-risk gaps and implement corrective actions ahead of scheduled inspections.
         </p>
       </a>
     </div>

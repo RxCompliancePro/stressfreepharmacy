@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RXCELSIOR SOLUTIONS</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Updated Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -16,8 +15,10 @@
       font-family: 'Inter', sans-serif;
       background-color: #E6F0FA;
       padding-top: 56px;
+      font-size: 16.5px;
     }
 
+    /* NAVBAR */
     .navbar {
       background-color: #1D3A6D;
       padding: 20px 0;
@@ -32,13 +33,14 @@
 
     .navbar-brand span:last-child {
       color: #D4AF37;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
     }
 
     .nav-link { color: #fff !important; }
     .nav-link:hover { color: #D4AF37 !important; }
 
+    /* HERO */
     header {
       background: url('images/DESK.png') center / cover no-repeat;
       color: #fff;
@@ -62,42 +64,53 @@
     }
 
     .hero-title {
-      font-size: 2.6rem;
+      font-size: 2.7rem;
       font-weight: 700;
       font-family: 'Playfair Display', serif;
       line-height: 1.2;
-      letter-spacing: 0.3px;
     }
 
     .hero-subtitle {
-      max-width: 750px;
+      max-width: 780px;
       margin: auto;
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       line-height: 1.7;
     }
 
-    h2, h5 {
-      font-family: 'Playfair Display', serif;
-      letter-spacing: 0.3px;
-    }
-
+    /* BUTTON */
     .btn-warning {
       background-color: #D4AF37;
       border: none;
     }
 
-    .btn-warning:hover { background-color: #b8962e; }
+    .btn-warning:hover {
+      background-color: #b8962e;
+    }
 
+    /* SECTIONS */
+    section {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    h2, h5 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* CARDS */
     .card-container {
       background: #fff;
-      padding: 35px;
+      padding: 38px;
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-      display: block;
       height: 100%;
     }
 
-    /* Static cards */
     .static-card {
       cursor: default;
     }
@@ -107,20 +120,26 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.06);
     }
 
-    footer { 
-      background-color:#1D3A6D; 
-      color:#fff; 
-      text-align:center; 
-      padding:25px 0; 
-      margin-top:50px; 
+    /* FOOTER */
+    footer {
+      background-color:#1D3A6D;
+      color:#fff;
+      text-align:center;
+      padding:25px 0;
+      margin-top:50px;
       font-size:0.9rem;
     }
 
-    footer a { color:#D4AF37; text-decoration:none; margin:0 5px; }
+    footer a {
+      color:#D4AF37;
+      text-decoration:none;
+      margin:0 5px;
+    }
 
+    /* MOBILE */
     @media (max-width:768px) {
-      .hero-title { font-size:2rem; }
-      .hero-subtitle { font-size:1rem; }
+      .hero-title { font-size:2.1rem; }
+      .hero-subtitle { font-size:1.05rem; }
       .card-container { padding:25px; }
       .navbar-brand span:first-child { font-size:1.4rem; }
       .navbar-brand span:last-child { font-size:0.9rem; }
@@ -135,7 +154,7 @@
   <div class="container">
     <a class="navbar-brand d-flex flex-column" href="index.html">
       <span>RXCELSIOR SOLUTIONS</span>
-      <span>Comprehensive Pharmacy Oversight & Compliance <br> Solutions (OCP & NAPRA Aligned)</span>
+      <span>Comprehensive Pharmacy Oversight & Compliance (OCP & NAPRA Aligned)</span>
     </a>
 
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -157,23 +176,24 @@
 <header>
   <div class="container">
     <h1 class="hero-title">Inspection-Ready Compliance & Controlled Pharmacy Operations</h1>
+
     <p class="hero-subtitle mt-3">
       Structured oversight and targeted evaluations designed to identify compliance risks, operational gaps, and process breakdowns before they escalate. We implement practical, defensible solutions to ensure consistent, inspection-ready performance aligned with OCP and NAPRA standards.
     </p>
 
     <a href="contact.html" class="btn btn-warning mt-4 px-4 py-2">Start a Conversation</a>
 
-    <p class="mt-3" style="font-size:0.9rem; opacity:0.9;">
+    <p class="mt-3" style="font-size:0.95rem; opacity:0.9;">
       Designed for pharmacies operating in increasingly complex regulatory environments.
     </p>
   </div>
 </header>
 
 <!-- WHERE WE FOCUS -->
-<section class="container py-5">
+<section class="container">
   <div class="text-center mb-5">
     <h2>Where We Focus</h2>
-    <p style="max-width:700px; margin:auto;">
+    <p style="max-width:720px; margin:auto;">
       We focus on the areas where pharmacies are most exposed — and where small gaps can lead to significant regulatory and operational consequences.
     </p>
   </div>
@@ -183,10 +203,8 @@
     <div class="col-md-4">
       <div class="card-container static-card">
         <h5>Regulatory Alignment</h5>
-        <p>
-          Ensuring alignment with OCP and NAPRA standards across all operational areas.
-        </p>
-        <p style="font-size:0.9rem; color:#555;">
+        <p>Ensuring alignment with OCP and NAPRA standards across all operational areas.</p>
+        <p style="font-size:0.95rem; color:#555;">
           Gaps in compliance often remain hidden until identified during inspection.
         </p>
       </div>
@@ -195,10 +213,8 @@
     <div class="col-md-4">
       <div class="card-container static-card">
         <h5>Operational Control</h5>
-        <p>
-          Identifying workflow inefficiencies, process gaps, and breakdowns that impact consistency and accountability.
-        </p>
-        <p style="font-size:0.9rem; color:#555;">
+        <p>Identifying workflow inefficiencies, process gaps, and breakdowns that impact consistency and accountability.</p>
+        <p style="font-size:0.95rem; color:#555;">
           Small process failures compound over time and lead to larger systemic issues.
         </p>
       </div>
@@ -207,10 +223,8 @@
     <div class="col-md-4">
       <div class="card-container static-card">
         <h5>Compliance Sustainability</h5>
-        <p>
-          Implementing practical systems that maintain long-term inspection readiness.
-        </p>
-        <p style="font-size:0.9rem; color:#555;">
+        <p>Implementing practical systems that maintain long-term inspection readiness.</p>
+        <p style="font-size:0.95rem; color:#555;">
           Without structure, even strong operations gradually drift out of compliance.
         </p>
       </div>
@@ -229,7 +243,7 @@
 <footer>
   &copy; 2026 RXCELSIOR SOLUTIONS. All engagements are strictly confidential.<br>
   <small>
-    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms of Engagement</a>
   </small>
 </footer>

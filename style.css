@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL DESIGN SYSTEM (LOCKED)
+   RXCELSIOR GLOBAL DESIGN SYSTEM
 ========================= */
 
 :root {
@@ -9,18 +9,16 @@
   --text: #1c1c1c;
 }
 
-/* =========================
-   BASE
-========================= */
+/* ================= BASE ================= */
 
 body {
   font-family: 'Inter', sans-serif;
   font-size: 17.5px;
-  line-height: 1.75;
+  line-height: 1.7;
   color: var(--text);
   background-color: var(--bg);
   margin: 0;
-  padding-top: 78px;
+  padding-top: 80px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,15 +26,13 @@ a {
   text-decoration: none;
 }
 
-/* =========================
-   TYPOGRAPHY SYSTEM
-========================= */
+/* ================= TYPOGRAPHY ================= */
 
 h1, h2, h3, h4, h5 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   color: var(--navy);
-  letter-spacing: -0.3px;
+  margin-bottom: 12px;
 }
 
 p {
@@ -45,9 +41,7 @@ p {
   color: #2b2b2b;
 }
 
-/* =========================
-   NAVBAR (GLOBAL)
-========================= */
+/* ================= NAVBAR ================= */
 
 .navbar {
   background-color: var(--navy);
@@ -63,9 +57,8 @@ p {
 
 .navbar-brand span:last-child {
   color: var(--gold);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  line-height: 1.2;
 }
 
 .nav-link {
@@ -79,26 +72,23 @@ p {
   color: var(--gold) !important;
 }
 
-/* =========================
-   HERO SYSTEM (UNIFIED)
-   NOTE: background image is set per page inline or class
-========================= */
+/* ================= HERO ================= */
 
 header {
   position: relative;
-  color: #fff;
-  text-align: center;
   min-height: 78vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  color: white;
   padding: 110px 20px 80px;
   background-size: cover;
   background-position: center;
 }
 
 header::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
@@ -107,60 +97,37 @@ header::before {
 header .container {
   position: relative;
   z-index: 2;
-  max-width: 950px;
 }
 
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
   line-height: 1.2;
-  margin-bottom: 18px;
-  color: #fff;
 }
 
 .hero-subtitle {
   font-size: 1.25rem;
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.75;
   opacity: 0.95;
-  color: #fff;
 }
 
-/* =========================
-   BUTTON SYSTEM (SINGLE SOURCE)
-========================= */
+/* ================= BUTTONS ================= */
 
-.btn,
-.btn-warning,
-.btn-primary-custom {
+.btn-warning {
   background-color: var(--gold);
   border: none;
-  color: var(--navy);
   font-weight: 700;
+  color: var(--navy);
   padding: 12px 28px;
-  border-radius: 6px;
-  transition: 0.2s ease;
 }
 
-.btn:hover,
-.btn-warning:hover,
-.btn-primary-custom:hover {
+.btn-warning:hover {
   background-color: #b8962e;
   color: var(--navy);
 }
 
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-  padding: 90px 0;
-}
-
-/* =========================
-   CARDS SYSTEM
-========================= */
+/* ================= CARDS ================= */
 
 .card-container {
   background: #fff;
@@ -168,76 +135,66 @@ section {
   padding: 34px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.07);
   height: 100%;
+  transition: 0.25s ease;
 }
 
-.card-container h5 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
-}
-
-.card-container p {
-  font-size: 1.05rem;
+.card-container:hover {
+  transform: translateY(-6px);
 }
 
 .card-label {
   color: var(--gold);
   font-weight: 700;
   font-size: 0.85rem;
-  letter-spacing: 1px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.card-container h5 {
+  font-size: 1.3rem;
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  padding: 90px 0;
+}
+
+/* ================= FORM ================= */
+
+form {
+  background: #fff;
+  padding: 50px;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+.email-line {
+  color: #2b2b2b;
+}
+
+/* ================= FOOTER ================= */
 
 footer {
   background-color: var(--navy);
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 45px 0;
   font-size: 0.95rem;
 }
 
 footer a {
-  color: var(--gold) !important;
-  font-weight: 500;
+  color: var(--gold);
 }
 
 footer a:hover {
-  color: #ffffff !important;
+  color: white;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
-  body {
-    font-size: 16.5px;
-  }
-
-  .hero-title {
-    font-size: 2.2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.05rem;
-  }
-
-  header {
-    padding: 90px 15px 60px;
-  }
-
-  .card-container {
-    padding: 22px;
-  }
-
-  .navbar-brand span:first-child {
-    font-size: 1.4rem;
-  }
-
-  .navbar-brand span:last-child {
-    font-size: 0.9rem;
-  }
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1.05rem; }
+  .card-container { padding: 22px; }
 }

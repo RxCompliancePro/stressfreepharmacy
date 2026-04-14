@@ -304,3 +304,12 @@ a:hover {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+/* =========================
+   SERVICE TITLE RESET (NO GOLD)
+========================= */
+
+.report-item-title,
+.report-container h5 {
+  color: var(--navy) !important;
+  font-weight: 700 !important;
+}

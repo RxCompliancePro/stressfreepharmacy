@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL BASE (CONSULTING GRADE)
+   ROOT VARIABLES
 ========================= */
 
 :root {
@@ -8,6 +8,10 @@
   --light-bg: #E6F0FA;
   --nav-height: 110px;
 }
+
+/* =========================
+   BASE STYLES
+========================= */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -18,8 +22,12 @@ body {
   padding-top: var(--nav-height);
 }
 
+.container {
+  max-width: 1140px;
+}
+
 /* =========================
-   TYPOGRAPHY SYSTEM
+   TYPOGRAPHY
 ========================= */
 
 h1, h2, h3, .hero-title {
@@ -41,14 +49,6 @@ section h2 {
 }
 
 /* =========================
-   CONTAINER
-========================= */
-
-.container {
-  max-width: 1140px;
-}
-
-/* =========================
    NAVBAR
 ========================= */
 
@@ -61,19 +61,20 @@ section h2 {
 .navbar-brand span:first-child {
   color: #fff;
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: 1.9rem;
 }
 
 .navbar-brand span:last-child {
   color: var(--gold);
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .nav-link {
   color: #fff !important;
-  font-weight: 500;
-  font-size: 1.05rem;
+  font-weight: 600 !important;
+  font-size: 1.15rem !important;
+  letter-spacing: 0.3px;
 }
 
 .nav-link:hover,
@@ -94,8 +95,7 @@ section h2 {
   text-align: center;
   background-size: cover;
   background-position: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding: 40px 0;
 }
 
 .hero::before {
@@ -141,15 +141,7 @@ section h2 {
 }
 
 /* =========================
-   SECTIONS
-========================= */
-
-section {
-  padding: 90px 0;
-}
-
-/* =========================
-   WHITE PANEL (CONSULTING STYLE)
+   CONTENT PANEL
 ========================= */
 
 .content-panel {
@@ -160,432 +152,101 @@ section {
 }
 
 /* =========================
-   SERVICE BOXES
+   SECTION SEPARATION (YOUR REQUEST)
 ========================= */
 
-.report-container {
-  background: transparent;
+.content-panel .mb-4 {
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
-.report-item {
-  margin-bottom: 20px;
-}
-
-.report-item-title {
-  color: var(--navy) !important;
-  font-weight: 700;
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-}
-
-.report-item p,
-.report-item-text {
-  color: #1c1c1c !important;
-}
-
-/* remove blue link behavior everywhere inside service blocks */
-.report-container a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-/* =========================
-   CARDS (INDEX)
-========================= */
-
-.card-container {
-  padding: 24px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  height: 100%;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-container h5 {
-  font-weight: 700;
-  color: var(--navy);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background-color: var(--navy);
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-}
-
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #fff;
-}
-
-/* =========================
-   UTILITIES
-========================= */
-
-.text-gold { color: var(--gold) !important; }
-.text-navy { color: var(--navy) !important; }
-/* =========================
-   NAVBAR TYPOGRAPHY UPGRADE
-========================= */
-
-/* nav links bigger + more premium spacing */
-.nav-link {
-  font-size: 1.15rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.3px;
-}
-
-/* brand subtitle (gold line) larger */
-.navbar-brand span:last-child {
-  font-size: 1.2rem !important;
-}
-
-/* brand main title slightly more refined */
-.navbar-brand span:first-child {
-  font-size: 1.9rem !important;
-}
-
-/* =========================
-   FIX: KILL BLUE HYPERLINKS (FULL FORCE)
-========================= */
-
-a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-/* ONLY allow hover accent */
-a:hover {
-  color: var(--gold) !important;
-  text-decoration: none !important;
-}
-
-/* extra safety for service pages */
-.report-container a,
-.report-item a,
-.report-item-text a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-/* =========================
-   GLOBAL BASE (CONSULTING GRADE)
-========================= */
-
-:root {
-  --navy: #1D3A6D;
-  --gold: #D4AF37;
-  --light-bg: #E6F0FA;
-  --nav-height: 110px;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--light-bg);
-  color: #1c1c1c;
-  line-height: 1.7;
-  font-size: 1.08rem;
-  padding-top: var(--nav-height);
-}
-
-/* =========================
-   TYPOGRAPHY SYSTEM
-========================= */
-
-h1, h2, h3, .hero-title {
-  font-family: "Playfair Display", Georgia, serif;
-  letter-spacing: 0.3px;
-  color: #1c1c1c;
-}
-
-p {
-  font-size: 1.08rem;
-  line-height: 1.75;
-}
-
-section h2 {
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-/* =========================
-   CONTAINER
-========================= */
-
-.container {
-  max-width: 1140px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-  background-color: var(--navy) !important;
-  padding: 18px 0;
-  z-index: 9999;
-}
-
-.navbar-brand span:first-child {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.75rem;
-}
-
-.navbar-brand span:last-child {
-  color: var(--gold);
-  font-weight: 500;
-  font-size: 1.05rem;
-}
-
-.nav-link {
-  color: #fff !important;
-  font-weight: 500;
-  font-size: 1.05rem;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--gold) !important;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: 1;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-title {
-  color: #fff !important;
-  font-size: 3.4rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.hero-subtitle {
-  color: #fff !important;
-  font-size: 1.3rem;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn-warning {
-  background-color: var(--gold);
-  border: none;
-  font-weight: 600;
-  color: #000;
-}
-
-.btn-warning:hover {
-  background-color: #b8962e;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-  padding: 90px 0;
-}
-
-/* =========================
-   WHITE PANEL (CONSULTING STYLE)
-========================= */
-
-.content-panel {
-  background: #fff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* =========================
-   SERVICE BOXES
-========================= */
-
-.report-container {
-  background: transparent;
-}
-
-.report-item {
-  margin-bottom: 20px;
-}
-
-.report-item-title {
-  color: var(--navy) !important;
-  font-weight: 700;
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-}
-
-.report-item p,
-.report-item-text {
-  color: #1c1c1c !important;
-}
-
-/* remove blue link behavior everywhere inside service blocks */
-.report-container a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-/* =========================
-   CARDS (INDEX)
-========================= */
-
-.card-container {
-  padding: 24px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  height: 100%;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-container h5 {
-  font-weight: 700;
-  color: var(--navy);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background-color: var(--navy);
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-}
-
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #fff;
-}
-
-/* =========================
-   UTILITIES
-========================= */
-
-.text-gold { color: var(--gold) !important; }
-.text-navy { color: var(--navy) !important; }
-/* =========================
-   NAVBAR TYPOGRAPHY UPGRADE
-========================= */
-
-/* nav links bigger + more premium spacing */
-.nav-link {
-  font-size: 1.15rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.3px;
-}
-
-/* brand subtitle (gold line) larger */
-.navbar-brand span:last-child {
-  font-size: 1.2rem !important;
-}
-
-/* brand main title slightly more refined */
-.navbar-brand span:first-child {
-  font-size: 1.9rem !important;
-}
-
-/* =========================
-   FIX: KILL BLUE HYPERLINKS (FULL FORCE)
-========================= */
-
-a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-/* ONLY allow hover accent */
-a:hover {
-  color: var(--gold) !important;
-  text-decoration: none !important;
-}
-
-/* extra safety for service pages */
-.report-container a,
-.report-item a,
-.report-item-text a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-/* =========================
-   FIX: TIGHT SPACING INSIDE WHITE PANELS
-========================= */
-
-.content-panel section {
-  padding: 0;
-  margin-bottom: 35px;
-}
-
-.content-panel section:last-child {
-  margin-bottom: 0;
-}
-/* =========================
-   CONTENT BLOCK SEPARATION (PROFESSIONAL)
-========================= */
-
-.content-block {
-  padding-bottom: 25px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.content-block:last-child {
+.content-panel .mb-4:last-child {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 
-.content-block h2 {
-  margin-bottom: 12px;
+/* =========================
+   SERVICE BOXES
+========================= */
+
+.report-container {
+  background: transparent;
+}
+
+.report-item {
+  margin-bottom: 20px;
+}
+
+.report-item-title {
+  color: var(--navy) !important;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.report-item p,
+.report-item-text {
+  color: #1c1c1c !important;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card-container {
+  padding: 24px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  height: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container h5 {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background-color: var(--navy);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.text-gold { color: var(--gold) !important; }
+.text-navy { color: var(--navy) !important; }
+
+/* =========================
+   LINK RESET (CONSISTENT BRANDING)
+========================= */
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--gold) !important;
 }

@@ -16,12 +16,11 @@ body {
   line-height: 1.7;
   font-size: 1.08rem;
 
-  /* FIX: prevents hero being hidden under navbar */
   padding-top: var(--nav-height);
 }
 
 /* =========================
-   TYPOGRAPHY SYSTEM (CONSULTING STYLE)
+   TYPOGRAPHY SYSTEM
 ========================= */
 
 h1, h2, h3, .hero-title {
@@ -52,7 +51,7 @@ section h2 {
 }
 
 /* =========================
-   NAVBAR (CONSISTENT PREMIUM STYLE)
+   NAVBAR
 ========================= */
 
 .navbar {
@@ -65,14 +64,12 @@ section h2 {
   color: #fff;
   font-weight: 700;
   font-size: 1.75rem;
-  letter-spacing: 0.5px;
 }
 
 .navbar-brand span:last-child {
   color: var(--gold);
   font-weight: 500;
   font-size: 1.05rem;
-  letter-spacing: 0.3px;
 }
 
 .nav-link {
@@ -87,7 +84,7 @@ section h2 {
 }
 
 /* =========================
-   HERO SYSTEM (FIXED + PREMIUM)
+   HERO
 ========================= */
 
 .hero {
@@ -102,12 +99,10 @@ section h2 {
   background-size: cover;
   background-position: center;
 
-  /* ensures it doesn't sit under navbar visually */
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-/* DARK OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
@@ -121,7 +116,6 @@ section h2 {
   z-index: 2;
 }
 
-/* HERO TYPOGRAPHY */
 .hero-title {
   color: #fff !important;
   font-size: 3.4rem;
@@ -134,7 +128,6 @@ section h2 {
   font-size: 1.3rem;
   max-width: 850px;
   margin: 0 auto;
-  line-height: 1.6;
 }
 
 /* =========================
@@ -153,23 +146,60 @@ section h2 {
 }
 
 /* =========================
-   SECTIONS
+   SECTION SYSTEM
 ========================= */
 
 section {
   padding: 90px 0;
 }
 
-.section-light {
-  background-color: #fff;
-}
+/* =========================
+   🔥 NEW: WHITE CONTENT PANEL SYSTEM
+   (FIXES "TEXT ON BLUE BACKGROUND")
+========================= */
 
-.section-dark {
-  background-color: var(--light-bg);
+.content-panel {
+  background: #fff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
 /* =========================
-   CARDS (FIXED TEXT COLOR ISSUE)
+   REPORT / SERVICE BOXES
+========================= */
+
+.report-container {
+  background: transparent;
+}
+
+/* service titles (FIX: GOLD + BOLD) */
+.report-item-title {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+/* service text (FIX: REMOVE BLUE LINK LOOK) */
+.report-item-text,
+.report-item p,
+.report-item {
+  color: #1c1c1c !important;
+}
+
+.report-item a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* spacing */
+.report-item {
+  margin-bottom: 22px;
+}
+
+/* =========================
+   CARD BOXES (INDEX PAGE)
 ========================= */
 
 .card-container {
@@ -178,25 +208,23 @@ section {
   background: #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 
-  /* KEY FIX */
   height: 100%;
   min-height: 220px;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
+/* FIX: gold headings in cards */
 .card-container h5 {
   font-weight: 700;
   color: var(--navy);
   margin-bottom: 10px;
 }
 
-.card-container p {
-  flex-grow: 1;
-  margin-bottom: 0;
-  font-size: 1rem;
+/* FIX: ensure NO link blue inside cards */
+.card-container, .card-container * {
+  color: #1c1c1c;
 }
 
 /* =========================

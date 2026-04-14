@@ -235,3 +235,46 @@ footer a:hover {
 
 .text-gold { color: var(--gold) !important; }
 .text-navy { color: var(--navy) !important; }
+/* =========================
+   NAVBAR TYPOGRAPHY UPGRADE
+========================= */
+
+/* nav links bigger + more premium spacing */
+.nav-link {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px;
+}
+
+/* brand subtitle (gold line) larger */
+.navbar-brand span:last-child {
+  font-size: 1.2rem !important;
+}
+
+/* brand main title slightly more refined */
+.navbar-brand span:first-child {
+  font-size: 1.9rem !important;
+}
+
+/* =========================
+   FIX: KILL BLUE HYPERLINKS (FULL FORCE)
+========================= */
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* ONLY allow hover accent */
+a:hover {
+  color: var(--gold) !important;
+  text-decoration: none !important;
+}
+
+/* extra safety for service pages */
+.report-container a,
+.report-item a,
+.report-item-text a {
+  color: inherit !important;
+  text-decoration: none !important;
+}

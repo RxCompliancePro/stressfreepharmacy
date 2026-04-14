@@ -15,7 +15,6 @@ body {
   color: #1c1c1c;
   line-height: 1.7;
   font-size: 1.08rem;
-
   padding-top: var(--nav-height);
 }
 
@@ -34,7 +33,6 @@ p {
   line-height: 1.75;
 }
 
-/* Section headers */
 section h2 {
   color: var(--navy);
   font-weight: 700;
@@ -90,15 +88,12 @@ section h2 {
 .hero {
   position: relative;
   min-height: 70vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   background-size: cover;
   background-position: center;
-
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -146,7 +141,7 @@ section h2 {
 }
 
 /* =========================
-   SECTION SYSTEM
+   SECTIONS
 ========================= */
 
 section {
@@ -154,8 +149,7 @@ section {
 }
 
 /* =========================
-   🔥 NEW: WHITE CONTENT PANEL SYSTEM
-   (FIXES "TEXT ON BLUE BACKGROUND")
+   WHITE PANEL (CONSULTING STYLE)
 ========================= */
 
 .content-panel {
@@ -166,40 +160,37 @@ section {
 }
 
 /* =========================
-   REPORT / SERVICE BOXES
+   SERVICE BOXES
 ========================= */
 
 .report-container {
   background: transparent;
 }
 
-/* service titles (FIX: GOLD + BOLD) */
+.report-item {
+  margin-bottom: 20px;
+}
+
 .report-item-title {
+  color: var(--navy) !important;
   font-weight: 700;
-  color: var(--gold);
   font-size: 1.15rem;
   margin-bottom: 6px;
 }
 
-/* service text (FIX: REMOVE BLUE LINK LOOK) */
-.report-item-text,
 .report-item p,
-.report-item {
+.report-item-text {
   color: #1c1c1c !important;
 }
 
-.report-item a {
+/* remove blue link behavior everywhere inside service blocks */
+.report-container a {
   color: inherit !important;
   text-decoration: none !important;
 }
 
-/* spacing */
-.report-item {
-  margin-bottom: 22px;
-}
-
 /* =========================
-   CARD BOXES (INDEX PAGE)
+   CARDS (INDEX)
 ========================= */
 
 .card-container {
@@ -207,24 +198,15 @@ section {
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-
   height: 100%;
   min-height: 220px;
-
   display: flex;
   flex-direction: column;
 }
 
-/* FIX: gold headings in cards */
 .card-container h5 {
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 10px;
-}
-
-/* FIX: ensure NO link blue inside cards */
-.card-container, .card-container * {
-  color: #1c1c1c;
 }
 
 /* =========================
@@ -251,65 +233,5 @@ footer a:hover {
    UTILITIES
 ========================= */
 
-.text-gold {
-  color: var(--gold) !important;
-}
-
-.text-navy {
-  color: var(--navy) !important;
-}
-/* =========================
-   FINAL FIX: SERVICE TEXT + LINK OVERRIDE
-========================= */
-
-/* kill bootstrap blue link bleed */
-a {
-  color: inherit;
-}
-
-a:hover {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-/* force ALL service page text to be clean */
-.report-container,
-.report-container p,
-.report-container div {
-  color: #1c1c1c !important;
-}
-
-/* gold titles everywhere (robust selector) */
-.report-item-title,
-.report-container h5 {
-  color: var(--gold) !important;
-  font-weight: 700 !important;
-  font-family: "Inter", sans-serif;
-}
-
-/* ensure spacing consistency */
-.report-item {
-  margin-bottom: 20px;
-}
-
-/* =========================
-   WHITE BOX SYSTEM (ACTIVATED FIX)
-========================= */
-
-.content-panel {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-/* =========================
-   SERVICE TITLE RESET (NO GOLD)
-========================= */
-
-.report-item-title,
-.report-container h5 {
-  color: var(--navy) !important;
-  font-weight: 700 !important;
-}
+.text-gold { color: var(--gold) !important; }
+.text-navy { color: var(--navy) !important; }

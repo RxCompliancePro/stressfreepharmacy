@@ -46,7 +46,7 @@
 </nav>
 
 <!-- =========================
-     HERO (STANDARDIZED)
+     HERO
 ========================= -->
 <header class="hero" style="background-image: url('images/Consultant3.PNG');">
   <div class="container">
@@ -56,57 +56,60 @@
     </h1>
 
     <p class="hero-subtitle">
-      Structured pharmacy assessments focused on regulatory compliance, workflow integrity, and compounding standards. We deliver implementation-ready solutions for sustained operational control.
+      Structured pharmacy assessments focused on regulatory compliance, workflow integrity, and compounding standards.
+      We deliver implementation-ready solutions for sustained operational control.
     </p>
 
   </div>
 </header>
 
 <!-- =========================
-     CONTACT FORM
+     CONTACT PANEL
 ========================= -->
-<main class="container py-5">
+<main class="container my-5">
 
-  <div class="row justify-content-center">
-    <div class="col-lg-8">
+  <div class="content-panel">
 
-      <form action="https://formspree.io/f/xykbqkzy" method="POST">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
 
-        <h2 class="mb-4">Start a Conversation</h2>
+        <h2 class="mb-4 text-center">Start a Conversation</h2>
 
-        <input type="hidden" name="_subject" value="New RXCELSIOR Inquiry">
+        <form action="https://formspree.io/f/xykbqkzy" method="POST">
 
-        <div class="mb-3">
-          <label class="form-label">Name</label>
-          <input type="text" class="form-control" name="name" required>
+          <input type="hidden" name="_subject" value="New RXCELSIOR Inquiry">
+
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" required>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label">Message</label>
+            <textarea class="form-control" name="message" rows="5" required></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-warning px-4">
+              Send Message
+            </button>
+          </div>
+
+        </form>
+
+        <div class="text-center mt-5">
+          <p class="mb-1">Or email directly:</p>
+          <strong>contact_stressfreepharmacy@proton.me</strong>
         </div>
 
-        <div class="mb-3">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-control" name="email" required>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label">Message</label>
-          <textarea class="form-control" name="message" rows="5" required></textarea>
-        </div>
-
-        <div class="text-center">
-          <button type="submit" class="btn btn-warning">
-            Send Message
-          </button>
-        </div>
-
-      </form>
-
-      <div class="text-center mt-4">
-        <p class="mb-0">
-          Or email directly:
-        </p>
-        <strong>contact_stressfreepharmacy@proton.me</strong>
       </div>
-
     </div>
+
   </div>
 
 </main>

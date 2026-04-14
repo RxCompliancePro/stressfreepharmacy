@@ -258,3 +258,49 @@ footer a:hover {
 .text-navy {
   color: var(--navy) !important;
 }
+/* =========================
+   FINAL FIX: SERVICE TEXT + LINK OVERRIDE
+========================= */
+
+/* kill bootstrap blue link bleed */
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+/* force ALL service page text to be clean */
+.report-container,
+.report-container p,
+.report-container div {
+  color: #1c1c1c !important;
+}
+
+/* gold titles everywhere (robust selector) */
+.report-item-title,
+.report-container h5 {
+  color: var(--gold) !important;
+  font-weight: 700 !important;
+  font-family: "Inter", sans-serif;
+}
+
+/* ensure spacing consistency */
+.report-item {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   WHITE BOX SYSTEM (ACTIVATED FIX)
+========================= */
+
+.content-panel {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

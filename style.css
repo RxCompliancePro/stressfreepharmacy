@@ -558,3 +558,15 @@ a:hover {
   color: inherit !important;
   text-decoration: none !important;
 }
+/* =========================
+   FIX: TIGHT SPACING INSIDE WHITE PANELS
+========================= */
+
+.content-panel section {
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.content-panel section:last-child {
+  margin-bottom: 0;
+}

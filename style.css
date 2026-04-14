@@ -180,3 +180,6 @@ footer a:hover {
 .hero-subtitle {
   font-size: 1.2rem;
 }
+body {
+  background: red !important;
+}

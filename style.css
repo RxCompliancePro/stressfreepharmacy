@@ -49,7 +49,7 @@ section h2 {
   margin-bottom: 20px;
 }
 
-/* SECTION INTRO TEXT (FIXED) */
+/* SECTION INTRO TEXT */
 .lead-text {
   font-size: 1.45rem;
   line-height: 1.8;
@@ -147,6 +147,16 @@ section h2 {
 
 .btn-warning:hover {
   background-color: #b8962e;
+}
+
+/* =========================
+   CONTENT BOX TEXT (FIXED)
+========================= */
+
+.content-panel,
+.card-container {
+  font-size: 1.34rem;
+  line-height: 1.95;
 }
 
 /* =========================

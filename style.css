@@ -49,16 +49,6 @@ section h2 {
   margin-bottom: 16px;
 }
 
-/* SECTION INTRO TEXT */
-.lead-text {
-  font-size: 1.25rem;
-  line-height: 1.7;
-  max-width: 780px;
-  margin: 0 auto 1.2rem auto;
-  color: #2a2a2a;
-  font-weight: 500;
-}
-
 /* =========================
    NAVBAR
 ========================= */
@@ -172,6 +162,12 @@ section h2 {
   line-height: 1.7;
 }
 
+/* MAIN SECTION TITLE = BLACK (FIXED) */
+.content-panel h2 {
+  color: #1c1c1c !important;
+  margin-bottom: 32px;
+}
+
 /* =========================
    CONTENT BLOCKS
 ========================= */
@@ -186,6 +182,18 @@ section h2 {
   border-bottom: none;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.content-block h5 {
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
+}
+
+.content-block p {
+  margin-bottom: 0;
+  color: #2a2a2a;
 }
 
 /* =========================
@@ -289,36 +297,4 @@ section {
   .content-panel {
     padding: 26px 20px;
   }
-}
-.content-block h5 {
-  color: var(--navy);
-  font-weight: 700;
-  margin-bottom: 4px;
-  letter-spacing: 0.2px;
-}
-
-.content-block p {
-  margin-bottom: 0;
-  color: #2a2a2a;
-}
-.content-panel h2 {
-  margin-bottom: 32px;
-}
-/* MAIN SECTION HEADINGS (H2) = BLACK */
-.content-panel h2 {
-  color: #1c1c1c !important;
-}
-main .content-panel h2 {
-  color: #1c1c1c !important;
-}
-.hero-title {
-  color: #fff;
-}
-
-.content-panel h2 {
-  color: #1c1c1c !important;
-}
-
-.content-panel h5 {
-  color: var(--navy);
 }

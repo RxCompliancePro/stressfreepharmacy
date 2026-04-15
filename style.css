@@ -1,7 +1,6 @@
 /* =========================
    ROOT VARIABLES
 ========================= */
-
 :root {
   --navy: #1D3A6D;
   --gold: #C9A94D;
@@ -12,7 +11,6 @@
 /* =========================
    BASE
 ========================= */
-
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--light-bg);
@@ -27,36 +25,33 @@ body {
 }
 
 /* =========================
-   TYPOGRAPHY (GLOBAL PREMIUM RULE)
+   TYPOGRAPHY (SAFE SCOPED)
 ========================= */
-
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: 0.2px;
   color: var(--navy);
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
 
-/* subtitles */
+/* KEEP BODY TEXT CLEAN (DO NOT OVERWRITE LAYOUT) */
 p {
+  margin-bottom: 1rem;
   color: #2a2a2a;
-  line-height: 1.7;
 }
 
-/* force subtitle consistency */
-.hero-subtitle,
-.text-muted,
-small {
-  color: #2f4f7f !important;
+/* ONLY HERO SUBTITLE SHOULD BE LIGHT */
+.hero-subtitle {
+  color: #ffffff !important;
 }
 
 /* =========================
    NAVBAR
 ========================= */
-
 .navbar {
   background-color: var(--navy) !important;
   padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   z-index: 9999;
 }
 
@@ -85,7 +80,6 @@ small {
 /* =========================
    HERO
 ========================= */
-
 .hero {
   position: relative;
   min-height: 65vh;
@@ -111,158 +105,143 @@ small {
 .hero-title {
   color: #fff !important;
   font-size: 3rem;
-}
-
-.hero-subtitle {
-  color: #fff !important;
-  font-size: 1.15rem;
+  margin-bottom: 12px;
 }
 
 /* =========================
-   BUTTON
+   BUTTONS
 ========================= */
-
 .btn-warning {
   background-color: var(--gold);
   border: none;
-  color: #000;
   font-weight: 600;
+  color: #000;
+  padding: 10px 22px;
+}
+
+.btn-warning:hover {
+  background-color: #b8962e;
 }
 
 /* =========================
-   CONTENT PANEL
+   CONTENT PAGES (IMPORTANT FIX)
 ========================= */
-
 .content-panel {
   background: #fff;
   padding: 36px;
   border-radius: 6px;
   border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* THIS FIXES YOUR DIVIDER + SPACING ISSUE */
+.content-block {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.content-block h5 {
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 /* =========================
-   CARD BASE (STATIC DEFAULT)
+   SERVICES GRID (ONLY PLACE WITH HOVER)
 ========================= */
+.col-md-6,
+.col-lg-4 {
+  display: flex;
+}
 
 .card-container {
   background: #fff;
   border: 1px solid #eef2f7;
   border-radius: 8px;
   padding: 22px;
-
   display: flex;
   flex-direction: column;
   min-height: 230px;
-
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-/* Bootstrap layout fix */
-.col-md-6,
-.col-lg-4 {
-  display: flex;
-}
-
-/* =========================
-   PILLAR CARDS (HOME ONLY - STATIC)
-========================= */
-
-.pillar-card {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-}
-
-/* kill ALL movement */
-.pillar-card:hover {
-  transform: none !important;
-}
-
-/* =========================
-   SERVICE CARDS ONLY (ANIMATION FIXED)
-========================= */
-
+/* ONLY SERVICE PAGE CARDS MOVE */
 .service-link-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .service-link-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-  border-color: var(--gold);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 /* =========================
-   SERVICE TITLE FIX (THIS IS THE KEY FIX)
+   CARD TEXT
 ========================= */
-
-.service-link-card h1,
-.service-link-card h2,
-.service-link-card h3,
-.service-link-card h4,
-.service-link-card h5,
-.service-link-card h6 {
-  color: var(--navy) !important;
-  font-weight: 700;
-}
-
-/* kill Bootstrap/anchor color interference */
-.service-link-card * {
-  text-decoration: none !important;
-}
-
-/* =========================
-   CARD TITLE STANDARD
-========================= */
-
 .card-container h5 {
   color: var(--navy);
   font-weight: 700;
 }
 
-/* labels */
 .card-label {
-  color: var(--gold);
   font-size: 0.8rem;
-  text-transform: uppercase;
+  font-weight: 600;
   letter-spacing: 0.08em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* =========================
+   PILLAR CARDS (STATIC ONLY)
+========================= */
+.pillar-card {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 /* =========================
    FOOTER
 ========================= */
-
 footer {
-  background: var(--navy);
+  background-color: var(--navy);
   color: #fff;
-  text-align: center;
   padding: 36px 0;
+  text-align: center;
 }
 
 footer a {
   color: var(--gold);
 }
 
+footer a:hover {
+  color: #fff;
+}
+
 /* =========================
    UTILITIES
 ========================= */
-
 .text-gold { color: var(--gold); }
 .text-navy { color: var(--navy); }
 
-/* =========================
-   SECTION SPACING
-========================= */
-
-section {
-  padding: 80px 0;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* =========================
    MOBILE
 ========================= */
-
 @media (max-width: 768px) {
+  :root {
+    --nav-height: 85px;
+  }
+
   .hero-title {
     font-size: 2.2rem !important;
+  }
+
+  .content-panel {
+    padding: 26px 20px;
   }
 }

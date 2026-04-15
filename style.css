@@ -324,3 +324,41 @@ section {
   border-color: #eef2f7 !important;
   cursor: default;
 }
+
+/* =========================
+   BASE CARD (NO INTERACTION BY DEFAULT)
+========================= */
+
+.card-container {
+  transition: none;
+}
+
+/* =========================
+   STATIC HOME PILLARS
+========================= */
+
+.pillar-card {
+  transition: none !important;
+  transform: none !important;
+}
+
+.pillar-card:hover {
+  transform: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+  cursor: default;
+}
+
+/* =========================
+   SERVICE CARDS (ONLY INTERACTIVE ELEMENTS)
+========================= */
+
+.service-link-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
+}
+
+.service-link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+  border-color: var(--gold);
+}

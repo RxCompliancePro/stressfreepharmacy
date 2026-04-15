@@ -20,6 +20,7 @@ body {
   padding-top: var(--nav-height);
 }
 
+/* keep Bootstrap structure stable */
 .container {
   max-width: 1100px;
 }
@@ -35,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.75rem;
 }
 
-/* Body text spacing (IMPORTANT FIX) */
 p {
   margin-bottom: 1rem;
   color: #2a2a2a;
@@ -80,7 +80,7 @@ p {
 }
 
 /* =========================
-   HERO
+   HERO (FIXED ALIGNMENT + WIDTH BALANCE)
 ========================= */
 .hero {
   position: relative;
@@ -99,9 +99,15 @@ p {
   background: rgba(0,0,0,0.55);
 }
 
+/* 🔥 FIX: controlled premium width (not stretched, not boxed too tight) */
 .hero .container {
   position: relative;
   z-index: 2;
+
+  max-width: 1000px;   /* key balance point */
+  margin-left: 0;      /* left aligned premium layout */
+  padding-left: 80px;   /* breathing room */
+  padding-right: 40px;
 }
 
 .hero-title {
@@ -137,22 +143,18 @@ p {
 }
 
 /* =========================
-   🔥 FIXED DIVIDERS + SPACING
+   DIVIDERS + SPACING (RESTORED)
 ========================= */
 .content-block {
   padding: 18px 0;
   margin-bottom: 0;
-
-  /* DIVIDER LINE */
   border-bottom: 1px solid rgba(29, 58, 109, 0.15);
 }
 
-/* remove divider on last item */
 .content-block:last-child {
   border-bottom: none;
 }
 
-/* heading inside blocks */
 .content-block h5 {
   color: var(--navy);
   font-weight: 700;
@@ -172,11 +174,9 @@ p {
   border: 1px solid #eef2f7;
   border-radius: 8px;
   padding: 22px;
-
   display: flex;
   flex-direction: column;
   min-height: 230px;
-
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
@@ -192,7 +192,7 @@ p {
 }
 
 /* =========================
-   CARD TEXT STYLING (NAVY FIX)
+   CARD TEXT STYLING
 ========================= */
 .card-container h5 {
   color: var(--navy) !important;
@@ -253,6 +253,11 @@ a {
 
   .hero-title {
     font-size: 2.2rem !important;
+  }
+
+  .hero .container {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .content-panel {

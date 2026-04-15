@@ -264,3 +264,71 @@ a {
     padding: 26px 20px;
   }
 }
+/* =========================
+   HERO (FIXED ALIGNMENT)
+========================= */
+.hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0; /* increased from 40px */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+
+/* desktop layout stays the same */
+.hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin-left: 0;
+  padding-left: 80px;
+  padding-right: 40px;
+}
+
+/* =========================
+   MOBILE FIX (IMPORTANT)
+========================= */
+@media (max-width: 768px) {
+
+  :root {
+    --nav-height: 85px;
+  }
+
+  body {
+    padding-top: var(--nav-height);
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding: 120px 0 60px; /* 🔥 key fix: pushes content down safely */
+    align-items: flex-start; /* prevents vertical clipping */
+  }
+
+  .hero .container {
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.2rem !important;
+    margin-top: 10px; /* prevents top clipping */
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem !important;
+  }
+
+  .content-panel {
+    padding: 26px 20px;
+  }
+}

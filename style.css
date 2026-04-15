@@ -306,3 +306,50 @@ section {
     padding: 26px 20px;
   }
 }
+/* =========================
+   PREMIUM HEADING OVERRIDE (FOR ALL CARDS + SERVICES)
+========================= */
+
+/* FORCE ALL CARD / SERVICE HEADINGS TO NAVY */
+.card-container h1,
+.card-container h2,
+.card-container h3,
+.card-container h4,
+.card-container h5,
+.card-container h6,
+
+.service-link-card h1,
+.service-link-card h2,
+.service-link-card h3,
+.service-link-card h4,
+.service-link-card h5,
+.service-link-card h6,
+
+.pillar-card h1,
+.pillar-card h2,
+.pillar-card h3,
+.pillar-card h4,
+.pillar-card h5,
+.pillar-card h6 {
+  color: var(--navy) !important;
+  font-weight: 700 !important;
+  font-family: "Playfair Display", Georgia, serif !important;
+  letter-spacing: 0.2px;
+}
+
+/* ENSURE LINKS INSIDE CARDS DON'T OVERRIDE COLOR */
+.card-container a,
+.service-link-card a,
+.pillar-card a {
+  color: var(--navy) !important;
+  text-decoration: none !important;
+}
+
+/* PREVENT BOOTSTRAP MUTED OVERRIDES ON HEADINGS */
+.text-muted h1,
+.text-muted h2,
+.text-muted h3,
+.text-muted h4,
+.text-muted h5 {
+  color: var(--navy) !important;
+}

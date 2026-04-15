@@ -163,33 +163,20 @@ p {
 }
 
 /* =========================
-   CONTENT BLOCKS (FIXED)
-   NO MORE HOVER MOVEMENT HERE
+   CONTENT BLOCKS (STATIC ONLY)
 ========================= */
 
 .content-block {
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  /* HARD LOCK: NO HOVER EFFECTS EVER */
+  transform: none !important;
 }
 
 /* =========================
-   CLICKABLE CARDS (ONLY FOR SERVICES GRID)
-========================= */
-
-.clickable-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.clickable-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-  border-color: var(--gold);
-  cursor: pointer;
-}
-
-/* =========================
-   SERVICES GRID
+   SERVICES GRID BASE CARD (STATIC)
 ========================= */
 
 .card-container {
@@ -204,9 +191,13 @@ p {
   min-height: 230px;
 
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+
+  /* IMPORTANT: prevents any accidental animation bleed */
+  transform: none !important;
+  transition: none !important;
 }
 
-/* IMPORTANT: only apply hover behavior via clickable-card */
+/* layout fix */
 .col-md-6,
 .col-lg-4 {
   display: flex;
@@ -226,6 +217,23 @@ p {
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--gold);
+}
+
+/* =========================
+   ONLY CLICKABLE SERVICE CARDS MOVE
+   (ONLY 6 BOXES ON services.html)
+========================= */
+
+.service-link-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  will-change: transform;
+}
+
+.service-link-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+  border-color: var(--gold);
+  cursor: pointer;
 }
 
 /* =========================

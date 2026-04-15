@@ -797,3 +797,27 @@ a {
 a:hover {
   color: var(--gold) !important;
 }
+/* =========================
+   HARD FIX FOR CONTENT BLOCKS
+========================= */
+
+.content-panel .content-block {
+  display: block;
+  padding: 20px 0 !important;
+  margin: 0 !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+.content-panel .content-block + .content-block {
+  margin-top: 18px !important;
+}
+
+.content-panel .content-block:last-child {
+  border-bottom: none !important;
+}
+
+/* Titles */
+.content-panel .content-block h5 {
+  color: var(--navy) !important;
+  font-weight: 700;
+}

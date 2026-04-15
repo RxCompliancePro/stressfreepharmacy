@@ -41,11 +41,22 @@ p {
   line-height: 1.75;
 }
 
+/* SECTION HEADINGS */
 section h2 {
   color: var(--navy);
   font-weight: 700;
   font-size: 2.2rem;
   margin-bottom: 20px;
+}
+
+/* SECTION INTRO TEXT (FIXED) */
+.lead-text {
+  font-size: 1.45rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto 1.5rem auto;
+  color: #2a2a2a;
+  font-weight: 500;
 }
 
 /* =========================
@@ -74,7 +85,6 @@ section h2 {
   color: #fff !important;
   font-weight: 600 !important;
   font-size: 1.15rem !important;
-  letter-spacing: 0.3px;
 }
 
 .nav-link:hover,
@@ -103,7 +113,6 @@ section h2 {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.55);
-  z-index: 1;
 }
 
 .hero .container {
@@ -138,57 +147,6 @@ section h2 {
 
 .btn-warning:hover {
   background-color: #b8962e;
-}
-
-/* =========================
-   CONTENT PANEL
-========================= */
-
-.content-panel {
-  background: #fff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* =========================
-   SECTION SEPARATION (YOUR REQUEST)
-========================= */
-
-.content-panel .mb-4 {
-  padding-bottom: 18px;
-  margin-bottom: 18px;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-}
-
-.content-panel .mb-4:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-/* =========================
-   SERVICE BOXES
-========================= */
-
-.report-container {
-  background: transparent;
-}
-
-.report-item {
-  margin-bottom: 20px;
-}
-
-.report-item-title {
-  color: var(--navy) !important;
-  font-weight: 700;
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-}
-
-.report-item p,
-.report-item-text {
-  color: #1c1c1c !important;
 }
 
 /* =========================
@@ -235,295 +193,32 @@ footer a:hover {
    UTILITIES
 ========================= */
 
-.text-gold { color: var(--gold) !important; }
-.text-navy { color: var(--navy) !important; }
+.text-gold { color: var(--gold); }
+.text-navy { color: var(--navy); }
 
 /* =========================
-   LINK RESET (CONSISTENT BRANDING)
+   LINKS
 ========================= */
 
 a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-a:hover {
-  color: var(--gold) !important;
-}
-/* =========================
-   ROOT VARIABLES
-========================= */
-
-:root {
-  --navy: #1D3A6D;
-  --gold: #D4AF37;
-  --light-bg: #E6F0FA;
-  --nav-height: 110px;
-}
-
-/* =========================
-   BASE STYLES
-========================= */
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--light-bg);
-  color: #1c1c1c;
-  line-height: 1.7;
-  font-size: 1.08rem;
-  padding-top: var(--nav-height);
-}
-
-.container {
-  max-width: 1140px;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-
-h1, h2, h3, .hero-title {
-  font-family: "Playfair Display", Georgia, serif;
-  letter-spacing: 0.3px;
-  color: #1c1c1c;
-}
-
-p {
-  font-size: 1.08rem;
-  line-height: 1.75;
-}
-
-section h2 {
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-  background-color: var(--navy) !important;
-  padding: 18px 0;
-  z-index: 9999;
-}
-
-.navbar-brand span:first-child {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.9rem;
-}
-
-.navbar-brand span:last-child {
-  color: var(--gold);
-  font-weight: 500;
-  font-size: 1.2rem;
-}
-
-.nav-link {
-  color: #fff !important;
-  font-weight: 600 !important;
-  font-size: 1.15rem !important;
-  letter-spacing: 0.3px;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--gold) !important;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  padding: 40px 0;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: 1;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-title {
-  color: #fff !important;
-  font-size: 3.4rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.hero-subtitle {
-  color: #fff !important;
-  font-size: 1.3rem;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn-warning {
-  background-color: var(--gold);
-  border: none;
-  font-weight: 600;
-  color: #000;
-}
-
-.btn-warning:hover {
-  background-color: #b8962e;
-}
-
-/* =========================
-   CONTENT PANEL
-========================= */
-
-.content-panel {
-  background: #fff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* =========================
-   SECTION SEPARATION (YOUR REQUEST)
-========================= */
-
-.content-panel .mb-4 {
-  padding-bottom: 18px;
-  margin-bottom: 18px;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-}
-
-.content-panel .mb-4:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-/* =========================
-   SERVICE BOXES
-========================= */
-
-.report-container {
-  background: transparent;
-}
-
-.report-item {
-  margin-bottom: 20px;
-}
-
-.report-item-title {
-  color: var(--navy) !important;
-  font-weight: 700;
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-}
-
-.report-item p,
-.report-item-text {
-  color: #1c1c1c !important;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.card-container {
-  padding: 24px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  height: 100%;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-container h5 {
-  font-weight: 700;
-  color: var(--navy);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background-color: var(--navy);
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-}
-
-footer a {
-  color: var(--gold);
+  color: inherit;
   text-decoration: none;
 }
 
-footer a:hover {
-  color: #fff;
-}
-
-/* =========================
-   UTILITIES
-========================= */
-
-.text-gold { color: var(--gold) !important; }
-.text-navy { color: var(--navy) !important; }
-
-/* =========================
-   LINK RESET (CONSISTENT BRANDING)
-========================= */
-
-a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
 a:hover {
-  color: var(--gold) !important;
+  color: var(--gold);
 }
+
 /* =========================
-   MOBILE OPTIMIZATION FIX
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* NAVBAR HEIGHT FIX */
   :root {
     --nav-height: 90px;
   }
 
-  /* NAVBAR BRAND STACK FIX */
-  .navbar-brand span:first-child {
-    font-size: 1.4rem !important;
-  }
-
-  .navbar-brand span:last-child {
-    font-size: 0.85rem !important;
-    line-height: 1.2;
-  }
-
-  /* HERO FIX */
   .hero {
     min-height: 60vh;
     padding: 80px 15px 40px;
@@ -531,304 +226,14 @@ a:hover {
 
   .hero-title {
     font-size: 2.2rem !important;
-    line-height: 1.2;
   }
 
   .hero-subtitle {
     font-size: 1.05rem !important;
+  }
+
+  .lead-text {
+    font-size: 1.2rem;
     padding: 0 10px;
   }
-
-  /* GENERAL TEXT CONTAINMENT */
-  h1, h2, h3, p {
-    word-wrap: break-word;
-  }
-
-}
-/* =========================
-   ROOT VARIABLES
-========================= */
-
-:root {
-  --navy: #1D3A6D;
-  --gold: #D4AF37;
-  --light-bg: #E6F0FA;
-  --nav-height: 110px;
-}
-
-/* =========================
-   BASE STYLES
-========================= */
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--light-bg);
-  color: #1c1c1c;
-  line-height: 1.7;
-  font-size: 1.08rem;
-  padding-top: var(--nav-height);
-}
-
-.container {
-  max-width: 1140px;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-
-h1, h2, h3, .hero-title {
-  font-family: "Playfair Display", Georgia, serif;
-  letter-spacing: 0.3px;
-  color: #1c1c1c;
-}
-
-p {
-  font-size: 1.08rem;
-  line-height: 1.75;
-}
-
-section h2 {
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar {
-  background-color: var(--navy) !important;
-  padding: 18px 0;
-  z-index: 9999;
-}
-
-.navbar-brand span:first-child {
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.9rem;
-}
-
-.navbar-brand span:last-child {
-  color: var(--gold);
-  font-weight: 500;
-  font-size: 1.2rem;
-}
-
-.nav-link {
-  color: #fff !important;
-  font-weight: 600 !important;
-  font-size: 1.15rem !important;
-  letter-spacing: 0.3px;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--gold) !important;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  padding: 40px 0;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: 1;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-title {
-  color: #fff !important;
-  font-size: 3.4rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.hero-subtitle {
-  color: #fff !important;
-  font-size: 1.3rem;
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn-warning {
-  background-color: var(--gold);
-  border: none;
-  font-weight: 600;
-  color: #000;
-}
-
-.btn-warning:hover {
-  background-color: #b8962e;
-}
-
-/* =========================
-   CONTENT PANEL
-========================= */
-
-.content-panel {
-  background: #fff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* =========================
-   SECTION SEPARATION (YOUR REQUEST)
-========================= */
-
-.content-panel .mb-4 {
-  padding-bottom: 18px;
-  margin-bottom: 18px;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-}
-
-.content-panel .mb-4:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-/* =========================
-   SERVICE BOXES
-========================= */
-
-.report-container {
-  background: transparent;
-}
-
-.report-item {
-  margin-bottom: 20px;
-}
-
-.report-item-title {
-  color: var(--navy) !important;
-  font-weight: 700;
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-}
-
-.report-item p,
-.report-item-text {
-  color: #1c1c1c !important;
-}
-
-/* =========================
-   CARDS
-========================= */
-
-.card-container {
-  padding: 24px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  height: 100%;
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-container h5 {
-  font-weight: 700;
-  color: var(--navy);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  background-color: var(--navy);
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-}
-
-footer a {
-  color: var(--gold);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #fff;
-}
-
-/* =========================
-   UTILITIES
-========================= */
-
-.text-gold { color: var(--gold) !important; }
-.text-navy { color: var(--navy) !important; }
-
-/* =========================
-   LINK RESET (CONSISTENT BRANDING)
-========================= */
-
-a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-a:hover {
-  color: var(--gold) !important;
-}
-/* =========================
-   HARD FIX FOR CONTENT BLOCKS
-========================= */
-
-.content-panel .content-block {
-  display: block;
-  padding: 20px 0 !important;
-  margin: 0 !important;
-  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
-}
-
-.content-panel .content-block + .content-block {
-  margin-top: 18px !important;
-}
-
-.content-panel .content-block:last-child {
-  border-bottom: none !important;
-}
-/* =========================
-   LEAD TEXT (SECTION INTRO)
-========================= */
-
-.lead-text {
-  font-size: 1.35rem;
-  line-height: 1.8;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #2a2a2a;
-}
-/* Titles */
-.content-panel .content-block h5 {
-  color: var(--navy) !important;
-  font-weight: 700;
 }

@@ -150,13 +150,38 @@ section h2 {
 }
 
 /* =========================
-   CONTENT BOX TEXT (FIXED)
+   CONTENT PANEL (FIXED CORE ISSUE)
 ========================= */
 
-.content-panel,
-.card-container {
-  font-size: 1.34rem;
-  line-height: 1.95;
+.content-panel {
+  background: #fff !important;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  display: block;
+}
+
+/* TEXT INSIDE BOXES (LARGER + CLEAN) */
+.content-panel p,
+.content-panel li {
+  font-size: 1.22rem;
+  line-height: 1.85;
+}
+
+/* =========================
+   CONTENT BLOCKS
+========================= */
+
+.content-block {
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.content-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 /* =========================
@@ -246,24 +271,4 @@ a:hover {
     font-size: 1.2rem;
     padding: 0 10px;
   }
-}
-/* FORCE WHITE PANEL TO ALWAYS DISPLAY */
-.content-panel {
-  background: #fff;
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-}
-
-/* FIX INTERNAL SPACING (THIS IS WHAT YOU'RE MISSING) */
-.content-block {
-  margin-bottom: 28px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.content-block:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }

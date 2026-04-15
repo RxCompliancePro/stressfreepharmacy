@@ -307,3 +307,20 @@ section {
     padding: 26px 20px;
   }
 }
+/* =========================
+   STATIC PILLAR CARDS (HOME PAGE ONLY)
+========================= */
+
+.pillar-card {
+  transform: none !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+}
+
+/* hard stop ANY hover illusion */
+.pillar-card:hover {
+  transform: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+  border-color: #eef2f7 !important;
+  cursor: default;
+}

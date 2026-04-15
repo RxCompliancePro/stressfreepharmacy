@@ -22,7 +22,6 @@ body {
   padding-top: var(--nav-height);
 }
 
-/* FIX: stop global container from artificially restricting layout */
 .container {
   max-width: 1100px;
 }
@@ -136,7 +135,7 @@ p {
 }
 
 /* =========================
-   CONTENT PANEL (FIXED CORE ISSUE)
+   CONTENT PANEL
 ========================= */
 
 .content-panel {
@@ -146,14 +145,11 @@ p {
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 
-  /* ✅ KEY FIXES */
   width: 100%;
   max-width: 100%;
   margin: 0;
-
 }
 
-/* text inside panel */
 .content-panel p,
 .content-panel li {
   font-size: 1.08rem;
@@ -167,30 +163,29 @@ p {
 }
 
 /* =========================
-   CONTENT BLOCKS
+   CONTENT BLOCKS (FIXED)
+   NO MORE HOVER MOVEMENT HERE
 ========================= */
 
 .content-block {
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
-  transition: transform 0.2s ease;
 }
 
-.content-block:hover {
-  transform: translateY(-3px);
+/* =========================
+   CLICKABLE CARDS (ONLY FOR SERVICES GRID)
+========================= */
+
+.clickable-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.content-block h5 {
-  color: var(--navy);
-  font-weight: 700;
-  margin-bottom: 6px;
-  font-size: 1.1rem;
-  transition: color 0.2s ease;
-}
-
-.content-block:hover h5 {
-  color: var(--gold);
+.clickable-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+  border-color: var(--gold);
+  cursor: pointer;
 }
 
 /* =========================
@@ -209,9 +204,9 @@ p {
   min-height: 230px;
 
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+/* IMPORTANT: only apply hover behavior via clickable-card */
 .col-md-6,
 .col-lg-4 {
   display: flex;
@@ -219,12 +214,6 @@ p {
 
 .card-container {
   flex: 1;
-}
-
-.card-container:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-  border-color: var(--gold);
 }
 
 .card-container h5 {

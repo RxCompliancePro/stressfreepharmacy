@@ -290,3 +290,9 @@ section {
     padding: 26px 20px;
   }
 }
+.content-block h5 {
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
+}

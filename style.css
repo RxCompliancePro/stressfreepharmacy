@@ -353,3 +353,33 @@ section {
 .text-muted h5 {
   color: var(--navy) !important;
 }
+/* =========================
+   FIX: SERVICE CARD HEADINGS INSIDE LINKS
+========================= */
+
+.service-link-card h1,
+.service-link-card h2,
+.service-link-card h3,
+.service-link-card h4,
+.service-link-card h5,
+.service-link-card h6 {
+  color: var(--navy) !important;
+}
+
+/* IMPORTANT: override anchor inheritance specifically */
+a.service-link-card h5,
+a.service-link-card h4,
+a.service-link-card h3 {
+  color: var(--navy) !important;
+}
+
+/* prevent any browser link styling bleed */
+.service-link-card h5 {
+  color: var(--navy) !important;
+  font-weight: 700 !important;
+}
+
+/* kill Bootstrap link color influence completely inside cards */
+.service-link-card * {
+  text-decoration: none !important;
+}

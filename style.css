@@ -301,3 +301,6 @@ section {
   margin-bottom: 0;
   color: #2a2a2a;
 }
+.content-panel h2 {
+  margin-bottom: 32px;
+}

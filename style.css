@@ -311,3 +311,14 @@ section {
 main .content-panel h2 {
   color: #1c1c1c !important;
 }
+.hero-title {
+  color: #fff;
+}
+
+.content-panel h2 {
+  color: #1c1c1c !important;
+}
+
+.content-panel h5 {
+  color: var(--navy);
+}

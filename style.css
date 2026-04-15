@@ -304,3 +304,7 @@ section {
 .content-panel h2 {
   margin-bottom: 32px;
 }
+/* MAIN SECTION HEADINGS (H2) = BLACK */
+.content-panel h2 {
+  color: #1c1c1c !important;
+}

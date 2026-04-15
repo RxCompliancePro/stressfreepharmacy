@@ -157,8 +157,11 @@ section h2 {
   background: #fff !important;
   padding: 40px;
   border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border: 1px solid #d7e3f2;
+  box-shadow: 0 12px 30px rgba(17, 48, 97, 0.12);
   display: block;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
 /* TEXT INSIDE BOXES (LARGER + CLEAN) */
@@ -270,5 +273,9 @@ a:hover {
   .lead-text {
     font-size: 1.2rem;
     padding: 0 10px;
+  }
+
+  .content-panel {
+    padding: 28px 22px;
   }
 }

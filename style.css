@@ -4,9 +4,9 @@
 
 :root {
   --navy: #1D3A6D;
-  --gold: #D4AF37;
+  --gold: #C9A94D;
   --light-bg: #E6F0FA;
-  --nav-height: 110px;
+  --nav-height: 100px;
 }
 
 /* =========================
@@ -17,13 +17,13 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--light-bg);
   color: #1c1c1c;
-  line-height: 1.7;
-  font-size: 1.08rem;
+  line-height: 1.65;
+  font-size: 1.02rem;
   padding-top: var(--nav-height);
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1100px;
 }
 
 /* =========================
@@ -32,29 +32,29 @@ body {
 
 h1, h2, h3, .hero-title {
   font-family: "Playfair Display", Georgia, serif;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   color: #1c1c1c;
 }
 
 p {
-  font-size: 1.08rem;
-  line-height: 1.75;
+  font-size: 1.02rem;
+  line-height: 1.65;
 }
 
 /* SECTION HEADINGS */
 section h2 {
   color: var(--navy);
   font-weight: 700;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 16px;
 }
 
 /* SECTION INTRO TEXT */
 .lead-text {
-  font-size: 1.45rem;
-  line-height: 1.8;
-  max-width: 850px;
-  margin: 0 auto 1.5rem auto;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 0 auto 1.2rem auto;
   color: #2a2a2a;
   font-weight: 500;
 }
@@ -65,26 +65,27 @@ section h2 {
 
 .navbar {
   background-color: var(--navy) !important;
-  padding: 18px 0;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   z-index: 9999;
 }
 
 .navbar-brand span:first-child {
   color: #fff;
   font-weight: 700;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 
 .navbar-brand span:last-child {
   color: var(--gold);
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
 }
 
 .nav-link {
   color: #fff !important;
   font-weight: 600 !important;
-  font-size: 1.15rem !important;
+  font-size: 1.05rem !important;
 }
 
 .nav-link:hover,
@@ -98,11 +99,11 @@ section h2 {
 
 .hero {
   position: relative;
-  min-height: 70vh;
+  min-height: 65vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
   background-size: cover;
   background-position: center;
   padding: 40px 0;
@@ -118,20 +119,21 @@ section h2 {
 .hero .container {
   position: relative;
   z-index: 2;
+  max-width: 900px;
 }
 
 .hero-title {
   color: #fff !important;
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .hero-subtitle {
   color: #fff !important;
-  font-size: 1.3rem;
-  max-width: 850px;
-  margin: 0 auto;
+  font-size: 1.15rem;
+  max-width: 700px;
 }
 
 /* =========================
@@ -143,6 +145,7 @@ section h2 {
   border: none;
   font-weight: 600;
   color: #000;
+  padding: 10px 22px;
 }
 
 .btn-warning:hover {
@@ -150,25 +153,23 @@ section h2 {
 }
 
 /* =========================
-   CONTENT PANEL (FIXED CORE ISSUE)
+   CONTENT PANEL
 ========================= */
 
 .content-panel {
-  background: #fff !important;
-  padding: 40px;
-  border-radius: 14px;
-  border: 1px solid #d7e3f2;
-  box-shadow: 0 12px 30px rgba(17, 48, 97, 0.12);
-  display: block;
-  max-width: 1040px;
+  background: #fff;
+  padding: 36px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  max-width: 980px;
   margin: 0 auto;
 }
 
-/* TEXT INSIDE BOXES (LARGER + CLEAN) */
 .content-panel p,
 .content-panel li {
-  font-size: 1.22rem;
-  line-height: 1.85;
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
 /* =========================
@@ -176,9 +177,9 @@ section h2 {
 ========================= */
 
 .content-block {
-  margin-bottom: 28px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
 .content-block:last-child {
@@ -192,12 +193,13 @@ section h2 {
 ========================= */
 
 .card-container {
-  padding: 24px;
-  border-radius: 12px;
+  padding: 22px;
+  border-radius: 6px;
   background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  border: 1px solid #eef2f7;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   height: 100%;
-  min-height: 220px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -214,7 +216,7 @@ section h2 {
 footer {
   background-color: var(--navy);
   color: #fff;
-  padding: 40px 0;
+  padding: 36px 0;
   text-align: center;
 }
 
@@ -248,18 +250,27 @@ a:hover {
 }
 
 /* =========================
+   SECTION SPACING
+========================= */
+
+section {
+  padding: 80px 0;
+}
+
+/* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
   :root {
-    --nav-height: 90px;
+    --nav-height: 85px;
   }
 
   .hero {
     min-height: 60vh;
     padding: 80px 15px 40px;
+    text-align: left;
   }
 
   .hero-title {
@@ -271,11 +282,11 @@ a:hover {
   }
 
   .lead-text {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     padding: 0 10px;
   }
 
   .content-panel {
-    padding: 28px 22px;
+    padding: 26px 20px;
   }
 }

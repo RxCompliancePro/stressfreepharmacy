@@ -49,16 +49,6 @@ section h2 {
   margin-bottom: 16px;
 }
 
-/* SECTION INTRO TEXT */
-.lead-text {
-  font-size: 1.25rem;
-  line-height: 1.7;
-  max-width: 780px;
-  margin: 0 auto 1.2rem auto;
-  color: #2a2a2a;
-  font-weight: 500;
-}
-
 /* =========================
    NAVBAR
 ========================= */
@@ -173,17 +163,14 @@ section h2 {
   color: #2a2a2a;
 }
 
-/* =========================
-   SECTION HEADERS INSIDE PANELS
-========================= */
-
+/* PANEL HEADER */
 .content-panel h2 {
   color: #1c1c1c !important;
   margin-bottom: 32px;
 }
 
 /* =========================
-   CONTENT BLOCKS
+   CONTENT BLOCKS (SERVICE PAGES)
 ========================= */
 
 .content-block {
@@ -191,71 +178,75 @@ section h2 {
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 
-  /* adds subtle “card feel” */
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
-.content-block:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
+/* hover shift (RESTORED PROPERLY) */
+.content-block:hover {
+  transform: translateY(-3px);
 }
-
-/* =========================
-   SERVICE TITLES (H5)
-========================= */
 
 .content-block h5 {
   color: var(--navy);
   font-weight: 700;
   margin-bottom: 6px;
-  letter-spacing: 0.2px;
   font-size: 1.1rem;
-
   transition: color 0.2s ease;
 }
 
-/* =========================
-   HOVER BEHAVIOR (RESTORED + IMPROVED)
-========================= */
-
-/* shift + lift effect */
-.content-block:hover {
-  transform: translateY(-3px);
-}
-
-/* optional: keep text color stable OR subtle gold accent */
 .content-block:hover h5 {
   color: var(--gold);
 }
 
 /* =========================
-   CARD STYLE GRID SUPPORT (FIX FOR UNEVEN BOXES)
+   SERVICES GRID (FIXED EQUAL HEIGHT + PROPER CLICK FEEL)
 ========================= */
 
 .card-container {
-  padding: 22px;
-  border-radius: 6px;
   background: #fff;
   border: 1px solid #eef2f7;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  height: 100%;
-  min-height: 220px;
+  border-radius: 8px;
+  padding: 22px;
 
   display: flex;
   flex-direction: column;
+  height: 100%;
+  min-height: 230px;
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
+/* FORCE EQUAL HEIGHT GRID BEHAVIOR */
+.col-md-6,
+.col-lg-4 {
+  display: flex;
+}
+
+/* MAKE CARD STRETCH */
+.card-container {
+  flex: 1;
+}
+
+/* HOVER = REAL “SHIFT” EFFECT */
 .card-container:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+  border-color: var(--gold);
 }
 
+/* CARD TEXT */
 .card-container h5 {
   font-weight: 700;
   color: var(--navy);
+}
+
+/* LABEL */
+.card-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold);
 }
 
 /* =========================

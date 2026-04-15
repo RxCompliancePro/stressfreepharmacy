@@ -144,7 +144,6 @@ p {
   border-radius: 6px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -163,20 +162,18 @@ p {
 }
 
 /* =========================
-   CONTENT BLOCKS (STATIC ONLY)
+   CONTENT BLOCKS (ALWAYS STATIC)
 ========================= */
 
 .content-block {
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
-
-  /* HARD LOCK: NO HOVER EFFECTS EVER */
-  transform: none !important;
 }
 
 /* =========================
-   SERVICES GRID BASE CARD (STATIC)
+   BASE CARD (STATIC DEFAULT)
+   used everywhere EXCEPT service links
 ========================= */
 
 .card-container {
@@ -192,12 +189,13 @@ p {
 
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 
-  /* IMPORTANT: prevents any accidental animation bleed */
-  transform: none !important;
-  transition: none !important;
+  /* IMPORTANT: no motion by default */
+  transform: none;
+  transition: none;
 }
 
 /* layout fix */
+.col-md-4,
 .col-md-6,
 .col-lg-4 {
   display: flex;
@@ -207,33 +205,37 @@ p {
   flex: 1;
 }
 
-.card-container h5 {
-  font-weight: 700;
-  color: var(--navy);
+/* =========================
+   HOME PILLAR CARDS (STATIC)
+========================= */
+
+.pillar-card {
+  transform: none !important;
+  transition: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
 }
 
-.card-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--gold);
+.pillar-card:hover {
+  transform: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+  cursor: default;
 }
 
 /* =========================
-   ONLY CLICKABLE SERVICE CARDS MOVE
-   (ONLY 6 BOXES ON services.html)
+   ONLY SERVICE PAGE CARDS MOVE
+   (services.html ONLY INTERACTIVE)
 ========================= */
 
 .service-link-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   will-change: transform;
+  cursor: pointer;
 }
 
 .service-link-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.10);
   border-color: var(--gold);
-  cursor: pointer;
 }
 
 /* =========================
@@ -306,59 +308,4 @@ section {
   .content-panel {
     padding: 26px 20px;
   }
-}
-/* =========================
-   STATIC PILLAR CARDS (HOME PAGE ONLY)
-========================= */
-
-.pillar-card {
-  transform: none !important;
-  transition: none !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
-}
-
-/* hard stop ANY hover illusion */
-.pillar-card:hover {
-  transform: none !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
-  border-color: #eef2f7 !important;
-  cursor: default;
-}
-
-/* =========================
-   BASE CARD (NO INTERACTION BY DEFAULT)
-========================= */
-
-.card-container {
-  transition: none;
-}
-
-/* =========================
-   STATIC HOME PILLARS
-========================= */
-
-.pillar-card {
-  transition: none !important;
-  transform: none !important;
-}
-
-.pillar-card:hover {
-  transform: none !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
-  cursor: default;
-}
-
-/* =========================
-   SERVICE CARDS (ONLY INTERACTIVE ELEMENTS)
-========================= */
-
-.service-link-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  cursor: pointer;
-}
-
-.service-link-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-  border-color: var(--gold);
 }

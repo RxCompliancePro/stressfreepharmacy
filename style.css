@@ -22,6 +22,7 @@ body {
   padding-top: var(--nav-height);
 }
 
+/* FIX: stop global container from artificially restricting layout */
 .container {
   max-width: 1100px;
 }
@@ -39,14 +40,6 @@ h1, h2, h3, .hero-title {
 p {
   font-size: 1.02rem;
   line-height: 1.65;
-}
-
-/* SECTION HEADINGS */
-section h2 {
-  color: var(--navy);
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 16px;
 }
 
 /* =========================
@@ -143,7 +136,7 @@ section h2 {
 }
 
 /* =========================
-   CONTENT PANEL
+   CONTENT PANEL (FIXED CORE ISSUE)
 ========================= */
 
 .content-panel {
@@ -152,10 +145,15 @@ section h2 {
   border-radius: 6px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-  max-width: 980px;
-  margin: 0 auto;
+
+  /* ✅ KEY FIXES */
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+
 }
 
+/* text inside panel */
 .content-panel p,
 .content-panel li {
   font-size: 1.08rem;
@@ -163,25 +161,22 @@ section h2 {
   color: #2a2a2a;
 }
 
-/* PANEL HEADER */
 .content-panel h2 {
   color: #1c1c1c !important;
   margin-bottom: 32px;
 }
 
 /* =========================
-   CONTENT BLOCKS (SERVICE PAGES)
+   CONTENT BLOCKS
 ========================= */
 
 .content-block {
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
-
   transition: transform 0.2s ease;
 }
 
-/* hover shift (RESTORED PROPERLY) */
 .content-block:hover {
   transform: translateY(-3px);
 }
@@ -199,7 +194,7 @@ section h2 {
 }
 
 /* =========================
-   SERVICES GRID (FIXED EQUAL HEIGHT + PROPER CLICK FEEL)
+   SERVICES GRID
 ========================= */
 
 .card-container {
@@ -217,31 +212,26 @@ section h2 {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* FORCE EQUAL HEIGHT GRID BEHAVIOR */
 .col-md-6,
 .col-lg-4 {
   display: flex;
 }
 
-/* MAKE CARD STRETCH */
 .card-container {
   flex: 1;
 }
 
-/* HOVER = REAL “SHIFT” EFFECT */
 .card-container:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.10);
   border-color: var(--gold);
 }
 
-/* CARD TEXT */
 .card-container h5 {
   font-weight: 700;
   color: var(--navy);
 }
 
-/* LABEL */
 .card-label {
   font-size: 0.8rem;
   font-weight: 600;
@@ -275,10 +265,6 @@ footer a:hover {
 
 .text-gold { color: var(--gold); }
 .text-navy { color: var(--navy); }
-
-/* =========================
-   LINKS
-========================= */
 
 a {
   color: inherit;

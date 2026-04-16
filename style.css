@@ -1,22 +1,35 @@
 /* =========================
-   ROOT VARIABLES
+   DESIGN SYSTEM VARIABLES
 ========================= */
 :root {
   --navy: #1D3A6D;
   --gold: #C9A94D;
   --light-bg: #E6F0FA;
+
+  --text: #1c1c1c;
+  --muted: #4a4a4a;
+
   --nav-height: 100px;
+
+  --radius-sm: 8px;
+  --radius-md: 10px;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 6px 18px rgba(0,0,0,0.05);
+  --shadow-hover: 0 14px 30px rgba(29, 58, 109, 0.12);
+
+  --border: #e9eef5;
 }
 
 /* =========================
    BASE
 ========================= */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--light-bg);
-  color: #1c1c1c;
+  color: var(--text);
   line-height: 1.75;
-  font-size: 1.08rem; /* 🔥 increased */
+  font-size: 1.05rem;
   padding-top: var(--nav-height);
 }
 
@@ -25,25 +38,36 @@ body {
 }
 
 /* =========================
-   TYPOGRAPHY
+   TYPOGRAPHY SYSTEM
 ========================= */
-h1, h2, h3, h4, h5, h6 {
+h1 {
   font-family: "Playfair Display", Georgia, serif;
-  letter-spacing: 0.2px;
-  color: var(--navy);
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  color: var(--navy);
+}
+
+h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 2.2rem;
+}
+
+h3, h4, h5, h6 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: var(--navy);
 }
 
 p {
-  font-size: 1.08rem;
-  margin-bottom: 1rem;
-  color: #2a2a2a;
+  font-size: 1.05rem;
   line-height: 1.75;
+  color: #2a2a2a;
+  margin-bottom: 1rem;
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (STABLE SYSTEM COMPONENT)
 ========================= */
 .navbar {
   background-color: var(--navy) !important;
@@ -61,15 +85,14 @@ p {
 .navbar-brand span:last-child {
   color: var(--gold);
   font-weight: 500;
-  font-size: 1.1rem; /* 🔥 increased */
+  font-size: 1.05rem;
   letter-spacing: 0.3px;
 }
 
 .nav-link {
   color: #fff !important;
   font-weight: 600 !important;
-  font-size: 1.08rem; /* 🔥 increased */
-  letter-spacing: 0.3px;
+  font-size: 1.05rem;
 }
 
 .nav-link:hover,
@@ -78,7 +101,7 @@ p {
 }
 
 /* =========================
-   HERO
+   HERO SYSTEM (CONSISTENT ACROSS ALL PAGES)
 ========================= */
 .hero {
   position: relative;
@@ -87,7 +110,7 @@ p {
   align-items: center;
   background-size: cover;
   background-position: center;
-  padding: 60px 0;
+  padding: 70px 0;
 }
 
 .hero::before {
@@ -97,41 +120,37 @@ p {
   background: rgba(0,0,0,0.55);
 }
 
-/* controlled premium width */
 .hero .container {
   position: relative;
   z-index: 2;
-
   max-width: 1000px;
-  margin-left: 0;
-  padding-left: 80px;
-  padding-right: 40px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
-/* 🔥 STRONGER HERO */
 .hero-title {
   color: #fff !important;
-  font-size: 3.4rem;
+  font-size: 3.3rem;
   line-height: 1.2;
+  max-width: 760px;
   margin-bottom: 16px;
-  max-width: 750px; /* 🔥 prevents stretched feel */
 }
 
 .hero-subtitle {
-  color: #ffffff !important;
-  font-size: 1.2rem;
+  color: #fff !important;
+  font-size: 1.15rem;
+  max-width: 650px;
   line-height: 1.75;
-  max-width: 620px;
 }
 
 /* =========================
-   BUTTONS
+   BUTTON SYSTEM
 ========================= */
 .btn-warning {
   background-color: var(--gold);
   border: none;
-  font-weight: 600;
   color: #000;
+  font-weight: 600;
   padding: 11px 24px;
 }
 
@@ -140,89 +159,88 @@ p {
 }
 
 /* =========================
-   CONTENT PANEL
+   CONTENT PANEL (ABOUT + SERVICE PAGES)
 ========================= */
 .content-panel {
   background: #fff;
-  padding: 38px;
-  border-radius: 8px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  padding: 42px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
 }
 
-/* =========================
-   DIVIDERS + SPACING
-========================= */
+/* spacing system for sections */
 .content-block {
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(29, 58, 109, 0.15);
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(29, 58, 109, 0.12);
 }
 
 .content-block:last-child {
   border-bottom: none;
 }
 
-.content-block h5 {
-  color: var(--navy);
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
 /* =========================
-   SERVICES GRID
+   SERVICES GRID SYSTEM
 ========================= */
 .col-md-6,
 .col-lg-4 {
   display: flex;
 }
 
+/* base card */
 .card-container {
   background: #fff;
-  border: 1px solid #eef2f7;
-  border-radius: 8px;
-  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  min-height: 230px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  min-height: 240px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
 }
 
-.card-container p {
-  font-size: 1.05rem;
-}
-
-/* hover only for services */
-.service-link-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
-}
-
+/* hover interaction ONLY for clickable cards */
 .service-link-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(201, 169, 77, 0.3);
 }
 
 /* =========================
-   CARD TEXT
+   CARD TYPOGRAPHY SYSTEM
 ========================= */
 .card-container h5 {
-  color: var(--navy) !important;
+  color: var(--navy);
   font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-container p {
+  font-size: 1.03rem;
+  color: #2a2a2a;
 }
 
 .card-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: rgba(201, 169, 77, 0.9);
 }
 
 /* =========================
    PILLAR CARDS
 ========================= */
 .pillar-card {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   CONTENT PANEL HIERARCHY (IMPORTANT)
+========================= */
+.content-panel h2 {
+  margin-bottom: 12px;
 }
 
 /* =========================
@@ -255,7 +273,7 @@ a {
 }
 
 /* =========================
-   MOBILE
+   MOBILE SYSTEM (CONSISTENT ACROSS ALL PAGES)
 ========================= */
 @media (max-width: 768px) {
 
@@ -269,24 +287,20 @@ a {
 
   .hero {
     min-height: 70vh;
-    padding: 120px 0 60px;
+    padding: 110px 0 60px;
     align-items: flex-start;
   }
 
   .hero .container {
-    padding-left: 24px;
-    padding-right: 24px;
-    max-width: 100%;
+    padding: 0 22px;
   }
 
   .hero-title {
     font-size: 2.4rem !important;
-    line-height: 1.25;
-    margin-top: 10px;
   }
 
   .hero-subtitle {
-    font-size: 1.08rem !important;
+    font-size: 1.05rem !important;
   }
 
   .content-panel {

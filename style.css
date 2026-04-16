@@ -15,12 +15,11 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--light-bg);
   color: #1c1c1c;
-  line-height: 1.7;
-  font-size: 1.02rem;
+  line-height: 1.75;
+  font-size: 1.08rem; /* 🔥 increased */
   padding-top: var(--nav-height);
 }
 
-/* keep Bootstrap structure stable */
 .container {
   max-width: 1100px;
 }
@@ -37,14 +36,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+  font-size: 1.08rem;
   margin-bottom: 1rem;
   color: #2a2a2a;
   line-height: 1.75;
-}
-
-/* ONLY HERO SUBTITLE SHOULD BE LIGHT */
-.hero-subtitle {
-  color: #ffffff !important;
 }
 
 /* =========================
@@ -66,12 +61,15 @@ p {
 .navbar-brand span:last-child {
   color: var(--gold);
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 1.1rem; /* 🔥 increased */
+  letter-spacing: 0.3px;
 }
 
 .nav-link {
   color: #fff !important;
   font-weight: 600 !important;
+  font-size: 1.08rem; /* 🔥 increased */
+  letter-spacing: 0.3px;
 }
 
 .nav-link:hover,
@@ -80,7 +78,7 @@ p {
 }
 
 /* =========================
-   HERO (FIXED ALIGNMENT + WIDTH BALANCE)
+   HERO
 ========================= */
 .hero {
   position: relative;
@@ -89,7 +87,7 @@ p {
   align-items: center;
   background-size: cover;
   background-position: center;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 .hero::before {
@@ -99,21 +97,31 @@ p {
   background: rgba(0,0,0,0.55);
 }
 
-/* 🔥 FIX: controlled premium width (not stretched, not boxed too tight) */
+/* controlled premium width */
 .hero .container {
   position: relative;
   z-index: 2;
 
-  max-width: 1000px;   /* key balance point */
-  margin-left: 0;      /* left aligned premium layout */
-  padding-left: 80px;   /* breathing room */
+  max-width: 1000px;
+  margin-left: 0;
+  padding-left: 80px;
   padding-right: 40px;
 }
 
+/* 🔥 STRONGER HERO */
 .hero-title {
   color: #fff !important;
-  font-size: 3rem;
-  margin-bottom: 12px;
+  font-size: 3.4rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  max-width: 750px; /* 🔥 prevents stretched feel */
+}
+
+.hero-subtitle {
+  color: #ffffff !important;
+  font-size: 1.2rem;
+  line-height: 1.75;
+  max-width: 620px;
 }
 
 /* =========================
@@ -124,7 +132,7 @@ p {
   border: none;
   font-weight: 600;
   color: #000;
-  padding: 10px 22px;
+  padding: 11px 24px;
 }
 
 .btn-warning:hover {
@@ -132,7 +140,7 @@ p {
 }
 
 /* =========================
-   CONTENT PANEL (SERVICE PAGES)
+   CONTENT PANEL
 ========================= */
 .content-panel {
   background: #fff;
@@ -143,11 +151,10 @@ p {
 }
 
 /* =========================
-   DIVIDERS + SPACING (RESTORED)
+   DIVIDERS + SPACING
 ========================= */
 .content-block {
   padding: 18px 0;
-  margin-bottom: 0;
   border-bottom: 1px solid rgba(29, 58, 109, 0.15);
 }
 
@@ -180,7 +187,11 @@ p {
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
-/* SERVICE CARD HOVER ONLY */
+.card-container p {
+  font-size: 1.05rem;
+}
+
+/* hover only for services */
 .service-link-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
@@ -192,7 +203,7 @@ p {
 }
 
 /* =========================
-   CARD TEXT STYLING
+   CARD TEXT
 ========================= */
 .card-container h5 {
   color: var(--navy) !important;
@@ -247,57 +258,6 @@ a {
    MOBILE
 ========================= */
 @media (max-width: 768px) {
-  :root {
-    --nav-height: 85px;
-  }
-
-  .hero-title {
-    font-size: 2.2rem !important;
-  }
-
-  .hero .container {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .content-panel {
-    padding: 26px 20px;
-  }
-}
-/* =========================
-   HERO (FIXED ALIGNMENT)
-========================= */
-.hero {
-  position: relative;
-  min-height: 65vh;
-  display: flex;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  padding: 60px 0; /* increased from 40px */
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-
-/* desktop layout stays the same */
-.hero .container {
-  position: relative;
-  z-index: 2;
-  max-width: 1000px;
-  margin-left: 0;
-  padding-left: 80px;
-  padding-right: 40px;
-}
-
-/* =========================
-   MOBILE FIX (IMPORTANT)
-========================= */
-@media (max-width: 768px) {
 
   :root {
     --nav-height: 85px;
@@ -309,8 +269,8 @@ a {
 
   .hero {
     min-height: 70vh;
-    padding: 120px 0 60px; /* 🔥 key fix: pushes content down safely */
-    align-items: flex-start; /* prevents vertical clipping */
+    padding: 120px 0 60px;
+    align-items: flex-start;
   }
 
   .hero .container {
@@ -320,12 +280,13 @@ a {
   }
 
   .hero-title {
-    font-size: 2.2rem !important;
-    margin-top: 10px; /* prevents top clipping */
+    font-size: 2.4rem !important;
+    line-height: 1.25;
+    margin-top: 10px;
   }
 
   .hero-subtitle {
-    font-size: 1.05rem !important;
+    font-size: 1.08rem !important;
   }
 
   .content-panel {

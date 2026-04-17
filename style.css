@@ -33,6 +33,11 @@ body {
   padding-top: var(--nav-height);
 }
 
+/* prevent width inconsistencies */
+* {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 1100px;
 }
@@ -40,16 +45,13 @@ body {
 /* =========================
    TYPOGRAPHY SYSTEM
 ========================= */
-h1 {
+h1, h2 {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 700;
   color: var(--navy);
 }
 
 h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-weight: 700;
-  color: var(--navy);
   font-size: 2.2rem;
 }
 
@@ -67,7 +69,7 @@ p {
 }
 
 /* =========================
-   NAVBAR (STABLE SYSTEM COMPONENT)
+   NAVBAR
 ========================= */
 .navbar {
   background-color: var(--navy) !important;
@@ -101,18 +103,22 @@ p {
 }
 
 /* =========================
-   HERO SYSTEM (CONSISTENT ACROSS ALL PAGES)
+   HERO SYSTEM (FIXED CONSISTENCY CORE)
 ========================= */
 .hero {
   position: relative;
   min-height: 65vh;
   display: flex;
   align-items: center;
+
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+
   padding: 70px 0;
 }
 
+/* overlay consistency */
 .hero::before {
   content: "";
   position: absolute;
@@ -128,6 +134,7 @@ p {
   padding: 0 40px;
 }
 
+/* HERO TYPOGRAPHY */
 .hero-title {
   color: #fff !important;
   font-size: 3.3rem;
@@ -141,6 +148,13 @@ p {
   font-size: 1.15rem;
   max-width: 650px;
   line-height: 1.75;
+}
+
+/* subtle visual improvement for desktop cropping */
+@media (min-width: 768px) {
+  .hero {
+    background-position: center 40%;
+  }
 }
 
 /* =========================
@@ -159,7 +173,7 @@ p {
 }
 
 /* =========================
-   CONTENT PANEL (ABOUT + SERVICE PAGES)
+   CONTENT PANEL
 ========================= */
 .content-panel {
   background: #fff;
@@ -169,7 +183,6 @@ p {
   box-shadow: var(--shadow-md);
 }
 
-/* spacing system for sections */
 .content-block {
   padding: 22px 0;
   border-bottom: 1px solid rgba(29, 58, 109, 0.12);
@@ -180,14 +193,13 @@ p {
 }
 
 /* =========================
-   SERVICES GRID SYSTEM
+   SERVICES GRID
 ========================= */
 .col-md-6,
 .col-lg-4 {
   display: flex;
 }
 
-/* base card */
 .card-container {
   background: #fff;
   border: 1px solid var(--border);
@@ -200,16 +212,12 @@ p {
   transition: all 0.25s ease;
 }
 
-/* hover interaction ONLY for clickable cards */
 .service-link-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
   border-color: rgba(201, 169, 77, 0.3);
 }
 
-/* =========================
-   CARD TYPOGRAPHY SYSTEM
-========================= */
 .card-container h5 {
   color: var(--navy);
   font-weight: 700;
@@ -227,20 +235,6 @@ p {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: rgba(201, 169, 77, 0.9);
-}
-
-/* =========================
-   PILLAR CARDS
-========================= */
-.pillar-card {
-  box-shadow: var(--shadow-sm);
-}
-
-/* =========================
-   CONTENT PANEL HIERARCHY (IMPORTANT)
-========================= */
-.content-panel h2 {
-  margin-bottom: 12px;
 }
 
 /* =========================
@@ -273,7 +267,7 @@ a {
 }
 
 /* =========================
-   MOBILE SYSTEM (CONSISTENT ACROSS ALL PAGES)
+   MOBILE FIXES
 ========================= */
 @media (max-width: 768px) {
 
@@ -289,6 +283,7 @@ a {
     min-height: 70vh;
     padding: 110px 0 60px;
     align-items: flex-start;
+    background-position: center center;
   }
 
   .hero .container {

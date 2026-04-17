@@ -24,6 +24,10 @@
 /* =========================
    BASE
 ========================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--light-bg);
@@ -31,11 +35,6 @@ body {
   line-height: 1.75;
   font-size: 1.05rem;
   padding-top: var(--nav-height);
-}
-
-/* prevent width inconsistencies */
-* {
-  box-sizing: border-box;
 }
 
 .container {
@@ -103,22 +102,25 @@ p {
 }
 
 /* =========================
-   HERO SYSTEM (FIXED CONSISTENCY CORE)
+   HERO SYSTEM (FULL FIXED VERSION)
 ========================= */
 .hero {
   position: relative;
+
+  /* 🔥 LOCKED CONSISTENT HEIGHT ACROSS ALL PAGES */
   min-height: 65vh;
+
   display: flex;
   align-items: center;
 
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 
-  padding: 70px 0;
+  padding: 80px 0;
 }
 
-/* overlay consistency */
+/* dark overlay */
 .hero::before {
   content: "";
   position: absolute;
@@ -126,31 +128,46 @@ p {
   background: rgba(0,0,0,0.55);
 }
 
+/* container stability */
 .hero .container {
   position: relative;
   z-index: 2;
+
   max-width: 1000px;
   margin: 0 auto;
+
   padding: 0 40px;
+
+  display: block;
 }
 
-/* HERO TYPOGRAPHY */
+/* HERO TEXT */
 .hero-title {
   color: #fff !important;
   font-size: 3.3rem;
   line-height: 1.2;
+
   max-width: 760px;
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
 }
 
 .hero-subtitle {
   color: #fff !important;
   font-size: 1.15rem;
-  max-width: 650px;
   line-height: 1.75;
+
+  max-width: 650px;
+  margin: 0 0 20px 0;
 }
 
-/* subtle visual improvement for desktop cropping */
+/* BUTTON FIX (prevents full-width stretch bug) */
+.hero .btn {
+  display: inline-block;
+  width: auto;
+  max-width: fit-content;
+}
+
+/* slight desktop positioning refinement */
 @media (min-width: 768px) {
   .hero {
     background-position: center 40%;
@@ -229,14 +246,6 @@ p {
   color: #2a2a2a;
 }
 
-.card-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(201, 169, 77, 0.9);
-}
-
 /* =========================
    FOOTER
 ========================= */
@@ -281,9 +290,8 @@ a {
 
   .hero {
     min-height: 70vh;
-    padding: 110px 0 60px;
-    align-items: flex-start;
-    background-position: center center;
+    padding: 80px 0 60px;
+    align-items: center;
   }
 
   .hero .container {

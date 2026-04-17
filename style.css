@@ -22,7 +22,7 @@
 }
 
 /* =========================
-   BASE
+   GLOBAL RESET
 ========================= */
 * {
   box-sizing: border-box;
@@ -102,12 +102,12 @@ p {
 }
 
 /* =========================
-   HERO SYSTEM (FULL FIXED VERSION)
+   HERO SYSTEM (STABLE + NO CLIPPING)
 ========================= */
 .hero {
   position: relative;
 
-  /* 🔥 LOCKED CONSISTENT HEIGHT ACROSS ALL PAGES */
+  /* 🔥 KEY FIX: stable height system */
   min-height: 65vh;
 
   display: flex;
@@ -117,10 +117,10 @@ p {
   background-position: center;
   background-repeat: no-repeat;
 
-  padding: 80px 0;
+  padding: 90px 0;
 }
 
-/* dark overlay */
+/* overlay */
 .hero::before {
   content: "";
   position: absolute;
@@ -128,12 +128,12 @@ p {
   background: rgba(0,0,0,0.55);
 }
 
-/* container stability */
+/* content wrapper (prevents stretching & layout issues) */
 .hero .container {
   position: relative;
   z-index: 2;
 
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
 
   padding: 0 40px;
@@ -141,33 +141,44 @@ p {
   display: block;
 }
 
-/* HERO TEXT */
+/* =========================
+   HERO TYPOGRAPHY (BALANCED WIDTH FIX)
+========================= */
 .hero-title {
   color: #fff !important;
-  font-size: 3.3rem;
-  line-height: 1.2;
 
-  max-width: 760px;
+  font-size: 3.3rem;
+  line-height: 1.15;
+
+  max-width: 900px;
+
   margin: 0 0 16px 0;
+
+  overflow-wrap: break-word;
 }
 
 .hero-subtitle {
   color: #fff !important;
+
   font-size: 1.15rem;
   line-height: 1.75;
 
-  max-width: 650px;
+  max-width: 700px;
+
   margin: 0 0 20px 0;
 }
 
-/* BUTTON FIX (prevents full-width stretch bug) */
+/* =========================
+   BUTTON FIX (STOPS FULL HEIGHT STRETCH)
+========================= */
 .hero .btn {
-  display: inline-block;
-  width: auto;
+  display: inline-block !important;
+  width: auto !important;
   max-width: fit-content;
+  align-self: flex-start;
 }
 
-/* slight desktop positioning refinement */
+/* desktop fine tuning */
 @media (min-width: 768px) {
   .hero {
     background-position: center 40%;

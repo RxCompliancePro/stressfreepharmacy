@@ -24,6 +24,10 @@
 /* =========================
    BASE
 ========================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--light-bg);
@@ -31,11 +35,6 @@ body {
   line-height: 1.75;
   font-size: 1.05rem;
   padding-top: var(--nav-height);
-}
-
-/* prevent width inconsistencies */
-* {
-  box-sizing: border-box;
 }
 
 .container {
@@ -103,11 +102,16 @@ p {
 }
 
 /* =========================
-   HERO SYSTEM (FIXED CONSISTENCY CORE)
+   HERO SYSTEM (FIXED SIZE ACROSS ALL PAGES)
 ========================= */
 .hero {
   position: relative;
-  min-height: 65vh;
+
+  /* 🔥 LOCKED HEIGHT (this fixes your issue) */
+  height: 75vh;
+  min-height: 75vh;
+  max-height: 75vh;
+
   display: flex;
   align-items: center;
 
@@ -115,10 +119,10 @@ p {
   background-position: center center;
   background-repeat: no-repeat;
 
-  padding: 70px 0;
+  padding: 0;
 }
 
-/* overlay consistency */
+/* dark overlay */
 .hero::before {
   content: "";
   position: absolute;
@@ -126,15 +130,22 @@ p {
   background: rgba(0,0,0,0.55);
 }
 
+/* content positioning */
 .hero .container {
   position: relative;
   z-index: 2;
+
   max-width: 1000px;
   margin: 0 auto;
+
   padding: 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* HERO TYPOGRAPHY */
+/* HERO TEXT */
 .hero-title {
   color: #fff !important;
   font-size: 3.3rem;
@@ -148,13 +159,6 @@ p {
   font-size: 1.15rem;
   max-width: 650px;
   line-height: 1.75;
-}
-
-/* subtle visual improvement for desktop cropping */
-@media (min-width: 768px) {
-  .hero {
-    background-position: center 40%;
-  }
 }
 
 /* =========================
@@ -229,14 +233,6 @@ p {
   color: #2a2a2a;
 }
 
-.card-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(201, 169, 77, 0.9);
-}
-
 /* =========================
    FOOTER
 ========================= */
@@ -267,7 +263,7 @@ a {
 }
 
 /* =========================
-   MOBILE FIXES
+   MOBILE FIX
 ========================= */
 @media (max-width: 768px) {
 
@@ -280,9 +276,13 @@ a {
   }
 
   .hero {
+    height: 70vh;
     min-height: 70vh;
-    padding: 110px 0 60px;
-    align-items: flex-start;
+    max-height: 70vh;
+
+    padding: 0;
+    align-items: center;
+
     background-position: center center;
   }
 

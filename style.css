@@ -321,3 +321,9 @@ a {
     padding: 26px 20px;
   }
 }
+
+.service-link-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

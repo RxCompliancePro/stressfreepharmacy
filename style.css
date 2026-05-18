@@ -9,16 +9,16 @@
   --text: #1c1c1c;
   --muted: #4a4a4a;
 
-  --nav-height: 100px;
+  --nav-height: 110px;
 
   --radius-sm: 8px;
-  --radius-md: 10px;
+  --radius-md: 12px;
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-  --shadow-md: 0 6px 18px rgba(0,0,0,0.05);
-  --shadow-hover: 0 14px 30px rgba(29, 58, 109, 0.12);
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.04);
+  --shadow-md: 0 10px 25px rgba(0,0,0,0.06);
+  --shadow-hover: 0 18px 40px rgba(29, 58, 109, 0.14);
 
-  --border: #e9eef5;
+  --border: #e6ecf3;
 }
 
 /* =========================
@@ -33,12 +33,13 @@ body {
   background-color: var(--light-bg);
   color: var(--text);
   line-height: 1.75;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   padding-top: var(--nav-height);
 }
 
+/* Slightly wider, more "consulting firm" feel */
 .container {
-  max-width: 1100px;
+  max-width: 1140px;
 }
 
 /* =========================
@@ -48,68 +49,81 @@ h1, h2 {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 700;
   color: var(--navy);
+  letter-spacing: -0.3px;
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
 }
 
 h3, h4, h5, h6 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   color: var(--navy);
+  letter-spacing: -0.2px;
 }
 
 p {
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 1.08rem;
+  line-height: 1.8;
   color: #2a2a2a;
-  margin-bottom: 1rem;
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (MAJOR UPGRADE)
 ========================= */
 .navbar {
   background-color: var(--navy) !important;
-  padding: 14px 0;
+  padding: 18px 0;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   z-index: 9999;
 }
 
+/* BRAND */
 .navbar-brand span:first-child {
   color: #fff;
-  font-weight: 700;
-  font-size: 1.7rem;
+  font-weight: 800;
+  font-size: 1.95rem;
+  letter-spacing: 0.4px;
+  line-height: 1.1;
 }
 
 .navbar-brand span:last-child {
   color: var(--gold);
   font-weight: 500;
-  font-size: 1.05rem;
-  letter-spacing: 0.3px;
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+  margin-top: 3px;
+  opacity: 0.95;
+}
+
+/* NAV LINKS (FIXED HIERARCHY) */
+.navbar-nav {
+  gap: 6px;
 }
 
 .nav-link {
   color: #fff !important;
   font-weight: 600 !important;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.3px;
+  padding: 8px 12px !important;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: var(--gold) !important;
+  background: rgba(255,255,255,0.06);
 }
 
 /* =========================
-   HERO SYSTEM (STABLE + NO CLIPPING)
+   HERO SYSTEM (CLEANED)
 ========================= */
 .hero {
   position: relative;
-
-  /* 🔥 KEY FIX: stable height system */
-  min-height: 65vh;
-
+  min-height: 70vh;
   display: flex;
   align-items: center;
 
@@ -117,10 +131,9 @@ p {
   background-position: center;
   background-repeat: no-repeat;
 
-  padding: 90px 0;
+  padding: 100px 0;
 }
 
-/* overlay */
 .hero::before {
   content: "";
   position: absolute;
@@ -128,111 +141,66 @@ p {
   background: rgba(0,0,0,0.55);
 }
 
-/* content wrapper (prevents stretching & layout issues) */
 .hero .container {
   position: relative;
   z-index: 2;
-
   max-width: 900px;
-  margin: 0 auto;
-
   padding: 0 40px;
-
-  display: block;
 }
 
-/* =========================
-   HERO TYPOGRAPHY (BALANCED WIDTH FIX)
-========================= */
+/* HERO TEXT */
 .hero-title {
   color: #fff !important;
-
-  font-size: 3.3rem;
+  font-size: 3.2rem;
   line-height: 1.15;
-
-  max-width: 900px;
-
-  margin: 0 0 16px 0;
-
-  overflow-wrap: break-word;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
   color: #fff !important;
-
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   line-height: 1.75;
-
-  max-width: 700px;
-
-  margin: 0 0 20px 0;
+  max-width: 750px;
 }
 
 /* =========================
-   BUTTON FIX (STOPS FULL HEIGHT STRETCH)
-========================= */
-.hero .btn {
-  display: inline-block !important;
-  width: auto !important;
-  max-width: fit-content;
-  align-self: flex-start;
-}
-
-/* desktop fine tuning */
-@media (min-width: 768px) {
-  .hero {
-    background-position: center 40%;
-  }
-}
-
-/* =========================
-   BUTTON SYSTEM
+   BUTTON SYSTEM (CLEAN)
 ========================= */
 .btn-warning {
   background-color: var(--gold);
   border: none;
   color: #000;
   font-weight: 600;
-  padding: 11px 24px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 .btn-warning:hover {
   background-color: #b8962e;
+  transform: translateY(-1px);
 }
 
 /* =========================
-   CONTENT PANEL
+   CONTENT PANEL (MORE PREMIUM)
 ========================= */
 .content-panel {
   background: #fff;
-  padding: 42px;
+  padding: 48px;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-md);
 }
 
-.content-block {
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(29, 58, 109, 0.12);
-}
-
-.content-block:last-child {
-  border-bottom: none;
-}
-
 /* =========================
-   SERVICES GRID
+   CARDS (UPGRADED FEEL)
 ========================= */
-.col-md-6,
-.col-lg-4 {
-  display: flex;
-}
-
 .card-container {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
   min-height: 240px;
@@ -240,10 +208,10 @@ p {
   transition: all 0.25s ease;
 }
 
-.service-link-card:hover {
-  transform: translateY(-5px);
+.card-container:hover {
+  transform: translateY(-6px);
   box-shadow: var(--shadow-hover);
-  border-color: rgba(201, 169, 77, 0.3);
+  border-color: rgba(201, 169, 77, 0.35);
 }
 
 .card-container h5 {
@@ -258,12 +226,20 @@ p {
 }
 
 /* =========================
+   LINKS
+========================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
   background-color: var(--navy);
   color: #fff;
-  padding: 36px 0;
+  padding: 42px 0;
   text-align: center;
 }
 
@@ -281,18 +257,13 @@ footer a:hover {
 .text-gold { color: var(--gold); }
 .text-navy { color: var(--navy); }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* =========================
-   MOBILE FIXES
+   MOBILE
 ========================= */
 @media (max-width: 768px) {
 
   :root {
-    --nav-height: 85px;
+    --nav-height: 90px;
   }
 
   body {
@@ -300,30 +271,18 @@ a {
   }
 
   .hero {
-    min-height: 70vh;
-    padding: 80px 0 60px;
-    align-items: center;
-  }
-
-  .hero .container {
-    padding: 0 22px;
+    padding: 80px 0;
   }
 
   .hero-title {
-    font-size: 2.4rem !important;
+    font-size: 2.3rem;
   }
 
   .hero-subtitle {
-    font-size: 1.05rem !important;
+    font-size: 1.05rem;
   }
 
   .content-panel {
-    padding: 26px 20px;
+    padding: 28px 22px;
   }
-}
-
-.service-link-card {
-  text-decoration: none;
-  color: inherit;
-  display: block;
 }

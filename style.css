@@ -1,36 +1,37 @@
 /* =========================
-   PREMIUM CONSULTING DESIGN SYSTEM
-   RXCELSIOR SOLUTIONS
+   RXCELSIOR PREMIUM SYSTEM v2
+   Healthcare Consulting Identity
 ========================= */
 
 :root {
-  /* Core identity */
+  /* Core brand */
   --navy: #14263d;
-  --navy-deep: #0c1726;
+  --navy-deep: #0b1624;
   --gold: #b08a2e;
 
-  /* Background system */
-  --bg: #f4f7fb;
+  /* Background system (less harsh white/black contrast) */
+  --bg: #f5f7fb;
   --surface: #ffffff;
 
-  /* Text system */
-  --text: #101828;
-  --muted: #475467;
+  /* Text system (SOFTER than pure black) */
+  --text: #1f2a37;
+  --muted: #5b6677;
+  --soft: #7a8699;
 
   /* Layout */
   --nav-height: 92px;
-  --radius: 12px;
+  --radius: 14px;
 
-  /* Shadows (subtle, institutional) */
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
-  --shadow-md: 0 12px 28px rgba(0,0,0,0.08);
-  --shadow-lg: 0 22px 50px rgba(0,0,0,0.12);
+  /* Shadows (more depth, less flat) */
+  --shadow-sm: 0 2px 10px rgba(0,0,0,0.05);
+  --shadow-md: 0 14px 30px rgba(0,0,0,0.08);
+  --shadow-lg: 0 26px 60px rgba(0,0,0,0.12);
 
-  --border: #e6ecf3;
+  --border: #e7edf5;
 }
 
 /* =========================
-   BASE RESET
+   BASE
 ========================= */
 
 * {
@@ -49,77 +50,63 @@ body {
   line-height: 1.75;
 }
 
-/* container constraint for professionalism */
-.container {
-  max-width: 1140px;
-}
-
 /* =========================
-   TYPOGRAPHY SYSTEM (FIXED AUTHORITY)
+   TYPOGRAPHY (FIX BLAND LOOK)
 ========================= */
 
-/* Headings = authority serif */
 h1, h2, h3 {
   font-family: "Libre Baskerville", Georgia, serif;
   color: var(--navy);
-  font-weight: 700;
   letter-spacing: -0.4px;
   line-height: 1.2;
+  font-weight: 700;
 }
 
-h1 {
-  font-size: 2.75rem;
-}
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.5rem; }
 
-h2 {
-  font-size: 2.15rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-/* Body text = readable sans */
 p {
-  font-size: 1.05rem;
   color: var(--muted);
+  font-size: 1.05rem;
   line-height: 1.8;
 }
 
+/* add subtle hierarchy instead of pure black blocks */
+strong {
+  color: var(--navy);
+  font-weight: 650;
+}
+
 /* =========================
-   NAVBAR (INSTITUTIONAL WEIGHT FIX)
+   NAVBAR (MORE INSTITUTIONAL)
 ========================= */
 
 .navbar {
   background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
   padding: 18px 0;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 .navbar-brand {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
-/* MAIN TITLE (heavier, more authority) */
 .navbar-brand span:first-child {
   font-size: 1.85rem;
   font-weight: 800;
-  color: #ffffff;
-  letter-spacing: 0.5px;
+  color: #fff;
 }
 
-/* SUBTITLE (less tiny, more readable) */
 .navbar-brand span:last-child {
   font-size: 1.05rem;
   font-weight: 500;
-  color: rgba(255,255,255,0.78);
-  margin-top: 4px;
+  color: rgba(255,255,255,0.75);
+  margin-top: 3px;
 }
 
-/* NAV LINKS (fix “small awkward feel”) */
 .navbar-nav {
   gap: 10px;
 }
@@ -130,7 +117,6 @@ p {
   color: rgba(255,255,255,0.85) !important;
   padding: 10px 14px !important;
   border-radius: 8px;
-  transition: 0.2s ease;
 }
 
 .nav-link:hover,
@@ -140,7 +126,7 @@ p {
 }
 
 /* =========================
-   HERO (MORE IMPACT, LESS “SOFT POSTER”)
+   HERO (MORE DEPTH)
 ========================= */
 
 .hero {
@@ -148,7 +134,6 @@ p {
   min-height: 72vh;
   display: flex;
   align-items: center;
-
   padding: 100px 0;
   background-size: cover;
   background-position: center;
@@ -158,7 +143,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(8, 14, 24, 0.62);
+  background: rgba(8, 14, 24, 0.60);
 }
 
 .hero .container {
@@ -167,25 +152,21 @@ p {
   max-width: 950px;
 }
 
-/* HERO TITLE (STRONGER WEIGHT IMPACT) */
 .hero-title {
   color: #fff;
   font-size: 2.9rem;
   font-weight: 800;
   line-height: 1.15;
-  margin-bottom: 16px;
 }
 
-/* HERO SUBTITLE (less “thin”) */
 .hero-subtitle {
   color: rgba(255,255,255,0.88);
   font-size: 1.18rem;
-  max-width: 800px;
-  line-height: 1.75;
+  margin-top: 14px;
 }
 
 /* =========================
-   BUTTONS (MORE INSTITUTIONAL)
+   BUTTONS (LESS FLAT)
 ========================= */
 
 .btn-warning {
@@ -195,7 +176,6 @@ p {
   font-weight: 700;
   padding: 12px 24px;
   border-radius: 10px;
-  transition: 0.2s ease;
 }
 
 .btn-warning:hover {
@@ -204,19 +184,19 @@ p {
 }
 
 /* =========================
-   PANELS (LESS “CARDY”, MORE INSTITUTIONAL)
+   CONTENT PANELS (LESS “WHITE BOX” FEEL)
 ========================= */
 
 .content-panel {
   background: var(--surface);
   border-radius: var(--radius);
-  padding: 42px;
+  padding: 44px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
 }
 
 /* =========================
-   CARDS (CLEAN + STRUCTURED)
+   SERVICE CARDS (FIX BLAND STACKING)
 ========================= */
 
 .card-container {
@@ -224,31 +204,55 @@ p {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
-  height: 100%;
+
   box-shadow: var(--shadow-sm);
-  transition: 0.25s ease;
+  transition: all 0.25s ease;
+
+  height: 100%;
 }
 
 .card-container:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(176, 138, 46, 0.25);
+  border-color: rgba(176, 138, 46, 0.3);
 }
 
-.card-container h5 {
-  font-size: 1.15rem;
-  font-weight: 750;
-  color: var(--navy);
+/* SMALL LABEL (top text in cards) */
+.card-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--soft);
   margin-bottom: 8px;
+  display: block;
 }
 
+/* MAIN TITLE */
+.card-container h5,
+.card-container h3 {
+  color: var(--navy);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* BODY TEXT (no more faint endings) */
 .card-container p {
-  font-size: 1rem;
   color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+/* FIX: stop last-line fading issue */
+.card-container small,
+.card-container .text-muted {
+  color: var(--soft) !important;
+  font-size: 0.95rem;
+  opacity: 1;
 }
 
 /* =========================
-   FOOTER (MORE “INSTITUTIONAL LAW FIRM FEEL”)
+   FOOTER (LESS HARSH BLACK FEEL)
 ========================= */
 
 footer {
@@ -257,7 +261,6 @@ footer {
   text-align: center;
   padding: 46px 0;
   margin-top: 60px;
-  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 footer a {
@@ -278,18 +281,13 @@ a {
 }
 
 /* =========================
-   MOBILE OPTIMIZATION
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
   body {
     font-size: 1rem;
-  }
-
-  .hero {
-    min-height: 60vh;
-    padding: 70px 0;
   }
 
   .hero-title {
@@ -301,43 +299,10 @@ a {
   }
 
   .content-panel {
-    padding: 24px;
+    padding: 26px;
   }
 
   .navbar-brand span:first-child {
     font-size: 1.35rem;
   }
-
-  .navbar-brand span:last-child {
-    font-size: 0.95rem;
-  }
-}
-/* =========================
-   TEXT HIERARCHY FIX (IMPORTANT)
-========================= */
-
-/* normal body stays slightly muted */
-p {
-  color: var(--muted);
-}
-
-/* CARD TEXT = MUST BE MORE READABLE */
-.card-container p,
-.content-panel p {
-  color: var(--text);
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
-
-/* HEADINGS INSIDE CARDS SHOULD POP MORE */
-.card-container h5,
-.card-container h3 {
-  color: var(--navy);
-  font-weight: 800;
-}
-
-/* SUBTLE SUPPORT TEXT ONLY */
-.text-muted {
-  color: #667085 !important;
-  font-size: 0.98rem;
 }

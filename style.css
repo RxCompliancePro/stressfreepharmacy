@@ -262,3 +262,20 @@ footer a {
   width: min(1120px, 92%);
   margin-inline: auto;
 }
+/* Tighten card typography and spacing on the index grid */
+.pillar-card h5,
+.card-container h3 { margin-bottom: 6px; }
+
+.card-container p { margin-bottom: 8px; }
+
+/* Ensure hero CTA uses your gold brand if preferred */
+.btn-warning {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: #111;
+  font-weight: 700;
+}
+.btn-warning:hover {
+  background-color: #9a7721;
+  border-color: #9a7721;
+}

@@ -314,3 +314,23 @@ a {
     font-size: 0.95rem;
   }
 }
+/* =========================
+   BRAND INTERACTION
+========================= */
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+
+  transition: opacity 0.2s ease,
+              transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+.navbar-brand:hover span:first-child {
+  color: #ffffff;
+}

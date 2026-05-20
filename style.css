@@ -1,5 +1,4 @@
 :root {
-
   --navy: #14263d;
   --navy-deep: #0b1624;
   --gold: #b08a2e;
@@ -16,17 +15,34 @@
   --shadow-md: 0 14px 35px rgba(0,0,0,0.10);
 
   --nav-height: 92px;
+
+  /* New tokens */
+  --border: #e6edf5;
+  --overlay: rgba(10,16,28,0.65);
+  --overlay-strong: rgba(10,16,28,0.75);
+  --text-inverse: #ffffff;
+  --text-inverse-soft: rgba(255,255,255,0.92);
+  --focus: #b08a2e; /* gold focus outline */
 }
 
 /* BASE */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
   padding-top: var(--nav-height);
   font-family: system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.75;
+  text-rendering: optimizeLegibility;
 }
 
 /* TYPOGRAPHY */
@@ -34,52 +50,87 @@ h1,h2,h3 {
   color: var(--navy);
   font-weight: 800;
   line-height: 1.2;
+  margin: 0 0 0.6em;
 }
 
-h1 { font-size: 2.8rem; }
-h2 { font-size: 2.2rem; }
-h3 { font-size: 1.5rem; }
+h1 { font-size: clamp(2rem, 3.2vw + 1rem, 2.8rem); }
+h2 { font-size: clamp(1.6rem, 2.2vw + 0.9rem, 2.2rem); }
+h3 { font-size: clamp(1.2rem, 1.2vw + 0.9rem, 1.5rem); }
 
 p {
+  margin: 0 0 1em;
   color: var(--text);
 }
 
-/* 🔥 FIX: strong text must be readable on dark hero */
-strong {
-  color: #ffffff !important;
+/* Strong text: readable on dark hero without using !important globally */
+.hero strong {
+  color: var(--text-inverse);
   font-weight: 800;
+}
+
+/* LINKS & FOCUS STATES */
+a {
+  color: var(--navy);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+:where(a, button, .btn-gold, .nav-link):focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 8px;
 }
 
 /* NAVBAR */
 .navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
   background: linear-gradient(180deg, var(--navy), var(--navy-deep));
   padding: 16px 0;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .navbar-brand {
   display: flex;
   flex-direction: column;
+  line-height: 1.1;
 }
 
 .navbar-brand span:first-child {
-  color: #fff;
-  font-size: 1.7rem;
+  color: var(--text-inverse);
+  font-size: 1.6rem;
   font-weight: 800;
 }
 
 .navbar-brand span:last-child {
-  color: rgba(255,255,255,0.8);
-  font-size: 1rem;
+  color: rgba(255,255,255,0.82);
+  font-size: 0.95rem;
 }
 
 .nav-link {
-  color: rgba(255,255,255,0.85) !important;
+  color: rgba(255,255,255,0.88);
   font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: color .2s ease, background-color .2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #fff !important;
+  color: var(--text-inverse);
+  background-color: rgba(255,255,255,0.06);
 }
 
 /* HERO */
@@ -88,33 +139,40 @@ strong {
   min-height: 72vh;
   display: flex;
   align-items: center;
-  padding: 90px 0;
+  padding: clamp(48px, 6vw, 90px) 0;
   background-size: cover;
   background-position: center;
+  isolation: isolate; /* ensures overlay stacks correctly */
 }
 
-/* 🔥 FIX: darker overlay so white + bold text is always readable */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(10,16,28,0.65);
+  background: var(--overlay);
+  z-index: -1;
 }
 
-/* HERO CONTENT */
+.hero:hover::before {
+  /* Slightly stronger overlay on hover for contrast stability if the bg is bright */
+  background: var(--overlay-strong);
+}
+
 .hero .container {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero-title {
-  color: #fff;
-  font-size: 2.7rem;
+  color: var(--text-inverse);
+  font-size: clamp(2rem, 3.4vw + 1rem, 2.7rem);
   font-weight: 800;
+  margin-bottom: 0.5em;
 }
 
 .hero-subtitle {
-  color: rgba(255,255,255,0.92);
+  color: var(--text-inverse-soft);
+  max-width: 72ch;
 }
 
 /* BUTTON */
@@ -123,43 +181,84 @@ strong {
   border: none;
   color: #111;
   font-weight: 700;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .2s ease, background-color .2s ease;
+  box-shadow: 0 4px 14px rgba(176,138,46,0.25);
 }
 
 .btn-gold:hover {
-  background: #9a7721;
+  background: color-mix(in srgb, var(--gold) 88%, black);
+}
+
+.btn-gold:active {
+  transform: translateY(1px);
+}
+
+.btn-gold:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* CARDS */
 .card-container {
-  background: #fff;
-  border: 1px solid #e6edf5;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--shadow-sm);
+  transition: box-shadow .25s ease, transform .08s ease;
 }
 
 .card-container:hover {
   box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
 }
 
 /* PANELS */
 .content-panel {
-  background: #fff;
+  background: var(--surface);
   border-radius: var(--radius);
-  padding: 40px;
-  border: 1px solid #e6edf5;
+  padding: clamp(24px, 3.2vw, 40px);
+  border: 1px solid var(--border);
 }
 
 /* FOOTER */
 footer {
   background: var(--navy-deep);
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.82);
   text-align: center;
   padding: 40px 0;
 }
 
 footer a {
   color: var(--gold);
+  text-underline-offset: 3px;
+}
+
+/* ACCESSIBILITY & REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* RESPONSIVE NAV HEIGHT + BODY OFFSET */
+@media (max-width: 640px) {
+  :root { --nav-height: 76px; }
+  body { padding-top: var(--nav-height); }
+  .navbar-brand span:first-child { font-size: 1.4rem; }
+  .navbar-brand span:last-child { font-size: 0.9rem; }
+}
+
+/* OPTIONAL: Container utility if not provided by framework */
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
 }

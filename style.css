@@ -312,3 +312,32 @@ a {
     font-size: 0.95rem;
   }
 }
+/* =========================
+   TEXT HIERARCHY FIX (IMPORTANT)
+========================= */
+
+/* normal body stays slightly muted */
+p {
+  color: var(--muted);
+}
+
+/* CARD TEXT = MUST BE MORE READABLE */
+.card-container p,
+.content-panel p {
+  color: var(--text);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* HEADINGS INSIDE CARDS SHOULD POP MORE */
+.card-container h5,
+.card-container h3 {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+/* SUBTLE SUPPORT TEXT ONLY */
+.text-muted {
+  color: #667085 !important;
+  font-size: 0.98rem;
+}

@@ -1,504 +1,188 @@
 /* =========================
    RXCELSIOR PREMIUM SYSTEM v5
-   Finalized Professional Brand System
 ========================= */
 
 :root {
 
-  /* BRAND */
   --navy: #14263d;
   --navy-deep: #0b1624;
   --gold: #b08a2e;
 
-  /* SURFACES */
   --bg: #f4f7fb;
   --surface: #ffffff;
 
-  /* TEXT */
   --text: #1b2430;
   --muted: #506072;
-  --soft: #738399;
 
-  /* LAYOUT */
   --nav-height: 92px;
   --radius: 14px;
 
-  /* DEPTH */
   --shadow-sm: 0 3px 12px rgba(0,0,0,0.06);
   --shadow-md: 0 16px 40px rgba(0,0,0,0.10);
-  --shadow-lg: 0 28px 70px rgba(0,0,0,0.14);
 
   --border: #e6edf5;
 }
 
-/* =========================
-   BASE
-========================= */
-
+/* BASE */
 * {
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding-top: var(--nav-height);
 
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    Arial,
-    sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   background: var(--bg);
   color: var(--text);
 
   font-size: 1.08rem;
   line-height: 1.75;
-
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
-.container {
-  max-width: 1140px;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
-
-h1,
-h2,
-h3,
-h4,
-h5 {
+/* TYPOGRAPHY */
+h1,h2,h3,h4,h5 {
   color: var(--navy);
-  font-weight: 780;
+  font-weight: 750;
   line-height: 1.2;
-  letter-spacing: -0.3px;
-  margin-bottom: 0.8rem;
 }
 
-h1 {
-  font-size: 2.95rem;
-}
-
-h2 {
-  font-size: 2.2rem;
-}
-
-h3 {
-  font-size: 1.55rem;
-}
-
-h5 {
-  font-size: 1.18rem;
-}
+h1 { font-size: 2.9rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.5rem; }
 
 p {
   color: var(--muted);
-  font-size: 1.08rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
 }
 
-strong {
-  color: var(--text);
-  font-weight: 720;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
+/* NAVBAR */
 .navbar {
-  background:
-    linear-gradient(
-      180deg,
-      var(--navy) 0%,
-      var(--navy-deep) 100%
-    );
-
+  background: linear-gradient(180deg, var(--navy), var(--navy-deep));
   padding: 16px 0;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.18);
-
-  border-bottom:
-    1px solid rgba(255,255,255,0.06);
 }
-
-/* BRAND */
 
 .navbar-brand {
   display: flex;
   flex-direction: column;
-  line-height: 1.12;
-
-  transition:
-    background 0.2s ease,
-    opacity 0.2s ease;
-
-  padding: 8px 12px;
-  border-radius: 10px;
-
-  cursor: pointer;
 }
-
-/* IMPORTANT:
-   match nav-link hover behavior */
-.navbar-brand:hover {
-  background: rgba(255,255,255,0.10);
-  opacity: 1;
-}
-
-/* MAIN NAME */
 
 .navbar-brand span:first-child {
-  font-size: 1.72rem;
+  font-size: 1.7rem;
   font-weight: 800;
-  color: #ffffff;
-  letter-spacing: 0.3px;
+  color: #fff;
 }
-
-/* SUBTITLE */
 
 .navbar-brand span:last-child {
   font-size: 1rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.80);
-  margin-top: 4px;
-}
-
-/* NAV ITEMS */
-
-.navbar-nav {
-  gap: 8px;
+  color: rgba(255,255,255,0.78);
 }
 
 .nav-link {
-  font-size: 1.05rem;
+  color: rgba(255,255,255,0.88) !important;
   font-weight: 650;
-
-  color:
-    rgba(255,255,255,0.88) !important;
-
-  padding: 10px 14px !important;
-
   border-radius: 8px;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
   background: rgba(255,255,255,0.10);
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero {
   position: relative;
-
   min-height: 72vh;
-
   display: flex;
   align-items: center;
-
   padding: 95px 0;
-
   background-size: cover;
   background-position: center;
 }
 
 .hero::before {
   content: "";
-
   position: absolute;
   inset: 0;
-
-  /* LIGHTER OVERLAY */
-  background:
-    rgba(10,16,28,0.48);
+  background: rgba(10,16,28,0.48);
 }
 
 .hero .container {
   position: relative;
   z-index: 2;
-
-  max-width: 960px;
 }
 
 .hero-title {
-  color: #ffffff;
-
-  font-size: 2.95rem;
+  color: #fff;
   font-weight: 800;
-
-  line-height: 1.15;
-
-  margin-bottom: 18px;
-
-  text-shadow:
-    0 2px 12px rgba(0,0,0,0.20);
 }
 
 .hero-subtitle {
-  color:
-    rgba(255,255,255,0.92);
-
-  font-size: 1.2rem;
-
-  max-width: 820px;
-
-  line-height: 1.7;
+  color: rgba(255,255,255,0.92);
 }
 
-/* HERO TEXT INSIDE IMAGE */
-
-.hero p strong {
-  color: #ffffff;
-  font-weight: 760;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
+/* BUTTON */
 .btn-warning {
   background: var(--gold);
   border: none;
-
-  color: #111111;
-
-  font-weight: 720;
-
-  padding: 12px 24px;
-
-  border-radius: 10px;
-
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    box-shadow 0.2s ease;
+  font-weight: 700;
 }
 
 .btn-warning:hover {
   background: #98741f;
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 10px 24px rgba(176,138,46,0.28);
 }
 
-/* =========================
-   PANELS
-========================= */
-
+/* PANELS */
 .content-panel {
   background: var(--surface);
-
-  border:
-    1px solid var(--border);
-
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-
-  padding: 44px;
-
-  box-shadow: var(--shadow-sm);
+  padding: 42px;
 }
 
-/* =========================
-   CARDS
-========================= */
-
+/* CARDS */
 .card-container {
   background: var(--surface);
-
-  border:
-    1px solid var(--border);
-
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-
-  padding: 28px;
-
+  padding: 26px;
   height: 100%;
-
-  box-shadow: var(--shadow-sm);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    border-color 0.25s ease;
 }
 
 .card-container:hover {
-  transform: translateY(-6px);
-
   box-shadow: var(--shadow-md);
-
-  border-color:
-    rgba(176,138,46,0.28);
 }
 
-/* CARD TITLES */
-
-.card-container h3,
-.card-container h5 {
-  color: var(--navy);
-  font-weight: 780;
-}
-
-/* CARD TEXT */
-
-.card-container p {
-  color: var(--text);
-
-  font-size: 1.05rem;
-
-  line-height: 1.78;
-}
-
-/* FIX FAINT TEXT */
-
-.card-container small,
-.card-container .text-muted {
-  color: var(--muted) !important;
-  opacity: 1 !important;
-  font-size: 1rem;
-}
-
-/* =========================
-   ALIGN BUTTONS
-========================= */
-
-.card-container .btn {
-  margin-top: auto;
-}
-
-.row.g-4 > div {
-  display: flex;
-}
-
-.row.g-4 > div > .card-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-/* =========================
-   LINKS
-========================= */
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer {
   background: var(--navy-deep);
-
-  color:
-    rgba(255,255,255,0.82);
-
+  color: rgba(255,255,255,0.82);
   text-align: center;
-
-  padding: 52px 0;
-
-  margin-top: 60px;
-}
-
-footer small {
-  font-size: 0.98rem;
+  padding: 50px 0;
 }
 
 footer a {
-  color:
-    rgba(176,138,46,0.95);
-
-  transition: color 0.2s ease;
-}
-
-footer a:hover {
-  color: #ffffff;
+  color: rgba(176,138,46,0.95);
 }
 
 /* =========================
-   MOBILE
+   CREDIBILITY STRIP
 ========================= */
 
-@media (max-width: 991px) {
-
-  .navbar-collapse {
-    margin-top: 14px;
-  }
-
-  .navbar-nav {
-    gap: 2px;
-  }
-
-  .nav-link {
-    padding: 12px 14px !important;
-  }
+.cred-strip {
+  background: #ffffff;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
 }
 
-@media (max-width: 768px) {
+.cred-text {
+  color: var(--muted);
+  font-size: 1rem;
+}
 
-  body {
-    font-size: 1rem;
-  }
-
-  h1,
-  .hero-title {
-    font-size: 2.2rem;
-  }
-
-  h2 {
-    font-size: 1.85rem;
-  }
-
-  h3 {
-    font-size: 1.35rem;
-  }
-
-  .hero {
-    min-height: 64vh;
-    padding: 80px 0;
-  }
-
-  .hero-subtitle {
-    font-size: 1.05rem;
-  }
-
-  .content-panel {
-    padding: 28px;
-  }
-
-  .card-container {
-    padding: 24px;
-  }
-
-  .navbar-brand span:first-child {
-    font-size: 1.35rem;
-  }
-
-  .navbar-brand span:last-child {
-    font-size: 0.92rem;
-  }
+.cred-text strong {
+  color: var(--navy);
+  font-weight: 750;
 }

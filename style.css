@@ -4,38 +4,33 @@
 ========================= */
 
 :root {
-  /* Core palette (more restrained, less “cartoon gold”) */
-  --navy: #16263d;
-  --navy-dark: #0f1828;
-  --gold: #a8842c; 
+  /* Core identity */
+  --navy: #14263d;
+  --navy-deep: #0c1726;
+  --gold: #b08a2e;
 
-  --bg: #f6f8fb;
+  /* Background system */
+  --bg: #f4f7fb;
   --surface: #ffffff;
 
-  --text: #141a22;
-  --muted: #5b6676;
+  /* Text system */
+  --text: #101828;
+  --muted: #475467;
 
-  /* spacing system (CONSISTENT RHYTHM) */
-  --space-1: 6px;
-  --space-2: 12px;
-  --space-3: 18px;
-  --space-4: 24px;
-  --space-5: 36px;
-  --space-6: 56px;
-  --space-7: 84px;
-  --space-8: 120px;
-
+  /* Layout */
+  --nav-height: 92px;
   --radius: 12px;
 
-  --shadow-sm: 0 2px 10px rgba(0,0,0,0.06);
-  --shadow-md: 0 16px 40px rgba(0,0,0,0.10);
-  --shadow-hover: 0 22px 60px rgba(0,0,0,0.14);
+  /* Shadows (subtle, institutional) */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow-md: 0 12px 28px rgba(0,0,0,0.08);
+  --shadow-lg: 0 22px 50px rgba(0,0,0,0.12);
 
-  --nav-height: 92px;
+  --border: #e6ecf3;
 }
 
 /* =========================
-   BASE
+   BASE RESET
 ========================= */
 
 * {
@@ -44,102 +39,108 @@
 
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  padding-top: var(--nav-height);
+
+  font-family: "Source Sans 3", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+
+  font-size: 1.08rem;
   line-height: 1.75;
-  font-size: 1.05rem;
-  padding-top: var(--nav-height);
 }
 
+/* container constraint for professionalism */
 .container {
-  max-width: 1120px;
+  max-width: 1140px;
 }
 
 /* =========================
-   TYPOGRAPHY (FIXED HIERARCHY)
+   TYPOGRAPHY SYSTEM (FIXED AUTHORITY)
 ========================= */
 
+/* Headings = authority serif */
 h1, h2, h3 {
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Libre Baskerville", Georgia, serif;
   color: var(--navy);
+  font-weight: 700;
   letter-spacing: -0.4px;
-  margin-bottom: var(--space-3);
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 3rem;
-  line-height: 1.15;
+  font-size: 2.75rem;
 }
 
 h2 {
-  font-size: 2.2rem;
-  line-height: 1.25;
+  font-size: 2.15rem;
 }
 
 h3 {
   font-size: 1.5rem;
-  line-height: 1.3;
 }
 
+/* Body text = readable sans */
 p {
-  color: var(--muted);
   font-size: 1.05rem;
+  color: var(--muted);
   line-height: 1.8;
-  margin-bottom: var(--space-3);
 }
 
 /* =========================
-   NAVBAR (AUTHORITY BAR)
+   NAVBAR (INSTITUTIONAL WEIGHT FIX)
 ========================= */
 
 .navbar {
-  background: linear-gradient(180deg, var(--navy), var(--navy-dark)) !important;
-  padding: var(--space-4) 0;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
+  padding: 18px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .navbar-brand {
   display: flex;
   flex-direction: column;
-  line-height: 1.15;
+  line-height: 1.1;
 }
 
+/* MAIN TITLE (heavier, more authority) */
 .navbar-brand span:first-child {
-  font-size: 1.65rem;
+  font-size: 1.85rem;
   font-weight: 800;
-  color: #fff;
-  letter-spacing: 0.4px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
 }
 
+/* SUBTITLE (less tiny, more readable) */
 .navbar-brand span:last-child {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.75);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.78);
   margin-top: 4px;
 }
 
+/* NAV LINKS (fix “small awkward feel”) */
 .navbar-nav {
-  gap: 8px;
+  gap: 10px;
 }
 
 .nav-link {
-  color: rgba(255,255,255,0.82) !important;
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
+  font-weight: 650;
+  color: rgba(255,255,255,0.85) !important;
   padding: 10px 14px !important;
   border-radius: 8px;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
+  background: rgba(255,255,255,0.10);
   color: #fff !important;
-  background: rgba(255,255,255,0.08);
 }
 
 /* =========================
-   HERO (STRONG STRUCTURE)
+   HERO (MORE IMPACT, LESS “SOFT POSTER”)
 ========================= */
 
 .hero {
@@ -147,7 +148,8 @@ p {
   min-height: 72vh;
   display: flex;
   align-items: center;
-  padding: var(--space-7) 0;
+
+  padding: 100px 0;
   background-size: cover;
   background-position: center;
 }
@@ -156,127 +158,123 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(10, 16, 26, 0.65);
+  background: rgba(8, 14, 24, 0.62);
 }
 
 .hero .container {
   position: relative;
   z-index: 2;
-  max-width: 900px;
+  max-width: 950px;
 }
 
+/* HERO TITLE (STRONGER WEIGHT IMPACT) */
 .hero-title {
   color: #fff;
   font-size: 2.9rem;
-  line-height: 1.2;
-  margin-bottom: var(--space-3);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
 }
 
+/* HERO SUBTITLE (less “thin”) */
 .hero-subtitle {
-  color: rgba(255,255,255,0.82);
-  font-size: 1.15rem;
-  max-width: 780px;
+  color: rgba(255,255,255,0.88);
+  font-size: 1.18rem;
+  max-width: 800px;
+  line-height: 1.75;
 }
 
 /* =========================
-   BUTTONS (CONSISTENT CTA STYLE)
+   BUTTONS (MORE INSTITUTIONAL)
 ========================= */
 
 .btn-warning {
   background: var(--gold);
   border: none;
   color: #111;
-  font-weight: 600;
+  font-weight: 700;
   padding: 12px 24px;
   border-radius: 10px;
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .btn-warning:hover {
-  background: #8f6f21;
-  transform: translateY(-2px);
+  background: #9a7721;
+  transform: translateY(-1px);
 }
 
 /* =========================
-   SECTIONS (FIX SPACING ISSUE)
-========================= */
-
-section {
-  padding: var(--space-7) 0;
-}
-
-/* =========================
-   CONTENT PANELS (LESS BOXY)
+   PANELS (LESS “CARDY”, MORE INSTITUTIONAL)
 ========================= */
 
 .content-panel {
   background: var(--surface);
   border-radius: var(--radius);
-  padding: var(--space-6);
+  padding: 42px;
+  border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
-  border: 1px solid #e7edf4;
 }
 
 /* =========================
-   CARDS (SIMPLIFIED + CLEAN)
+   CARDS (CLEAN + STRUCTURED)
 ========================= */
 
 .card-container {
   background: var(--surface);
-  border: 1px solid #e7edf4;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: var(--space-4);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.25s ease;
+  padding: 24px;
   height: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: 0.25s ease;
 }
 
 .card-container:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-md);
-  border-color: rgba(168, 132, 44, 0.25);
+  border-color: rgba(176, 138, 46, 0.25);
 }
 
 .card-container h5 {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 750;
   color: var(--navy);
-  margin-bottom: var(--space-2);
+  margin-bottom: 8px;
 }
 
 .card-container p {
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: var(--muted);
 }
 
 /* =========================
-   LINKS RESET
+   FOOTER (MORE “INSTITUTIONAL LAW FIRM FEEL”)
+========================= */
+
+footer {
+  background: var(--navy-deep);
+  color: rgba(255,255,255,0.78);
+  text-align: center;
+  padding: 46px 0;
+  margin-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+footer a {
+  color: rgba(176, 138, 46, 0.9);
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* =========================
+   LINKS
 ========================= */
 
 a {
   text-decoration: none;
   color: inherit;
-}
-
-/* =========================
-   FOOTER (INSTITUTIONAL FEEL)
-========================= */
-
-footer {
-  background: var(--navy-dark);
-  color: rgba(255,255,255,0.72);
-  text-align: center;
-  padding: var(--space-6) 0;
-  margin-top: var(--space-7);
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-
-footer a {
-  color: rgba(168, 132, 44, 0.9);
-}
-
-footer a:hover {
-  color: #fff;
 }
 
 /* =========================
@@ -290,8 +288,8 @@ footer a:hover {
   }
 
   .hero {
-    min-height: 58vh;
-    padding: var(--space-6) 0;
+    min-height: 60vh;
+    padding: 70px 0;
   }
 
   .hero-title {
@@ -299,14 +297,18 @@ footer a:hover {
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .content-panel {
-    padding: var(--space-4);
+    padding: 24px;
   }
 
   .navbar-brand span:first-child {
     font-size: 1.35rem;
+  }
+
+  .navbar-brand span:last-child {
+    font-size: 0.95rem;
   }
 }

@@ -4,206 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RXCELSIOR SOLUTIONS — Pharmacy Compliance & Medication Systems</title>
-
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Google Fonts: Playfair Display (authority/prestige) + Source Sans 3 (clarity) -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Global stylesheet -->
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      font-family: 'Source Sans 3', system-ui, sans-serif;
-    }
-    h1, h2, h3, .display-heading {
-      font-family: 'Playfair Display', Georgia, serif;
-    }
-
-    /* ── HERO ── */
-    .hero { min-height: 80vh; }
-    .hero-eyebrow {
-      display: inline-block;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 1rem;
-      font-family: 'Source Sans 3', sans-serif;
-    }
-    .hero-title {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2.2rem, 4vw + 1rem, 3.4rem);
-      line-height: 1.15;
-      margin-bottom: 1rem;
-    }
-    .hero-title em {
-      font-style: italic;
-      color: var(--gold);
-    }
-    .hero-subtitle {
-      font-size: 1.12rem;
-      line-height: 1.7;
-      max-width: 64ch;
-    }
-    .hero-divider {
-      width: 48px;
-      height: 3px;
-      background: var(--gold);
-      margin: 1.6rem 0;
-    }
-
-    /* ── CREDENTIAL STRIP ── */
-    .credential-strip {
-      background: var(--navy);
-      padding: 18px 0;
-    }
-    .credential-strip .item {
-      color: rgba(255,255,255,0.88);
-      font-size: 0.88rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .credential-strip .dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-
-    /* ── SECTION LABELS ── */
-    .section-eyebrow {
-      display: block;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 0.6rem;
-      font-family: 'Source Sans 3', sans-serif;
-    }
-
-    /* ── SERVICE DOMAIN CARDS ── */
-    .domain-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: clamp(28px, 3.5vw, 44px);
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow 0.25s ease, transform 0.1s ease;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-    .domain-card::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--gold);
-      border-radius: var(--radius) 0 0 var(--radius);
-    }
-    .domain-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-    .domain-card .card-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      line-height: 1;
-    }
-    .domain-card h3 {
-      font-family: 'Playfair Display', Georgia, serif;
-      margin-bottom: 0.5rem;
-      font-size: 1.45rem;
-    }
-    .domain-card .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin: 1rem 0 1.4rem;
-    }
-    .tag {
-      background: #edf2f8;
-      color: var(--navy);
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 3px 10px;
-      border-radius: 20px;
-      letter-spacing: 0.03em;
-    }
-
-    /* ── WHY RXCELSIOR ── */
-    .why-section {
-      background: var(--navy);
-      padding: clamp(48px, 6vw, 80px) 0;
-    }
-    .why-section h2 {
-      color: var(--text-inverse);
-      font-family: 'Playfair Display', Georgia, serif;
-    }
-    .why-section .lead-text {
-      color: rgba(255,255,255,0.82);
-      max-width: 68ch;
-    }
-    .differentiator {
-      border-left: 3px solid var(--gold);
-      padding-left: 20px;
-      margin-bottom: 2rem;
-    }
-    .differentiator h5 {
-      color: var(--text-inverse);
-      font-size: 1.05rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-      font-family: 'Source Sans 3', sans-serif;
-    }
-    .differentiator p {
-      color: rgba(255,255,255,0.75);
-      font-size: 0.95rem;
-      margin: 0;
-    }
-
-    /* ── FINAL CTA ── */
-    .cta-section {
-      background: var(--bg);
-      padding: clamp(56px, 7vw, 96px) 0;
-    }
-    .cta-panel {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: clamp(36px, 5vw, 60px);
-      box-shadow: var(--shadow-md);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-panel::after {
-      content: "";
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--navy), var(--gold));
-    }
-    .cta-panel h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.7rem, 2.4vw + 0.8rem, 2.4rem);
-    }
-
-    footer { font-family: 'Source Sans 3', sans-serif; font-size: 0.9rem; }
-    footer a { text-underline-offset: 3px; }
-  </style>
 </head>
 
 <body>
@@ -248,10 +51,7 @@
     </p>
     <div class="d-flex flex-wrap gap-3 mt-4">
       <a href="contact.html" class="btn-gold">Request a Compliance Review</a>
-      <a href="#services" class="btn-gold"
-         style="background: transparent; border: 2px solid rgba(255,255,255,0.45); color: #fff; box-shadow: none;">
-        View Services
-      </a>
+      <a href="#services" class="btn-gold btn-gold-ghost">View Services</a>
     </div>
   </div>
 </header>
@@ -264,15 +64,15 @@
       <div class="col-auto">
         <div class="item"><span class="dot"></span> OCP & NAPRA Aligned</div>
       </div>
-      <div class="col-auto d-none d-md-flex align-items-center" style="color:rgba(255,255,255,0.2);">|</div>
+      <div class="col-auto d-none d-md-flex align-items-center credential-divider">|</div>
       <div class="col-auto">
         <div class="item"><span class="dot"></span> RHRA Inspection Standards</div>
       </div>
-      <div class="col-auto d-none d-md-flex align-items-center" style="color:rgba(255,255,255,0.2);">|</div>
+      <div class="col-auto d-none d-md-flex align-items-center credential-divider">|</div>
       <div class="col-auto">
         <div class="item"><span class="dot"></span> Direct Operational Experience</div>
       </div>
-      <div class="col-auto d-none d-md-flex align-items-center" style="color:rgba(255,255,255,0.2);">|</div>
+      <div class="col-auto d-none d-md-flex align-items-center credential-divider">|</div>
       <div class="col-auto">
         <div class="item"><span class="dot"></span> All Engagements Strictly Confidential</div>
       </div>
@@ -282,7 +82,7 @@
 
 
 <!-- SERVICE DOMAINS -->
-<section id="services" class="container py-5">
+<section id="services" class="container section-block">
   <div class="text-center mb-5">
     <span class="section-eyebrow">Where We Operate</span>
     <h2 class="fw-bold">Two Regulated Environments.<br>One Standard of Rigour.</h2>
@@ -293,7 +93,6 @@
   </div>
 
   <div class="row g-4">
-    <!-- COMMUNITY PHARMACIES -->
     <div class="col-lg-6">
       <div class="domain-card">
         <div class="card-icon">⚕</div>
@@ -315,7 +114,6 @@
       </div>
     </div>
 
-    <!-- RETIREMENT HOMES -->
     <div class="col-lg-6">
       <div class="domain-card">
         <div class="card-icon">🏥</div>
@@ -345,7 +143,7 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-lg-5">
-        <span class="section-eyebrow" style="color: var(--gold);">Why Rxcelsior</span>
+        <span class="section-eyebrow">Why Rxcelsior</span>
         <h2 class="mt-2 mb-3">Built for Regulated Healthcare. Not Generic Consulting.</h2>
         <p class="lead-text">
           Most compliance gaps aren't discovered during inspections — they accumulate quietly in
@@ -386,9 +184,7 @@
         want structured oversight in place — we can help. Engagements are scoped to your specific
         regulatory environment and operational needs.
       </p>
-      <a href="contact.html" class="btn-gold" style="font-size: 1.05rem; padding: 14px 32px;">
-        Start a Conversation
-      </a>
+      <a href="contact.html" class="btn-gold btn-gold-lg">Start a Conversation</a>
     </div>
   </div>
 </section>

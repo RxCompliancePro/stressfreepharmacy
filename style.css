@@ -16,28 +16,25 @@
 
   --nav-height: 92px;
 
-  /* New tokens */
   --border: #e6edf5;
   --overlay: rgba(10,16,28,0.65);
   --overlay-strong: rgba(10,16,28,0.75);
   --text-inverse: #ffffff;
   --text-inverse-soft: rgba(255,255,255,0.92);
-  --focus: #b08a2e; /* gold focus outline */
+  --focus: #b08a2e;
 }
 
-/* BASE */
+/* ── BASE ── */
 *,
 *::before,
 *::after { box-sizing: border-box; }
 
-html {
-  -webkit-text-size-adjust: 100%;
-}
+html { -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
   padding-top: var(--nav-height);
-  font-family: system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   font-size: 1.05rem;
@@ -45,8 +42,9 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* TYPOGRAPHY */
-h1,h2,h3 {
+/* ── TYPOGRAPHY ── */
+h1, h2, h3, .display-heading {
+  font-family: 'Playfair Display', Georgia, serif;
   color: var(--navy);
   font-weight: 800;
   line-height: 1.2;
@@ -62,18 +60,16 @@ p {
   color: var(--text);
 }
 
-/* Strong text: readable on dark hero without using !important globally */
 .hero strong {
   color: var(--text-inverse);
   font-weight: 800;
 }
 
-/* LINKS & FOCUS STATES */
+/* ── LINKS & FOCUS ── */
 a {
   color: var(--navy);
   text-decoration: none;
 }
-
 a:hover { text-decoration: underline; }
 
 :where(a, button, .btn-gold, .nav-link):focus-visible {
@@ -82,7 +78,7 @@ a:hover { text-decoration: underline; }
   border-radius: 8px;
 }
 
-/* NAVBAR */
+/* ── NAVBAR ── */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -112,6 +108,7 @@ a:hover { text-decoration: underline; }
   color: var(--text-inverse);
   font-size: 1.6rem;
   font-weight: 800;
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
 .navbar-brand span:last-child {
@@ -133,16 +130,16 @@ a:hover { text-decoration: underline; }
   background-color: rgba(255,255,255,0.06);
 }
 
-/* HERO */
+/* ── HERO ── */
 .hero {
   position: relative;
-  min-height: 72vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   padding: clamp(48px, 6vw, 90px) 0;
   background-size: cover;
   background-position: center;
-  isolation: isolate; /* ensures overlay stacks correctly */
+  isolation: isolate;
 }
 
 .hero::before {
@@ -154,7 +151,6 @@ a:hover { text-decoration: underline; }
 }
 
 .hero:hover::before {
-  /* Slightly stronger overlay on hover for contrast stability if the bg is bright */
   background: var(--overlay-strong);
 }
 
@@ -163,19 +159,45 @@ a:hover { text-decoration: underline; }
   z-index: 1;
 }
 
+.hero-eyebrow {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
 .hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
   color: var(--text-inverse);
-  font-size: clamp(2rem, 3.4vw + 1rem, 2.7rem);
-  font-weight: 800;
-  margin-bottom: 0.5em;
+  font-size: clamp(2.2rem, 4vw + 1rem, 3.4rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-title em {
+  font-style: italic;
+  color: var(--gold);
 }
 
 .hero-subtitle {
   color: var(--text-inverse-soft);
-  max-width: 72ch;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  max-width: 64ch;
 }
 
-/* BUTTON */
+.hero-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--gold);
+  margin: 1.6rem 0;
+}
+
+/* ── BUTTONS ── */
 .btn-gold {
   background: var(--gold);
   border: none;
@@ -189,93 +211,46 @@ a:hover { text-decoration: underline; }
   cursor: pointer;
   transition: transform .06s ease, box-shadow .2s ease, background-color .2s ease;
   box-shadow: 0 4px 14px rgba(176,138,46,0.25);
+  text-decoration: none;
 }
 
 .btn-gold:hover {
   background: color-mix(in srgb, var(--gold) 88%, black);
+  text-decoration: none;
+  color: #111;
 }
 
-.btn-gold:active {
-  transform: translateY(1px);
-}
+.btn-gold:active { transform: translateY(1px); }
 
 .btn-gold:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-/* CARDS */
-.card-container {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-  box-shadow: var(--shadow-sm);
-  transition: box-shadow .25s ease, transform .08s ease;
+.btn-gold-ghost {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.45);
+  color: #fff;
+  box-shadow: none;
 }
 
-.card-container:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+.btn-gold-ghost:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
 }
 
-/* PANELS */
-.content-panel {
-  background: var(--surface);
-  border-radius: var(--radius);
-  padding: clamp(24px, 3.2vw, 40px);
-  border: 1px solid var(--border);
+.btn-gold-lg {
+  font-size: 1.05rem;
+  padding: 14px 32px;
 }
 
-/* FOOTER */
-footer {
-  background: var(--navy-deep);
-  color: rgba(255,255,255,0.82);
-  text-align: center;
-  padding: 40px 0;
+/* ── SECTION UTILITY ── */
+.section-block {
+  padding-top: clamp(48px, 6vw, 80px);
+  padding-bottom: clamp(48px, 6vw, 80px);
 }
 
-footer a {
-  color: var(--gold);
-  text-underline-offset: 3px;
-}
-
-/* ACCESSIBILITY & REDUCED MOTION */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* RESPONSIVE NAV HEIGHT + BODY OFFSET */
-@media (max-width: 640px) {
-  :root { --nav-height: 76px; }
-  body { padding-top: var(--nav-height); }
-  .navbar-brand span:first-child { font-size: 1.4rem; }
-  .navbar-brand span:last-child { font-size: 0.9rem; }
-}
-
-/* OPTIONAL: Container utility if not provided by framework */
-.container {
-  width: min(1120px, 92%);
-  margin-inline: auto;
-}
-/* Tighten card typography and spacing on the index grid */
-.pillar-card h5,
-.card-container h3 { margin-bottom: 6px; }
-
-.card-container p { margin-bottom: 8px; }
-
-/* Ensure hero CTA uses your gold brand if preferred */
-.btn-warning {
-  background-color: var(--gold);
-  border-color: var(--gold);
-  color: #111;
-  font-weight: 700;
-}
-.btn-warning:hover {
-  background-color: #9a7721;
-  border-color: #9a7721;
-}
+.section-eyebrow {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
